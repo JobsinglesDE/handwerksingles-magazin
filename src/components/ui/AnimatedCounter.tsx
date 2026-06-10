@@ -73,7 +73,7 @@ function Counter({ value, suffix = '', duration = 2000 }: Omit<AnimatedCounterPr
   }, []);
 
   // Format Swiss-style with apostrophe
-  const formatted = count.toLocaleString('de-CH');
+  const formatted = count.toLocaleString('de-DE');
 
   return (
     <span ref={callbackRef} className="inline-block">
