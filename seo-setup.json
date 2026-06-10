@@ -1,0 +1,27 @@
+{
+  "site": "blaulichtsingles.ch",
+  "magazinPath": "/magazin",
+  "organization": {
+    "name": "Blaulichtsingles.ch",
+    "url": "https://blaulichtsingles.ch",
+    "logo": "https://blaulichtsingles.ch/magazin/logo.png"
+  },
+  "authors": [
+    {
+      "name": "Tommy Honold",
+      "slug": "tommy-honold",
+      "role": "Chefredakteur",
+      "bio": "Gründer des Jobsingles Dating Networks. Bringt Blaulicht-Singles zusammen.",
+      "sameAs": []
+    }
+  ],
+  "breadcrumb": ["Home", "Magazin", "{category}", "{article}"],
+  "defaultImage": "/images/og-default.webp",
+  "hreflang": { "de-CH": "https://blaulichtsingles.ch/magazin" },
+  "schemas": ["BlogPosting", "FAQPage", "BreadcrumbList", "Organization"],
+  "robots": {
+    "index": true,
+    "follow": true,
+    "sitemap": "/magazin/sitemap.xml"
+  }
+}

@@ -1,0 +1,333 @@
+import { config, fields, collection } from '@keystatic/core';
+
+export default config({
+  storage: process.env.KEYSTATIC_GITHUB_CLIENT_ID
+    ? {
+        kind: 'github',
+        repo: 'JobsinglesDE/handwerksingles-magazin',
+      }
+    : { kind: 'local' },
+  ui: {
+    brand: { name: 'Handwerksingles Magazin' },
+  },
+  collections: {
+    articles: collection({
+      label: 'Artikel',
+      slugField: 'title',
+      path: 'content/articles/*',
+      columns: ['publishedAt', 'title', 'category', 'beruf'],
+      format: { contentField: 'content' },
+      schema: {
+        title: fields.slug({ name: { label: 'Titel' } }),
+        focusKeyword: fields.text({
+          label: 'Focus-Keyword',
+          description: 'Haupt-Keyword fuer SEO-Check (z.B. "Elektriker Gehalt"). Aktiviert 7 Yoast-Style-Checks im SEO-Score-Widget.',
+        }),
+        category: fields.select({
+          label: 'Kategorie (Sektion)',
+          defaultValue: 'partnersuche',
+          options: [
+            { label: 'Handwerk-News', value: 'handwerk-news' },
+            { label: 'Berufsbilder', value: 'berufsbilder' },
+            { label: 'Partnersuche', value: 'partnersuche' },
+          ],
+        }),
+        person: fields.text({
+          label: 'Person-Slug (z.B. tschulique) — optional',
+          description: 'Verknüpft den Artikel mit einem Personen-Hub unter /handwerker/{slug}.',
+          defaultValue: '',
+        }),
+        gewerk: fields.select({
+          label: 'Gewerk',
+          defaultValue: '',
+          options: [
+            { label: '— (alle)', value: '' },
+            { label: 'Bau', value: 'bau' },
+            { label: 'Ausbau', value: 'ausbau' },
+            { label: 'Elektro', value: 'elektro' },
+            { label: 'Holz', value: 'holz' },
+            { label: 'KFZ', value: 'kfz' },
+            { label: 'SHK (Sanitär/Heizung/Klima)', value: 'shk' },
+          ],
+        }),
+        beruf: fields.select({
+          label: 'Beruf',
+          defaultValue: '',
+          options: [
+            { label: '— (allgemein)', value: '' },
+            { label: 'Elektriker', value: 'elektriker' },
+            { label: 'KFZ-Mechatroniker', value: 'kfz-mechatroniker' },
+            { label: 'Dachdecker', value: 'dachdecker' },
+            { label: 'Tischler / Schreiner', value: 'tischler' },
+            { label: 'Zimmermann', value: 'zimmermann' },
+            { label: 'Maurer', value: 'maurer' },
+            { label: 'Maler & Lackierer', value: 'maler-lackierer' },
+            { label: 'Anlagenmechaniker SHK', value: 'anlagenmechaniker-shk' },
+            { label: 'Stuckateur', value: 'stuckateur' },
+            { label: 'Handwerkerin (allgemein)', value: 'handwerkerin-allgemein' },
+          ],
+        }),
+        type: fields.select({
+          label: 'Typ',
+          defaultValue: 'cluster',
+          options: [
+            { label: 'Pillar (Haupt-Hub)', value: 'pillar' },
+            { label: 'Pillar-Sub', value: 'pillar-sub' },
+            { label: 'Cluster', value: 'cluster' },
+            { label: 'Berufsbild-Hub', value: 'berufsbild' },
+            { label: 'News', value: 'news' },
+          ],
+        }),
+        excerpt: fields.text({ label: 'Auszug', multiline: true }),
+        featuredImage: fields.image({
+          label: 'Beitragsbild',
+          directory: 'public/images/articles',
+          publicPath: '/images/articles/',
+        }),
+        featuredImageAlt: fields.text({
+          label: 'Alt-Text Beitragsbild',
+          description: 'Beschreibung des Bild-Motivs (SEO + Barrierefreiheit). Falls leer, wird der Artikel-Titel als Fallback genutzt.',
+        }),
+        featuredImageCredit: fields.text({
+          label: 'Bild-Credit',
+          description: 'Urhebernennung unter dem Bild. Beispiel: "Foto: Instagram/@tschulique" oder "© ... / CC BY-SA 4.0 via Wikimedia Commons". Pflicht bei Pressebildern.',
+        }),
+        author: fields.relationship({
+          label: 'Autor',
+          collection: 'authors',
+        }),
+        calloutQuestion: fields.text({ label: 'Callout Frage' }),
+        calloutAnswer: fields.text({ label: 'Callout Antwort', multiline: true }),
+        content: fields.markdoc({ label: 'Inhalt' }),
+        faqItems: fields.array(
+          fields.object({
+            question: fields.text({ label: 'Frage' }),
+            answer: fields.text({ label: 'Antwort', multiline: true }),
+          }),
+          {
+            label: 'FAQ',
+            itemLabel: (props) => props.fields.question.value,
+          }
+        ),
+        takeaways: fields.array(fields.text({ label: 'Punkt' }), {
+          label: 'Das Wichtigste',
+        }),
+        status: fields.select({
+          label: 'Status',
+          defaultValue: 'published',
+          options: [
+            { label: 'Draft', value: 'draft' },
+            { label: 'Published', value: 'published' },
+          ],
+        }),
+        isNews: fields.checkbox({ label: 'News-Artikel (NewsArticle JSON-LD)', defaultValue: false }),
+        isFeatured: fields.checkbox({ label: 'Auf ICONY-Startseite anzeigen (max. 3)', defaultValue: false }),
+        tags: fields.array(fields.text({ label: 'Tag' }), { label: 'Tags' }),
+        seoTitle: fields.text({ label: 'SEO Titel' }),
+        seoDescription: fields.text({ label: 'SEO Beschreibung' }),
+        publishedAt: fields.date({ label: 'Veröffentlicht am' }),
+        theme: fields.select({
+          label: 'Theme',
+          defaultValue: 'dark',
+          options: [
+            { label: 'Dark', value: 'dark' },
+            { label: 'Light', value: 'light' },
+          ],
+        }),
+      },
+    }),
+
+    persons: collection({
+      label: 'Handwerker (Personen-Hubs)',
+      slugField: 'slug',
+      path: 'content/persons/*',
+      columns: ['name', 'role'],
+      schema: {
+        slug: fields.slug({ name: { label: 'Slug' } }),
+        name: fields.text({ label: 'Name' }),
+        role: fields.text({ label: 'Rolle (z.B. Maurermeisterin & Craftfluencerin)' }),
+        status: fields.select({
+          label: 'Status',
+          defaultValue: 'published',
+          options: [
+            { label: 'Draft', value: 'draft' },
+            { label: 'Published', value: 'published' },
+          ],
+        }),
+        focusKeyword: fields.text({ label: 'Focus-Keyword' }),
+        intro: fields.text({ label: 'Intro (Teaser unter Hero)', multiline: true }),
+        steckbrief: fields.array(
+          fields.object({
+            label: fields.text({ label: 'Label' }),
+            value: fields.text({ label: 'Wert' }),
+          }),
+          { label: 'Steckbrief', itemLabel: (props) => props.fields.label.value },
+        ),
+        bio: fields.markdoc({ label: 'Bio (ausführlich)' }),
+        featuredImage: fields.image({
+          label: 'Personenbild',
+          directory: 'public/images/persons',
+          publicPath: '/images/persons/',
+        }),
+        featuredImageAlt: fields.text({ label: 'Alt-Text Personenbild' }),
+        featuredImageCredit: fields.text({ label: 'Bild-Credit' }),
+        author: fields.relationship({ label: 'Autor', collection: 'authors' }),
+        faqItems: fields.array(
+          fields.object({
+            question: fields.text({ label: 'Frage' }),
+            answer: fields.text({ label: 'Antwort', multiline: true }),
+          }),
+          { label: 'FAQ', itemLabel: (props) => props.fields.question.value },
+        ),
+        takeaways: fields.array(fields.text({ label: 'Punkt' }), { label: 'Das Wichtigste' }),
+        seoTitle: fields.text({ label: 'SEO Titel' }),
+        seoDescription: fields.text({ label: 'SEO Beschreibung', multiline: true }),
+        publishedAt: fields.date({ label: 'Veröffentlicht am' }),
+      },
+    }),
+
+    stories: collection({
+      label: 'Erfolgsgeschichten',
+      slugField: 'title',
+      path: 'content/stories/*',
+      columns: ['publishedAt', 'couple', 'location'],
+      format: { contentField: 'content' },
+      schema: {
+        title: fields.slug({ name: { label: 'Titel' } }),
+        focusKeyword: fields.text({
+          label: 'Focus-Keyword',
+          description: 'Haupt-Keyword fuer SEO-Check. Aktiviert 7 Yoast-Style-Checks im SEO-Score-Widget.',
+        }),
+        couple: fields.text({ label: 'Paar-Namen' }),
+        location: fields.text({ label: 'Ort' }),
+        excerpt: fields.text({ label: 'Auszug', multiline: true }),
+        featuredImage: fields.image({
+          label: 'Paar-Foto',
+          directory: 'public/images/stories',
+          publicPath: '/images/stories/',
+        }),
+        featuredImageAlt: fields.text({
+          label: 'Alt-Text Paar-Foto',
+          description: 'Beschreibung des Bild-Motivs (SEO + Barrierefreiheit). Falls leer → Titel als Fallback.',
+        }),
+        featuredImageCredit: fields.text({
+          label: 'Bild-Credit',
+          description: 'Urhebernennung unter dem Bild. Pflicht bei Pressebildern.',
+        }),
+        content: fields.markdoc({ label: 'Geschichte' }),
+        isFeatured: fields.checkbox({ label: 'Auf ICONY-Startseite anzeigen (max. 3)', defaultValue: false }),
+        publishedAt: fields.date({ label: 'Veröffentlicht am' }),
+        seoTitle: fields.text({ label: 'SEO Titel' }),
+        seoDescription: fields.text({ label: 'SEO Beschreibung' }),
+      },
+    }),
+
+    handwerkskammern: collection({
+      label: 'Handwerkskammern (Singles Regional)',
+      slugField: 'title',
+      path: 'content/handwerkskammern/*',
+      columns: ['publishedAt', 'title', 'bundesland', 'stadt'],
+      format: { contentField: 'content' },
+      schema: {
+        title: fields.slug({ name: { label: 'Titel' } }),
+        focusKeyword: fields.text({
+          label: 'Focus-Keyword',
+          description: 'z.B. "Handwerkskammer Hamburg Singles".',
+        }),
+        bundesland: fields.select({
+          label: 'Bundesland',
+          defaultValue: 'bayern',
+          options: [
+            { label: 'Baden-Württemberg', value: 'baden-wuerttemberg' },
+            { label: 'Bayern', value: 'bayern' },
+            { label: 'Berlin', value: 'berlin' },
+            { label: 'Brandenburg', value: 'brandenburg' },
+            { label: 'Bremen', value: 'bremen' },
+            { label: 'Hamburg', value: 'hamburg' },
+            { label: 'Hessen', value: 'hessen' },
+            { label: 'Mecklenburg-Vorpommern', value: 'mecklenburg-vorpommern' },
+            { label: 'Niedersachsen', value: 'niedersachsen' },
+            { label: 'Nordrhein-Westfalen', value: 'nordrhein-westfalen' },
+            { label: 'Rheinland-Pfalz', value: 'rheinland-pfalz' },
+            { label: 'Saarland', value: 'saarland' },
+            { label: 'Sachsen', value: 'sachsen' },
+            { label: 'Sachsen-Anhalt', value: 'sachsen-anhalt' },
+            { label: 'Schleswig-Holstein', value: 'schleswig-holstein' },
+            { label: 'Thüringen', value: 'thueringen' },
+            { label: 'Deutschland (bundesweit)', value: 'deutschland' },
+          ],
+        }),
+        stadt: fields.text({ label: 'Stadt (Slug-Form)', description: 'z.B. "hamburg", "frankfurt-am-main"' }),
+        kammerBezirk: fields.text({ label: 'Kammerbezirk', description: 'z.B. "Rhein-Main", "Ostwestfalen-Lippe zu Bielefeld"' }),
+        kammerName: fields.text({ label: 'Vollständiger Kammer-Name' }),
+        mitgliedsbetriebe: fields.text({ label: 'Mitgliedsbetriebe (ca.)' }),
+        webseite: fields.url({ label: 'Kammer-Webseite' }),
+        sitzAdresse: fields.text({ label: 'Sitz-Adresse', multiline: true }),
+        prioritaet: fields.select({
+          label: 'Priorität (Build-Order)',
+          defaultValue: 'MEDIUM',
+          options: [
+            { label: 'HIGH', value: 'HIGH' },
+            { label: 'MEDIUM', value: 'MEDIUM' },
+            { label: 'LOW', value: 'LOW' },
+          ],
+        }),
+        excerpt: fields.text({ label: 'Auszug', multiline: true }),
+        featuredImage: fields.image({
+          label: 'Hero-Bild',
+          directory: 'public/images/handwerkskammern',
+          publicPath: '/images/handwerkskammern/',
+        }),
+        featuredImageAlt: fields.text({ label: 'Alt-Text', description: 'Stadt-Wahrzeichen + Handwerk-Element (Werkzeug, Helm, Geselle)' }),
+        featuredImageCredit: fields.text({ label: 'Bild-Credit' }),
+        calloutQuestion: fields.text({ label: 'Callout Frage' }),
+        calloutAnswer: fields.text({ label: 'Callout Antwort', multiline: true }),
+        content: fields.markdoc({ label: 'Inhalt' }),
+        faqItems: fields.array(
+          fields.object({
+            question: fields.text({ label: 'Frage' }),
+            answer: fields.text({ label: 'Antwort', multiline: true }),
+          }),
+          { label: 'FAQ', itemLabel: (props) => props.fields.question.value }
+        ),
+        takeaways: fields.array(fields.text({ label: 'Punkt' }), { label: 'Das Wichtigste' }),
+        tags: fields.array(fields.text({ label: 'Tag' }), { label: 'Tags' }),
+        seoTitle: fields.text({ label: 'SEO Titel' }),
+        seoDescription: fields.text({ label: 'SEO Beschreibung' }),
+        status: fields.select({
+          label: 'Status',
+          defaultValue: 'draft',
+          options: [
+            { label: 'Draft', value: 'draft' },
+            { label: 'Published', value: 'published' },
+          ],
+        }),
+        publishedAt: fields.date({ label: 'Veröffentlicht am' }),
+      },
+    }),
+
+    authors: collection({
+      label: 'Autoren',
+      slugField: 'name',
+      path: 'content/authors/*',
+      schema: {
+        name: fields.slug({ name: { label: 'Name' } }),
+        role: fields.text({ label: 'Rolle' }),
+        bio: fields.text({ label: 'Kurz-Bio (Artikel-Box)', multiline: true }),
+        longBio: fields.text({ label: 'Ausführliche Bio (Autoren-Seite)', multiline: true }),
+        avatar: fields.image({
+          label: 'Profilbild',
+          directory: 'public/images/authors',
+          publicPath: '/images/authors/',
+        }),
+        socialLinks: fields.array(
+          fields.object({
+            platform: fields.text({ label: 'Plattform' }),
+            url: fields.url({ label: 'URL' }),
+          }),
+          { label: 'Social Links' }
+        ),
+      },
+    }),
+  },
+});
