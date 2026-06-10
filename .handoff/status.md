@@ -13,3 +13,4 @@
 2. Review-Paket Tommy: Preview-URL + Hinweis Vercel-GitHub-App + ICONY-Proxy erst nach Review (seine Entscheidung)
 3. Daily Log + Memory (project_handwerksingles_magazin) + Vault-Task abhaken
 4. Phase 3 (NACH Review): ICONY-Proxy, GSC, IndexNow-Key, sites.json, qc-post KEYSTATIC_SITES, gsc-sitemap-resubmit-Eintrag
+Letzter Stand: 2026-06-10 22:20
