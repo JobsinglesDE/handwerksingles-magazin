@@ -1,4 +1,4 @@
-# Status (2026-06-10 ~21:30)
+# Status (2026-06-10 ~22:05)
 ## DONE
 - Phase 0+1 komplett: Repo, Taxonomie, Branding (#e0794d/#52230f), Build grün
 - GitHub JobsinglesDE/handwerksingles-magazin (main) · Vercel-Projekt prj_EiWR7bdffbRYEMz9kkn4BuzUNetm (Skeleton-Deploy READY auf handwerksingles-magazin.vercel.app/magazin)
