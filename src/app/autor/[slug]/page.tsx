@@ -137,7 +137,7 @@ export default async function AuthorPage({ params }: { params: Promise<{ slug: s
                     </p>
                     {a.entry.publishedAt && (
                       <p className="text-xs text-foreground/40 mt-1">
-                        {new Date(a.entry.publishedAt).toLocaleDateString('de-CH', {
+                        {new Date(a.entry.publishedAt).toLocaleDateString('de-DE', {
                           day: 'numeric',
                           month: 'long',
                           year: 'numeric',

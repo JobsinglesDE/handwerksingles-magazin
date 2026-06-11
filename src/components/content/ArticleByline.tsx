@@ -9,7 +9,7 @@ interface ArticleBylineProps {
 
 function formatDate(d: string): string {
   try {
-    return new Date(d).toLocaleDateString('de-CH', { day: '2-digit', month: 'long', year: 'numeric' });
+    return new Date(d).toLocaleDateString('de-DE', { day: '2-digit', month: 'long', year: 'numeric' });
   } catch {
     return d;
   }

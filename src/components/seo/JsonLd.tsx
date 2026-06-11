@@ -67,7 +67,7 @@ export function articleJsonLd({
         height: 200,
       },
     },
-    inLanguage: 'de-CH',
+    inLanguage: 'de-DE',
   };
 }
 
@@ -201,7 +201,7 @@ export function collectionPageJsonLd({
     name,
     description,
     url,
-    inLanguage: 'de-CH',
+    inLanguage: 'de-DE',
     isPartOf: {
       '@type': 'WebSite',
       name: 'Handwerksingles Magazin',
