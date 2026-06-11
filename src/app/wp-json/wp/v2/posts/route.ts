@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { reader } from '@/lib/keystatic';
+import { getArticleUrl } from '@/lib/routes';
 
 export const dynamic = 'force-dynamic';
 
@@ -16,12 +17,12 @@ export async function GET() {
     .map((a) => ({
       title: a.entry.title,
       excerpt: a.entry.excerpt || '',
-      url: `${SITE}/magazin/${a.slug}/`,
+      url: `${SITE}/magazin${getArticleUrl(a.slug, a.entry.category)}/`,
       image: a.entry.featuredImage ? `${SITE}/magazin${a.entry.featuredImage}` : '',
       date: a.entry.publishedAt || '2026-01-01',
     }));
 
-  // Featured Stories
+  // Featured Stories — haben Vorrang vor Artikeln (Startseiten-Teaser bei ICONY)
   const featuredStories = allStories
     .filter((s) => s.entry.isFeatured)
     .map((s) => ({
@@ -34,9 +35,8 @@ export async function GET() {
       date: s.entry.publishedAt || '2026-01-01',
     }));
 
-  const featured = [...featuredArticles, ...featuredStories]
-    .sort((a, b) => b.date.localeCompare(a.date))
-    .slice(0, 3);
+  const byDate = (a: { date: string }, b: { date: string }) => b.date.localeCompare(a.date);
+  const featured = [...featuredStories.sort(byDate), ...featuredArticles.sort(byDate)].slice(0, 3);
 
   const posts = featured.map((item, index) => ({
     id: index + 1,
