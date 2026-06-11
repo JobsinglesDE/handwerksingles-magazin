@@ -6,6 +6,7 @@ import { ClusterHero } from '@/components/content/ClusterHero';
 import { TableOfContents } from '@/components/content/TableOfContents';
 import { PillarBacklinkCard } from '@/components/content/PillarBacklinkCard';
 import { BerufsbildBacklinkCard } from '@/components/content/BerufsbildBacklinkCard';
+import { BerufIntentNav } from '@/components/content/BerufIntentNav';
 import { HandwerkerBacklinkCard } from '@/components/content/HandwerkerBacklinkCard';
 import { CalloutBox } from '@/components/ui/CalloutBox';
 import { TakeawayBox } from '@/components/ui/TakeawayBox';
@@ -146,6 +147,16 @@ export default async function ArticleView({ slug }: { slug: string }) {
           { label: crumb.label, href: crumb.href },
           { label: article.title, href: canonicalPath },
         ]} />
+
+        {article.category === 'berufsbilder' && article.beruf && (
+          <BerufIntentNav
+            beruf={article.beruf}
+            activeSlug={slug}
+            availableSlugs={allArticles
+              .filter((a) => a.entry.category === 'berufsbilder' && a.entry.status === 'published')
+              .map((a) => a.slug)}
+          />
+        )}
 
         <ArticleByline publishedAt={article.publishedAt || undefined} />
 
