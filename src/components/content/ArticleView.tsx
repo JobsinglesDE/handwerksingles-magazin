@@ -213,8 +213,13 @@ export default async function ArticleView({ slug }: { slug: string }) {
           />
         )}
 
-        {/* Pillar Backlink */}
-        {article.beruf && <PillarBacklinkCard specialization={article.beruf || undefined} />}
+        {/* Pillar Backlink — alle Partnersuche-Spokes verlinken zurück, mit Sektions-Anker */}
+        {(article.beruf || (article.category === 'partnersuche' && article.type !== 'pillar')) && (
+          <PillarBacklinkCard
+            specialization={article.beruf || undefined}
+            anchor={article.cluster || undefined}
+          />
+        )}
 
         {/* Handwerker-Hub Backlink (Spoke → Hub) */}
         {article.person && <HandwerkerBacklinkCard personSlug={article.person} />}

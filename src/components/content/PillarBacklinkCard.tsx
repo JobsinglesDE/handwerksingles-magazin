@@ -49,8 +49,9 @@ const DEFAULT_PILLAR = {
   cta: 'Zum Partnersuche-Guide →',
 };
 
-export function PillarBacklinkCard({ specialization }: { specialization?: Specialization }) {
-  const pillar = (specialization && PILLARS[specialization]) || DEFAULT_PILLAR;
+export function PillarBacklinkCard({ specialization, anchor }: { specialization?: Specialization; anchor?: string }) {
+  const base = (specialization && PILLARS[specialization]) || DEFAULT_PILLAR;
+  const pillar = anchor ? { ...base, href: `${base.href}#${anchor}` } : base;
   return (
     <div className="not-prose my-12 rounded-2xl bg-surface border border-foreground/10 p-6 md:p-8">
       <h3 className="text-xl md:text-2xl font-bold mb-3">{pillar.heading}</h3>

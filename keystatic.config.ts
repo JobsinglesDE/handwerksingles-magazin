@@ -78,6 +78,19 @@ export default config({
             { label: 'News', value: 'news' },
           ],
         }),
+        cluster: fields.select({
+          label: 'Pillar-Cluster',
+          description: 'Themen-Sektion auf der Partnersuche-Pillar (steuert Gruppierung + Anker)',
+          defaultValue: '',
+          options: [
+            { label: '— keiner —', value: '' },
+            { label: 'A. Grundlagen', value: 'grundlagen' },
+            { label: 'B. Online-Dating', value: 'online-dating' },
+            { label: 'C. Erstes Date & Date-Ideen', value: 'dates' },
+            { label: 'D. Beziehung & Alltag', value: 'beziehung' },
+            { label: 'E. Lebenslagen', value: 'lebenslagen' },
+          ],
+        }),
         excerpt: fields.text({ label: 'Auszug', multiline: true }),
         featuredImage: fields.image({
           label: 'Beitragsbild',
