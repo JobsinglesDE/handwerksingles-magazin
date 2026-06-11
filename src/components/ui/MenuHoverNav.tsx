@@ -15,23 +15,11 @@ const NAV_ITEMS: NavItem[] = [
   { label: 'Startseite', href: '/' },
   { label: 'Partnersuche', href: '/singles-partnersuche' },
   {
-    label: 'Handwerker',
-    href: '/handwerker',
+    label: 'Handwerk-News',
+    href: '/handwerk-news',
     dropdown: [
-      { label: 'Alle Porträts', href: '/handwerker', description: 'Craftfluencer & Promis im Überblick' },
-      { label: 'Handwerk-News', href: '/handwerk-news', description: 'Aktuelles von den Social-Media-Stars vom Bau' },
-    ],
-  },
-  {
-    label: 'Berufsbilder',
-    href: '/berufsbilder',
-    dropdown: [
-      { label: 'Elektriker', href: '/berufsbilder/elektriker', description: 'Ausbildung, Gehalt & Alltag' },
-      { label: 'KFZ-Mechatroniker', href: '/berufsbilder/kfz-mechatroniker', description: 'Werkstatt, Gehalt & Karriere' },
-      { label: 'Dachdecker', href: '/berufsbilder/dachdecker', description: 'Ausbildung & Höhenluft' },
-      { label: 'Tischler & Schreiner', href: '/berufsbilder/tischler', description: 'Das Handwerk mit Holz' },
-      { label: 'Zimmermann', href: '/berufsbilder/zimmermann', description: 'Ausbildung, Gehalt & Walz' },
-      { label: 'Maurer', href: '/berufsbilder/maurer', description: 'Ausbildung & Baustelle' },
+      { label: 'Promi-Handwerker', href: '/handwerker', description: 'Übersicht: tschulique, Dachdeckerin Chiara, Jonas Winkler & Gipser Felix' },
+      { label: 'Berufsbilder', href: '/berufsbilder', description: 'Übersicht: Elektriker, KFZ, Dachdecker, Tischler, Zimmermann & Maurer' },
     ],
   },
   {

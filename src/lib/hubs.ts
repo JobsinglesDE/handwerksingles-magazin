@@ -94,12 +94,12 @@ export const SECTION_HUBS: Record<string, Hub> = {
   },
   'handwerker': {
     slug: 'handwerker',
-    title: 'Handwerker im Porträt ❤️ — Craftfluencer & Promis',
+    title: 'Promi-Handwerker ❤️ — Craftfluencer im Porträt',
     description:
       'Die bekanntesten Gesichter des Handwerks: Craftfluencer wie tschulique und Dachdeckerin Chiara — Steckbriefe, Karriere und alle Artikel.',
-    seoTitle: 'Handwerker im Porträt: Craftfluencer',
+    seoTitle: 'Promi-Handwerker: Craftfluencer im Porträt',
     seoDescription:
-      'Craftfluencer & Handwerk-Promis im Porträt: tschulique, Dachdeckerin Chiara, Jonas Winkler & Co. — Steckbriefe und News.',
+      'Promi-Handwerker & Craftfluencer im Porträt: tschulique, Dachdeckerin Chiara, Jonas Winkler & Co. — Steckbriefe und News.',
   },
   'handwerk-news': {
     slug: 'handwerk-news',

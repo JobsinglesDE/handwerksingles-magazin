@@ -27,7 +27,7 @@ export default async function HandwerkerIndex() {
     <>
       <JsonLd
         data={collectionPageJsonLd({
-          name: 'Handwerker im Porträt — Craftfluencer',
+          name: 'Promi-Handwerker — Craftfluencer im Porträt',
           description: 'Steckbriefe und Porträts der bekanntesten Craftfluencer und Handwerks-Promis.',
           url: `${BASE}/handwerker`,
           items: persons.map((p) => ({
@@ -38,14 +38,14 @@ export default async function HandwerkerIndex() {
       />
 
       <div className="max-w-5xl mx-auto px-6 py-12">
-        <Breadcrumbs items={[{ label: 'Handwerker', href: '/handwerker' }]} />
+        <Breadcrumbs items={[{ label: 'Promi-Handwerker', href: '/handwerker' }]} />
 
         <header className="mt-6 mb-10">
           <span className="text-xs uppercase tracking-widest font-bold text-brand-orange">
             Craftfluencer
           </span>
           <h1 className="text-3xl md:text-5xl font-bold tracking-tight mt-2 mb-4">
-            Handwerker im Porträt
+            Promi-Handwerker im Porträt
           </h1>
           <p className="text-foreground/70 leading-relaxed max-w-2xl">
             Steckbrief, Karriere und alle Artikel zu den bekanntesten Craftfluencern und Handwerks-Promis — von tschulique bis zur Dachdeckerin Chiara.
