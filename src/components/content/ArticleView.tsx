@@ -5,6 +5,7 @@ import { ArticleBody } from '@/components/content/ArticleBody';
 import { ClusterHero } from '@/components/content/ClusterHero';
 import { TableOfContents } from '@/components/content/TableOfContents';
 import { PillarBacklinkCard } from '@/components/content/PillarBacklinkCard';
+import { BerufsbildBacklinkCard } from '@/components/content/BerufsbildBacklinkCard';
 import { HandwerkerBacklinkCard } from '@/components/content/HandwerkerBacklinkCard';
 import { CalloutBox } from '@/components/ui/CalloutBox';
 import { TakeawayBox } from '@/components/ui/TakeawayBox';
@@ -213,11 +214,19 @@ export default async function ArticleView({ slug }: { slug: string }) {
           />
         )}
 
-        {/* Pillar Backlink — alle Partnersuche-Spokes verlinken zurück, mit Sektions-Anker */}
-        {(article.beruf || (article.category === 'partnersuche' && article.type !== 'pillar')) && (
+        {/* Pillar Backlink — Partnersuche-Spokes → Singles-Pillar (mit Sektions-Anker) */}
+        {article.category === 'partnersuche' && article.type !== 'pillar' && (
           <PillarBacklinkCard
             specialization={article.beruf || undefined}
             anchor={article.cluster || undefined}
+          />
+        )}
+
+        {/* Berufsbild Backlink — Gehalt/Ausbildung-Spokes → Beruf-Hub, Beruf-Hubs → Übersicht */}
+        {article.category === 'berufsbilder' && (
+          <BerufsbildBacklinkCard
+            beruf={article.beruf || undefined}
+            isHub={article.type === 'berufsbild'}
           />
         )}
 
