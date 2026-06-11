@@ -45,8 +45,18 @@ type BerufSection = {
 // Gehalts-Spannen aus den Berufsbild-Artikeln (DFS-/Tavily-validiert beim Aufbau)
 const SECTIONS: BerufSection[] = [
   {
-    beruf: 'elektriker',
+    beruf: 'dachdecker',
     letter: 'A',
+    tocLabel: 'Dachdecker: Ausbildung & Höhenluft',
+    heading: 'Dachdecker: Ausbildung, Gehalt & Leben in der Höhe',
+    gehalt: '2.500–4.000 €',
+    paragraphs: [
+      'Dachdecker arbeiten dort, wo andere nicht hinkommen — und sind mit Solar- und Gründach-Boom gefragter denn je. Die Ausbildung dauert drei Jahre, der Lohn liegt zwischen 2.500 und 4.000 Euro, mit Zuschlägen für Höhe und Witterung.',
+    ],
+  },
+  {
+    beruf: 'elektriker',
+    letter: 'B',
     tocLabel: 'Elektriker: Ausbildung, Gehalt & Karriere',
     heading: 'Elektriker: Ausbildung, Gehalt & Karriere',
     gehalt: '2.500–4.500 €',
@@ -56,7 +66,7 @@ const SECTIONS: BerufSection[] = [
   },
   {
     beruf: 'kfz-mechatroniker',
-    letter: 'B',
+    letter: 'C',
     tocLabel: 'KFZ-Mechatroniker: Werkstatt & Gehalt',
     heading: 'KFZ-Mechatroniker: Werkstatt, Diagnose & Gehalt',
     gehalt: '2.400–4.200 €',
@@ -65,18 +75,18 @@ const SECTIONS: BerufSection[] = [
     ],
   },
   {
-    beruf: 'dachdecker',
-    letter: 'C',
-    tocLabel: 'Dachdecker: Ausbildung & Höhenluft',
-    heading: 'Dachdecker: Ausbildung, Gehalt & Leben in der Höhe',
-    gehalt: '2.500–4.000 €',
+    beruf: 'maurer',
+    letter: 'D',
+    tocLabel: 'Maurer: Ausbildung & Alltag auf dem Bau',
+    heading: 'Maurer: Ausbildung, Gehalt & Alltag auf dem Bau',
+    gehalt: '2.400–4.200 €',
     paragraphs: [
-      'Dachdecker arbeiten dort, wo andere nicht hinkommen — und sind mit Solar- und Gründach-Boom gefragter denn je. Die Ausbildung dauert drei Jahre, der Lohn liegt zwischen 2.500 und 4.000 Euro, mit Zuschlägen für Höhe und Witterung.',
+      'Maurer sind das Rückgrat jedes Rohbaus. Die Bau-Tarifbindung sorgt für solide 2.400 bis 4.200 Euro, und der Fachkräftemangel auf dem Bau macht den Beruf so sicher wie kaum einen anderen.',
     ],
   },
   {
     beruf: 'tischler',
-    letter: 'D',
+    letter: 'E',
     tocLabel: 'Tischler & Schreiner: Holzhandwerk',
     heading: 'Tischler & Schreiner: Ausbildung, Gehalt & Holzhandwerk',
     gehalt: '2.300–4.000 €',
@@ -86,22 +96,12 @@ const SECTIONS: BerufSection[] = [
   },
   {
     beruf: 'zimmermann',
-    letter: 'E',
+    letter: 'F',
     tocLabel: 'Zimmermann: Ausbildung, Gehalt & Walz',
     heading: 'Zimmermann: Ausbildung, Gehalt & die Walz',
     gehalt: '2.400–4.500 €',
     paragraphs: [
       'Holzbau boomt — vom Dachstuhl bis zum mehrgeschossigen Holzhaus. Zimmerleute verdienen 2.400 bis 4.500 Euro, und die traditionelle Walz nach der Gesellenprüfung ist bis heute gelebte Praxis: drei Jahre und ein Tag auf Wanderschaft.',
-    ],
-  },
-  {
-    beruf: 'maurer',
-    letter: 'F',
-    tocLabel: 'Maurer: Ausbildung & Alltag auf dem Bau',
-    heading: 'Maurer: Ausbildung, Gehalt & Alltag auf dem Bau',
-    gehalt: '2.400–4.200 €',
-    paragraphs: [
-      'Maurer sind das Rückgrat jedes Rohbaus. Die Bau-Tarifbindung sorgt für solide 2.400 bis 4.200 Euro, und der Fachkräftemangel auf dem Bau macht den Beruf so sicher wie kaum einen anderen.',
     ],
   },
 ];
