@@ -13,6 +13,15 @@ type NavItem = {
 
 const NAV_ITEMS: NavItem[] = [
   { label: 'Startseite', href: '/' },
+  { label: 'Partnersuche', href: '/singles-partnersuche' },
+  {
+    label: 'Handwerker',
+    href: '/handwerker',
+    dropdown: [
+      { label: 'Alle Porträts', href: '/handwerker', description: 'Craftfluencer & Promis im Überblick' },
+      { label: 'Handwerk-News', href: '/handwerk-news', description: 'Aktuelles von den Social-Media-Stars vom Bau' },
+    ],
+  },
   {
     label: 'Berufsbilder',
     href: '/berufsbilder',
@@ -25,15 +34,6 @@ const NAV_ITEMS: NavItem[] = [
       { label: 'Maurer', href: '/berufsbilder/maurer', description: 'Ausbildung & Baustelle' },
     ],
   },
-  { label: 'Partnersuche', href: '/singles-partnersuche' },
-  {
-    label: 'Handwerker',
-    href: '/handwerker',
-    dropdown: [
-      { label: 'Alle Porträts', href: '/handwerker', description: 'Craftfluencer & Promis im Überblick' },
-      { label: 'Handwerk-News', href: '/handwerk-news', description: 'Aktuelles von den Social-Media-Stars vom Bau' },
-    ],
-  },
   {
     label: 'Singles Regional',
     href: '/singles-regional',
@@ -42,7 +42,6 @@ const NAV_ITEMS: NavItem[] = [
     ],
   },
   { label: 'Erfolgsgeschichten', href: '/erfolgsgeschichten' },
-  { label: 'Über uns', href: '/ueber-uns' },
 ];
 
 export function MenuHoverNav() {

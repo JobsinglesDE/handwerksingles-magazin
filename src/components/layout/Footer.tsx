@@ -83,7 +83,7 @@ export function Footer() {
                 Netzwerk
               </h4>
               <nav className="flex flex-col gap-2">
-                <a href="https://jobsingles.de" className="text-sm text-white/75 hover:text-white transition-colors">
+                <a href="https://jobsingles.de" rel="nofollow" className="text-sm text-white/75 hover:text-white transition-colors">
                   Jobsingles.de — Das Netzwerk
                 </a>
                 <a href="https://www.youtube.com/@Handwerksingles" target="_blank" rel="me noopener" className="text-sm text-white/75 hover:text-white transition-colors flex items-center gap-1.5">
@@ -135,7 +135,7 @@ export function Footer() {
             <a
               href="https://seeside.ai"
               target="_blank"
-              rel="noopener"
+              rel="nofollow noopener"
               className="text-white/60 underline hover:text-white transition-colors"
             >
               seeside.ai
