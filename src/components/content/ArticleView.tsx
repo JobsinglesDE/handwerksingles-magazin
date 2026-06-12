@@ -24,6 +24,20 @@ import { SECTION_HUBS, SINGLE_HUB } from '@/lib/hubs';
 
 const BASE_URL = 'https://handwerksingles.de/magazin';
 
+// Top-Suchvolumen-Berufe (DFS 2026-06-12) — bekommen sitewide das meiste interne Link-Gewicht
+const TOP_BERUFE = [
+  'friseur', // 550k/mo
+  'schornsteinfeger', // 27.1k
+  'gebaeudereiniger', // 22.2k
+  'goldschmied', // 22.2k
+  'metallbauer', // 22.2k
+  'fliesenleger', // 18.1k
+  'kfz-mechatroniker',
+  'elektriker',
+  'anlagenmechaniker-shk',
+  'dachdecker',
+];
+
 function toId(text: string) {
   return text.toLowerCase().replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 }
@@ -95,8 +109,31 @@ export default async function ArticleView({ slug }: { slug: string }) {
     : null;
 
   const allArticles = await reader.collections.articles.all();
-  const relatedArticles = allArticles
-    .filter((a) => a.slug !== slug && a.entry.category === article.category && a.entry.type === 'cluster')
+  // Deterministische Rotation pro Slug: jeder Artikel zeigt andere "Weitere Artikel",
+  // damit interne Links über alle Spokes verteilt werden statt immer auf dieselben 6.
+  const slugHash = [...slug].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7);
+  const pool = allArticles.filter(
+    (a) =>
+      a.slug !== slug &&
+      a.entry.status === 'published' &&
+      a.entry.category === article.category &&
+      (a.entry.type === 'cluster' || a.entry.type === 'berufsbild') &&
+      (article.category !== 'handwerksberufe' || a.entry.beruf !== article.beruf)
+  );
+  // Top-Volumen-Berufe (DFS) bekommen das meiste interne Gewicht: bis zu 3 feste Slots
+  const topPool = TOP_BERUFE.filter((b) => b !== article.beruf);
+  const topOffset = topPool.length > 0 ? slugHash % topPool.length : 0;
+  const topBerufsbilder =
+    article.category === 'handwerksberufe'
+      ? [...topPool.slice(topOffset), ...topPool.slice(0, topOffset)]
+          .map((b) => pool.find((a) => a.slug === b))
+          .filter((a): a is NonNullable<typeof a> => Boolean(a))
+          .slice(0, 3)
+      : [];
+  const rest = pool.filter((a) => !topBerufsbilder.includes(a));
+  const offset = rest.length > 0 ? slugHash % rest.length : 0;
+  const rotated = [...rest.slice(offset), ...rest.slice(0, offset)];
+  const relatedArticles = [...topBerufsbilder, ...rotated]
     .slice(0, 6)
     .map((a) => ({
       title: a.entry.title,
