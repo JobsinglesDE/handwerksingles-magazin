@@ -374,7 +374,17 @@ const SECTIONS: BerufSection[] = [
 
 // Alphabetisch sortiert (Tommy-Regel 2026-06-12), Sektions-Buchstaben dynamisch
 const SORTED_SECTIONS = [...SECTIONS].sort((a, b) => a.heading.localeCompare(b.heading, 'de'));
-const letterOf = (i: number) => String.fromCharCode(65 + i);
+// Excel-Stil: A…Z, AA, AB… — fromCharCode allein läuft ab Sektion 27 in Sonderzeichen ([, \, ])
+const letterOf = (i: number) => {
+  let s = '';
+  let n = i + 1;
+  while (n > 0) {
+    n--;
+    s = String.fromCharCode(65 + (n % 26)) + s;
+    n = Math.floor(n / 26);
+  }
+  return s;
+};
 
 export default async function HandwerksberufeHub() {
   const articles = await reader.collections.articles.all();
