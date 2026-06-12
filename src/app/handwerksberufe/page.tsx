@@ -279,6 +279,97 @@ const SECTIONS: BerufSection[] = [
       'Zahntechniker verbinden filigrane Handarbeit mit CAD/CAM-Fertigung im Dentallabor. Der Median liegt laut Entgeltatlas bei 3.109 Euro, mit Meisterbrief bei 4.248 Euro — die 3,5-jährige Ausbildung startet bei 724 Euro Vergütung.',
     ],
   },
+  // --- Welle 4 (2026-06-12) ---
+  {
+    beruf: 'feinwerkmechaniker',
+    tocLabel: 'Feinwerkmechaniker: CNC & Werkzeugbau',
+    heading: 'Feinwerkmechaniker: Ausbildung, Gehalt & Präzision',
+    gehalt: '3.180–3.750 €',
+    paragraphs: [
+      'Feinwerkmechaniker — dazu zählt auch der klassische Werkzeugmacher — fertigen Bauteile auf Hundertstel Millimeter genau. Der Median liegt bei 3.750 Euro im Westen und 3.180 Euro im Osten, und wer CNC- und CAM-Kompetenz mitbringt, verdient spürbar mehr.',
+    ],
+  },
+  {
+    beruf: 'goldschmied',
+    tocLabel: 'Goldschmied: Schmuck & Edelmetall',
+    heading: 'Goldschmied: Ausbildung, Gehalt & Schmuckhandwerk',
+    gehalt: '2.000–3.500 €',
+    paragraphs: [
+      'Goldschmiede fertigen Schmuck aus Edelmetallen mit Präzision auf Zehntelmillimeter. Der Schnitt liegt bei 2.858 Euro, und seit August 2025 heißt der neu geordnete Ausbildungsberuf Gold- und Silberschmied — mit den Fachrichtungen Goldschmieden und Silberschmieden.',
+    ],
+  },
+  {
+    beruf: 'hufschmied',
+    tocLabel: 'Hufschmied: Pferde & Schmiedefeuer',
+    heading: 'Hufschmied: Ausbildung, Verdienst & Pferde',
+    gehalt: '2.800–4.000 €',
+    paragraphs: [
+      'Hufbeschlagschmied ist kein dualer Ausbildungsberuf — der Weg führt nach Hufbeschlaggesetz über Lehrgang, zwei Jahre Praxis und Hufbeschlagschule. Angestellte verdienen rund 3.480 Euro nach Tarif, Selbstständige 3.000 bis 4.000 Euro — ein Beschlag aller vier Hufe kostet 80 bis 150 Euro.',
+    ],
+  },
+  {
+    beruf: 'kosmetikerin',
+    tocLabel: 'Kosmetikerin: Studio & Spezialisierung',
+    heading: 'Kosmetikerin: Ausbildung, Gehalt & Studio',
+    gehalt: '2.000–2.600 €',
+    paragraphs: [
+      'Kosmetikerinnen arbeiten in Studios, Spas und Wellness-Hotels — oder selbstständig. Der Median liegt laut Entgeltatlas bei 2.259 Euro; den Hebel nach oben bilden Spezialisierungen wie apparative Kosmetik oder Permanent Make-up und das eigene Studio. Die Ausbildung gibt es dual (3 Jahre, vergütet) oder schulisch.',
+    ],
+  },
+  {
+    beruf: 'sattler',
+    tocLabel: 'Sattler: Leder, Reitsport & Fahrzeug',
+    heading: 'Sattler: Ausbildung, Gehalt & Lederhandwerk',
+    gehalt: '2.400–3.750 €',
+    paragraphs: [
+      'Sattler verarbeiten Leder in drei Fachrichtungen: Reitsportsattlerei, Fahrzeugsattlerei und Feintäschnerei. Der Median liegt bei rund 3.000 Euro, der Meisterbrief bringt im Schnitt 3.704 Euro — und die Oldtimer-Sattlerei ist eine gefragte Nische.',
+    ],
+  },
+  {
+    beruf: 'schaedlingsbekaempfer',
+    tocLabel: 'Schädlingsbekämpfer: IHK & Sachkunde',
+    heading: 'Schädlingsbekämpfer: Ausbildung, Gehalt & Sachkunde',
+    gehalt: '2.900–3.940 €',
+    paragraphs: [
+      'Schädlingsbekämpfer ist seit 2004 ein dreijähriger IHK-Ausbildungsberuf. Der Median liegt laut Entgeltatlas bei rund 3.400 Euro, das obere Quartil bei 3.939 Euro — und Bettwanzen-Boom plus Klimawandel treiben die Nachfrage stetig.',
+    ],
+  },
+  {
+    beruf: 'schuhmacher',
+    tocLabel: 'Schuhmacher: Reparatur & Maßschuh',
+    heading: 'Schuhmacher: Ausbildung, Gehalt & Maßschuhe',
+    gehalt: '2.470–3.730 €',
+    paragraphs: [
+      'Schuhmacher verdienen im Median 2.817 Euro — wer Maßschuhe fertigt, mit Preisen ab 3.000 Euro pro Paar, erzielt deutlich mehr. Der Nachwuchsmangel ist so groß, dass Gesellen nach der dreijährigen Ausbildung praktisch überall sofort unterkommen.',
+    ],
+  },
+  {
+    beruf: 'taetowierer',
+    tocLabel: 'Tätowierer: Studio & Apprenticeship',
+    heading: 'Tätowierer: Einstieg, Verdienst & Studio',
+    gehalt: '800–8.000 €',
+    paragraphs: [
+      'Tätowierer ist kein anerkannter Ausbildungsberuf — der Einstieg läuft über ein Studio-Apprenticeship von 12 bis 24 Monaten. Einsteiger verdienen 800 bis 1.800 Euro, erfahrene Selbstständige mit 90 bis 110 Euro Stundensatz kommen auf 4.000 bis 8.000 Euro.',
+    ],
+  },
+  {
+    beruf: 'uhrmacher',
+    tocLabel: 'Uhrmacher: Manufaktur & Restaurierung',
+    heading: 'Uhrmacher: Ausbildung, Gehalt & Manufaktur',
+    gehalt: '2.600–4.500 €',
+    paragraphs: [
+      'Uhrmacher gehören zu den seltensten Fachkräften im Handwerk — bundesweit werden jährlich nur wenige Hundert ausgebildet. Gesellen starten mit 2.600 bis 3.000 Euro, in Manufakturen sind 3.500 bis 4.500 Euro drin, und der Vintage-Boom füllt die Werkstätten.',
+    ],
+  },
+  {
+    beruf: 'zweiradmechatroniker',
+    tocLabel: 'Zweiradmechatroniker: E-Bike & Motorrad',
+    heading: 'Zweiradmechatroniker: Ausbildung, Gehalt & E-Bike-Boom',
+    gehalt: '2.410–3.160 €',
+    paragraphs: [
+      'Zweiradmechatroniker warten Fahrräder, E-Bikes und Motorräder — ein Beruf mit Rückenwind: 2 Millionen verkaufte E-Bikes allein 2025, über 17 Millionen im Umlauf. Der Median liegt laut Entgeltatlas bei rund 2.730 Euro, die Tarif-Ausbildungsvergütung startet bei 1.040 Euro.',
+    ],
+  },
 ];
 
 // Alphabetisch sortiert (Tommy-Regel 2026-06-12), Sektions-Buchstaben dynamisch

@@ -251,6 +251,98 @@ export const BERUF_HUBS: Record<string, Hub> = {
     seoDescription:
       'Zahntechniker-Beruf: Was Zahntechniker machen, was sie verdienen, wie die Ausbildung läuft und welche Wege der Meisterbrief öffnet.',
   },
+  // Welle 4 (2026-06-12): goldschmied 22.2k (ausb 6.6k), tätowierer/schädlingsbekämpfer/schuhmacher je 14.8k,
+  // uhrmacher 9.9k, sattler/kosmetikerin (ausb 8.1k!) je 6.6k, hufschmied 5.4k, feinwerkmechaniker 3.6k, zweiradmechatroniker 1.6k (ausb 2.9k).
+  'feinwerkmechaniker': {
+    slug: 'handwerksberufe/feinwerkmechaniker',
+    title: 'Feinwerkmechaniker ❤️ — Ausbildung, Gehalt & Präzision',
+    description:
+      'Berufsbild Feinwerkmechaniker (Werkzeugmacher): Ausbildung, Gehalt und Präzisionsarbeit an CNC-Maschinen — plus Dating-Tipps.',
+    seoTitle: 'Feinwerkmechaniker: Gehalt & Ausbildung',
+    seoDescription:
+      'Feinwerkmechaniker: Schwerpunkte, Ausbildung (3,5 Jahre), Gehalt und warum CNC-Spezialisten mehr verdienen. Aktuelle Zahlen 2026.',
+  },
+  'goldschmied': {
+    slug: 'handwerksberufe/goldschmied',
+    title: 'Goldschmied ❤️ — Ausbildung, Gehalt & Schmuckhandwerk',
+    description:
+      'Berufsbild Goldschmied: Ausbildung (neu: Gold- und Silberschmied), Gehalt und der Weg ins eigene Atelier — plus Dating-Tipps.',
+    seoTitle: 'Goldschmied: Ausbildung, Gehalt & Karriere',
+    seoDescription:
+      'Goldschmied werden: neue Ausbildung Gold- und Silberschmied, Gehalt nach Erfahrung und Karrierewege bis zum Meister. Aktuelle Fakten.',
+  },
+  'hufschmied': {
+    slug: 'handwerksberufe/hufschmied',
+    title: 'Hufschmied ❤️ — Ausbildung, Verdienst & Pferde',
+    description:
+      'Berufsbild Hufschmied: der Weg nach Hufbeschlaggesetz, Verdienst pro Beschlag und die Selbstständigen-Realität — plus Dating-Tipps.',
+    seoTitle: 'Hufschmied: Beruf, Gehalt & Ausbildung',
+    seoDescription:
+      'Hufschmied werden: Weg nach Hufbeschlaggesetz, Verdienst als Angestellter und Selbstständiger, Beschlagpreise. Aktuelle Fakten 2026.',
+  },
+  'kosmetikerin': {
+    slug: 'handwerksberufe/kosmetikerin',
+    title: 'Kosmetikerin ❤️ — Ausbildung, Gehalt & Studio',
+    description:
+      'Berufsbild Kosmetikerin: duale und schulische Ausbildung, realistisches Gehalt und der Weg ins eigene Studio — plus Dating-Tipps.',
+    seoTitle: 'Kosmetikerin: Ausbildung, Gehalt & Karriere',
+    seoDescription:
+      'Kosmetikerin werden: Ausbildungswege, realistisches Gehalt laut Entgeltatlas und Karrierechancen durch Spezialisierung oder eigenes Studio.',
+  },
+  'sattler': {
+    slug: 'handwerksberufe/sattler',
+    title: 'Sattler ❤️ — Ausbildung, Gehalt & Lederhandwerk',
+    description:
+      'Berufsbild Sattler: Ausbildung, Gehalt und drei Fachrichtungen von Reitsport bis Fahrzeugsattlerei — plus Dating-Tipps.',
+    seoTitle: 'Sattler: Ausbildung, Gehalt & Fachrichtungen',
+    seoDescription:
+      'Sattler-Beruf: Fachrichtungen, Ausbildung, Gehalt und Karrierewege. Reitsportsattlerei, Fahrzeugsattlerei, Feintäschnerei im Überblick.',
+  },
+  'schaedlingsbekaempfer': {
+    slug: 'handwerksberufe/schaedlingsbekaempfer',
+    title: 'Schädlingsbekämpfer ❤️ — Ausbildung, Gehalt & Sachkunde',
+    description:
+      'Berufsbild Schädlingsbekämpfer: 3-jährige IHK-Ausbildung, Gehalt und ein Markt, der durch Bettwanzen und Klimawandel wächst.',
+    seoTitle: 'Schädlingsbekämpfer: Beruf & Gehalt',
+    seoDescription:
+      'Schädlingsbekämpfer: 3-jährige IHK-Ausbildung, Gehalt laut Entgeltatlas und wachsende Nachfrage. Alle Fakten zum Beruf 2026.',
+  },
+  'schuhmacher': {
+    slug: 'handwerksberufe/schuhmacher',
+    title: 'Schuhmacher ❤️ — Ausbildung, Gehalt & Maßschuhe',
+    description:
+      'Berufsbild Schuhmacher: Ausbildung, Gehalt und das Handwerk zwischen Reparatur und Maßschuh — plus Dating-Tipps.',
+    seoTitle: 'Schuhmacher: Ausbildung, Gehalt & Beruf',
+    seoDescription:
+      'Schuhmacher werden: Ausbildung, Gehalt, Unterschied zum Orthopädieschuhmacher und Zukunftschancen im Maßschuh-Handwerk. Fakten 2026.',
+  },
+  'taetowierer': {
+    slug: 'handwerksberufe/taetowierer',
+    title: 'Tätowierer ❤️ — Einstieg, Verdienst & Studio',
+    description:
+      'Berufsbild Tätowierer: Einstieg über Studio-Apprenticeship, Verdienst-Realität und die REACH-Farbverordnung — plus Dating-Tipps.',
+    seoTitle: 'Tätowierer: Einstieg, Verdienst & Beruf',
+    seoDescription:
+      'Tätowierer ist kein Ausbildungsberuf — der Weg führt über Studio-Apprenticeship. Was man verdient und welche Gesetze gelten.',
+  },
+  'uhrmacher': {
+    slug: 'handwerksberufe/uhrmacher',
+    title: 'Uhrmacher ❤️ — Ausbildung, Gehalt & Manufaktur',
+    description:
+      'Berufsbild Uhrmacher: Ausbildung in Glashütte oder Furtwangen, Gehalt und Karriere in Luxusmanufakturen — plus Dating-Tipps.',
+    seoTitle: 'Uhrmacher: Ausbildung, Gehalt & Karriere',
+    seoDescription:
+      'Uhrmacher werden: Ausbildung, Gehaltsspanne, Schulen in Glashütte und Furtwangen und Karrierewege in Manufakturen. Aktuelle Fakten.',
+  },
+  'zweiradmechatroniker': {
+    slug: 'handwerksberufe/zweiradmechatroniker',
+    title: 'Zweiradmechatroniker ❤️ — Ausbildung, Gehalt & E-Bike',
+    description:
+      'Berufsbild Zweiradmechatroniker: Ausbildung, Gehalt und der E-Bike-Boom als Rückenwind — plus Dating-Tipps für Schrauber.',
+    seoTitle: 'Zweiradmechatroniker: Gehalt & Ausbildung',
+    seoDescription:
+      'Zweiradmechatroniker: Fachrichtungen, Ausbildung, Gehalt nach Region und was der E-Bike-Boom für Jobchancen bedeutet. Zahlen 2026.',
+  },
 };
 
 // Sektion 2: Singles (Conversion-Hub, Pillar + 13 thematische Spokes)
@@ -270,10 +362,10 @@ export const SECTION_HUBS: Record<string, Hub> = {
     slug: 'handwerksberufe',
     title: 'Handwerksberufe ❤️ — Elektriker, Dachdecker, Tischler & Co.',
     description:
-      'Berufe im Handwerk: Ausbildung, Gehalt und Alltag von Anlagenmechaniker bis Zimmermann — 26 Handwerksberufe im Überblick.',
+      'Berufe im Handwerk: Ausbildung, Gehalt und Alltag von Anlagenmechaniker bis Zimmermann — 36 Handwerksberufe im Überblick.',
     seoTitle: 'Handwerksberufe: Ausbildung & Gehalt',
     seoDescription:
-      '26 Handwerksberufe im Überblick: Elektriker, Friseur, Zahntechniker, Gebäudereiniger, Metallbauer & Co. — Ausbildung, Gehalt, Karriere.',
+      '36 Handwerksberufe im Überblick: Elektriker, Friseur, Goldschmied, Zahntechniker, Gebäudereiniger & Co. — Ausbildung, Gehalt, Karriere.',
   },
   'handwerker': {
     slug: 'handwerker',

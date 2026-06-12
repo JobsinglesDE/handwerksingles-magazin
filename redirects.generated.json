@@ -100,6 +100,21 @@
     "permanent": true
   },
   {
+    "source": "/feinwerkmechaniker-ausbildung",
+    "destination": "/handwerksberufe/feinwerkmechaniker-ausbildung",
+    "permanent": true
+  },
+  {
+    "source": "/feinwerkmechaniker-gehalt",
+    "destination": "/handwerksberufe/feinwerkmechaniker-gehalt",
+    "permanent": true
+  },
+  {
+    "source": "/feinwerkmechaniker",
+    "destination": "/handwerksberufe/feinwerkmechaniker",
+    "permanent": true
+  },
+  {
     "source": "/fliesenleger-ausbildung",
     "destination": "/handwerksberufe/fliesenleger-ausbildung",
     "permanent": true
@@ -190,6 +205,21 @@
     "permanent": true
   },
   {
+    "source": "/goldschmied-ausbildung",
+    "destination": "/handwerksberufe/goldschmied-ausbildung",
+    "permanent": true
+  },
+  {
+    "source": "/goldschmied-gehalt",
+    "destination": "/handwerksberufe/goldschmied-gehalt",
+    "permanent": true
+  },
+  {
+    "source": "/goldschmied",
+    "destination": "/handwerksberufe/goldschmied",
+    "permanent": true
+  },
+  {
     "source": "/handwerker-klischees-dating",
     "destination": "/singles-partnersuche/handwerker-klischees-dating",
     "permanent": true
@@ -217,6 +247,21 @@
   {
     "source": "/hoerakustiker",
     "destination": "/handwerksberufe/hoerakustiker",
+    "permanent": true
+  },
+  {
+    "source": "/hufschmied-ausbildung",
+    "destination": "/handwerksberufe/hufschmied-ausbildung",
+    "permanent": true
+  },
+  {
+    "source": "/hufschmied-gehalt",
+    "destination": "/handwerksberufe/hufschmied-gehalt",
+    "permanent": true
+  },
+  {
+    "source": "/hufschmied",
+    "destination": "/handwerksberufe/hufschmied",
     "permanent": true
   },
   {
@@ -252,6 +297,21 @@
   {
     "source": "/kfz-mechatroniker",
     "destination": "/handwerksberufe/kfz-mechatroniker",
+    "permanent": true
+  },
+  {
+    "source": "/kosmetikerin-ausbildung",
+    "destination": "/handwerksberufe/kosmetikerin-ausbildung",
+    "permanent": true
+  },
+  {
+    "source": "/kosmetikerin-gehalt",
+    "destination": "/handwerksberufe/kosmetikerin-gehalt",
+    "permanent": true
+  },
+  {
+    "source": "/kosmetikerin",
+    "destination": "/handwerksberufe/kosmetikerin",
     "permanent": true
   },
   {
@@ -340,6 +400,36 @@
     "permanent": true
   },
   {
+    "source": "/sattler-ausbildung",
+    "destination": "/handwerksberufe/sattler-ausbildung",
+    "permanent": true
+  },
+  {
+    "source": "/sattler-gehalt",
+    "destination": "/handwerksberufe/sattler-gehalt",
+    "permanent": true
+  },
+  {
+    "source": "/sattler",
+    "destination": "/handwerksberufe/sattler",
+    "permanent": true
+  },
+  {
+    "source": "/schaedlingsbekaempfer-ausbildung",
+    "destination": "/handwerksberufe/schaedlingsbekaempfer-ausbildung",
+    "permanent": true
+  },
+  {
+    "source": "/schaedlingsbekaempfer-gehalt",
+    "destination": "/handwerksberufe/schaedlingsbekaempfer-gehalt",
+    "permanent": true
+  },
+  {
+    "source": "/schaedlingsbekaempfer",
+    "destination": "/handwerksberufe/schaedlingsbekaempfer",
+    "permanent": true
+  },
+  {
     "source": "/schornsteinfeger-ausbildung",
     "destination": "/handwerksberufe/schornsteinfeger-ausbildung",
     "permanent": true
@@ -352,6 +442,21 @@
   {
     "source": "/schornsteinfeger",
     "destination": "/handwerksberufe/schornsteinfeger",
+    "permanent": true
+  },
+  {
+    "source": "/schuhmacher-ausbildung",
+    "destination": "/handwerksberufe/schuhmacher-ausbildung",
+    "permanent": true
+  },
+  {
+    "source": "/schuhmacher-gehalt",
+    "destination": "/handwerksberufe/schuhmacher-gehalt",
+    "permanent": true
+  },
+  {
+    "source": "/schuhmacher",
+    "destination": "/handwerksberufe/schuhmacher",
     "permanent": true
   },
   {
@@ -420,6 +525,21 @@
     "permanent": true
   },
   {
+    "source": "/taetowierer-ausbildung",
+    "destination": "/handwerksberufe/taetowierer-ausbildung",
+    "permanent": true
+  },
+  {
+    "source": "/taetowierer-gehalt",
+    "destination": "/handwerksberufe/taetowierer-gehalt",
+    "permanent": true
+  },
+  {
+    "source": "/taetowierer",
+    "destination": "/handwerksberufe/taetowierer",
+    "permanent": true
+  },
+  {
     "source": "/tischler-ausbildung",
     "destination": "/handwerksberufe/tischler-ausbildung",
     "permanent": true
@@ -437,6 +557,21 @@
   {
     "source": "/tschulique-maurermeisterin-portraet",
     "destination": "/handwerk-news/tschulique-maurermeisterin-portraet",
+    "permanent": true
+  },
+  {
+    "source": "/uhrmacher-ausbildung",
+    "destination": "/handwerksberufe/uhrmacher-ausbildung",
+    "permanent": true
+  },
+  {
+    "source": "/uhrmacher-gehalt",
+    "destination": "/handwerksberufe/uhrmacher-gehalt",
+    "permanent": true
+  },
+  {
+    "source": "/uhrmacher",
+    "destination": "/handwerksberufe/uhrmacher",
     "permanent": true
   },
   {
@@ -477,6 +612,21 @@
   {
     "source": "/zimmermann",
     "destination": "/handwerksberufe/zimmermann",
+    "permanent": true
+  },
+  {
+    "source": "/zweiradmechatroniker-ausbildung",
+    "destination": "/handwerksberufe/zweiradmechatroniker-ausbildung",
+    "permanent": true
+  },
+  {
+    "source": "/zweiradmechatroniker-gehalt",
+    "destination": "/handwerksberufe/zweiradmechatroniker-gehalt",
+    "permanent": true
+  },
+  {
+    "source": "/zweiradmechatroniker",
+    "destination": "/handwerksberufe/zweiradmechatroniker",
     "permanent": true
   }
 ]
