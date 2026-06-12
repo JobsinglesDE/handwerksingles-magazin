@@ -62,8 +62,8 @@ export function Footer() {
                 <Link href="/singles-partnersuche" className="text-sm text-white/75 hover:text-white transition-colors">
                   Partnersuche-Hub
                 </Link>
-                <Link href="/berufsbilder" className="text-sm text-white/75 hover:text-white transition-colors">
-                  Berufsbilder Handwerk
+                <Link href="/handwerksberufe" className="text-sm text-white/75 hover:text-white transition-colors">
+                  Handwerksberufe
                 </Link>
                 <Link href="/handwerk-news" className="text-sm text-white/75 hover:text-white transition-colors">
                   Handwerk-News

@@ -29,7 +29,12 @@ const nextConfig: NextConfig = {
     qualities: [60, 75, 85],
   },
   async redirects() {
-    return [...generatedRedirects];
+    return [
+      // Sektions-Umbenennung 2026-06-12: /berufsbilder → /handwerksberufe
+      { source: '/berufsbilder', destination: '/handwerksberufe', permanent: true },
+      { source: '/berufsbilder/:slug', destination: '/handwerksberufe/:slug', permanent: true },
+      ...generatedRedirects,
+    ];
   },
   async headers() {
     const securityHeaders = [

@@ -24,7 +24,7 @@ export function BerufIntentNav({
     .filter((c) => availableSlugs.includes(c.slug))
     .map((c) => ({
       label: c.label,
-      href: `/berufsbilder/${c.slug}`,
+      href: `/handwerksberufe/${c.slug}`,
       active: c.slug === activeSlug,
     }));
 

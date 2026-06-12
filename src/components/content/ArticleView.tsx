@@ -49,7 +49,7 @@ function extractH2s(content: any): { label: string; id: string }[] {
 // Sektion → Breadcrumb-Label + Hub-Href
 function sectionCrumb(category: string): { label: string; href: string } {
   if (category === 'handwerk-news') return { label: 'Handwerk-News', href: '/handwerk-news' };
-  if (category === 'berufsbilder') return { label: 'Berufsbilder', href: '/berufsbilder' };
+  if (category === 'handwerksberufe') return { label: 'Handwerksberufe', href: '/handwerksberufe' };
   return { label: 'Singles & Partnersuche', href: `/${SINGLE_HUB.slug}` };
 }
 
@@ -148,12 +148,12 @@ export default async function ArticleView({ slug }: { slug: string }) {
           { label: article.title, href: canonicalPath },
         ]} />
 
-        {article.category === 'berufsbilder' && article.beruf && (
+        {article.category === 'handwerksberufe' && article.beruf && (
           <BerufIntentNav
             beruf={article.beruf}
             activeSlug={slug}
             availableSlugs={allArticles
-              .filter((a) => a.entry.category === 'berufsbilder' && a.entry.status === 'published')
+              .filter((a) => a.entry.category === 'handwerksberufe' && a.entry.status === 'published')
               .map((a) => a.slug)}
           />
         )}
@@ -234,7 +234,7 @@ export default async function ArticleView({ slug }: { slug: string }) {
         )}
 
         {/* Berufsbild Backlink — Gehalt/Ausbildung-Spokes → Beruf-Hub, Beruf-Hubs → Übersicht */}
-        {article.category === 'berufsbilder' && (
+        {article.category === 'handwerksberufe' && (
           <BerufsbildBacklinkCard
             beruf={article.beruf || undefined}
             isHub={article.type === 'berufsbild'}

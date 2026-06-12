@@ -19,7 +19,7 @@ export async function GET() {
   lines.push('# Handwerksingles Magazin — handwerksingles.de');
   lines.push('');
   lines.push('Dating-Magazin für Singles im Handwerk: Elektriker, Dachdecker, Tischler, Zimmermann und Maurer.');
-  lines.push('Partnersuche-Tipps, Berufsbilder-Guides für jeden Handwerksbereich, Erfolgsgeschichten und');
+  lines.push('Partnersuche-Tipps, Handwerksberufe-Guides für jeden Handwerksbereich, Erfolgsgeschichten und');
   lines.push('regionale Handwerkskammern nach Bundesland.');
   lines.push('');
   lines.push('## Sitemaps');

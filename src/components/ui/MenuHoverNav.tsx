@@ -19,7 +19,7 @@ const NAV_ITEMS: NavItem[] = [
     href: '/handwerk-news',
     dropdown: [
       { label: 'Promi-Handwerker', href: '/handwerker', description: 'Übersicht: tschulique, Dachdeckerin Chiara, Jonas Winkler & Gipser Felix' },
-      { label: 'Berufsbilder', href: '/berufsbilder', description: 'Übersicht: Elektriker, KFZ, Dachdecker, Tischler, Zimmermann & Maurer' },
+      { label: 'Handwerksberufe', href: '/handwerksberufe', description: '16 Berufe: Elektriker, Friseur, Schornsteinfeger, Fliesenleger & Co.' },
     ],
   },
   {

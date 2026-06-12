@@ -3,15 +3,15 @@ import { HeartButton } from '@/components/ui/HeartButton';
 import { BERUF_HUBS } from '@/lib/hubs';
 
 const OVERVIEW = {
-  heading: 'Alle Berufsbilder im Handwerk',
+  heading: 'Alle Handwerksberufe im Überblick',
   text: 'Elektriker, KFZ-Mechatroniker, Dachdecker, Tischler, Zimmermann und Maurer: Ausbildung, Gehalt und Karriere im Überblick.',
-  href: '/berufsbilder',
-  cta: 'Zur Berufsbilder-Übersicht →',
+  href: '/handwerksberufe',
+  cta: 'Zur Handwerksberufe-Übersicht →',
 };
 
 /**
- * Backlink Spoke → Beruf-Hub (z.B. elektriker-gehalt → /berufsbilder/elektriker).
- * Ohne beruf (oder Hub-Artikel selbst) → Link auf die /berufsbilder-Übersicht.
+ * Backlink Spoke → Beruf-Hub (z.B. elektriker-gehalt → /handwerksberufe/elektriker).
+ * Ohne beruf (oder Hub-Artikel selbst) → Link auf die /handwerksberufe-Übersicht.
  */
 export function BerufsbildBacklinkCard({ beruf, isHub }: { beruf?: string; isHub?: boolean }) {
   const hub = !isHub && beruf ? BERUF_HUBS[beruf] : undefined;

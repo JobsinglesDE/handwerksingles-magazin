@@ -6,7 +6,7 @@ export const dynamicParams = false;
 export async function generateStaticParams() {
   const articles = await reader.collections.articles.all();
   return articles
-    .filter((a) => a.entry.category === 'berufsbilder')
+    .filter((a) => a.entry.category === 'handwerksberufe')
     .map((a) => ({ slug: a.slug }));
 }
 

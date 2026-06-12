@@ -18,7 +18,7 @@ for (const f of readdirSync(DIR).filter((x) => x.endsWith('.mdoc'))) {
   const cat = field(s, 'category');
   let dest;
   if (cat === 'handwerk-news') dest = `/handwerk-news/${slug}`;
-  else if (cat === 'berufsbilder') dest = `/berufsbilder/${slug}`;
+  else if (cat === 'handwerksberufe') dest = `/handwerksberufe/${slug}`;
   else dest = `/singles-partnersuche/${slug}`;
   if (dest !== `/${slug}`) out.push({ source: `/${slug}`, destination: dest, permanent: true });
 }

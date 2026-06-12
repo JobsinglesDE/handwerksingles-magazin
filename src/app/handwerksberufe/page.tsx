@@ -10,8 +10,8 @@ import { Breadcrumbs } from '@/components/seo/Breadcrumbs';
 import { JsonLd, collectionPageJsonLd, breadcrumbJsonLd } from '@/components/seo/JsonLd';
 import { SECTION_HUBS } from '@/lib/hubs';
 
-const HUB_URL = 'https://handwerksingles.de/magazin/berufsbilder';
-const HUB = SECTION_HUBS['berufsbilder'];
+const HUB_URL = 'https://handwerksingles.de/magazin/handwerksberufe';
+const HUB = SECTION_HUBS['handwerksberufe'];
 
 export const metadata = {
   title: HUB.seoTitle,
@@ -35,7 +35,6 @@ const HUB_COLORS = [
 
 type BerufSection = {
   beruf: string;
-  letter: string;
   tocLabel: string;
   heading: string;
   gehalt: string;
@@ -46,7 +45,6 @@ type BerufSection = {
 const SECTIONS: BerufSection[] = [
   {
     beruf: 'dachdecker',
-    letter: 'A',
     tocLabel: 'Dachdecker: Ausbildung & Höhenluft',
     heading: 'Dachdecker: Ausbildung, Gehalt & Leben in der Höhe',
     gehalt: '2.500–4.000 €',
@@ -56,7 +54,6 @@ const SECTIONS: BerufSection[] = [
   },
   {
     beruf: 'elektriker',
-    letter: 'B',
     tocLabel: 'Elektriker: Ausbildung, Gehalt & Karriere',
     heading: 'Elektriker: Ausbildung, Gehalt & Karriere',
     gehalt: '2.500–4.500 €',
@@ -66,7 +63,6 @@ const SECTIONS: BerufSection[] = [
   },
   {
     beruf: 'kfz-mechatroniker',
-    letter: 'C',
     tocLabel: 'KFZ-Mechatroniker: Werkstatt & Gehalt',
     heading: 'KFZ-Mechatroniker: Werkstatt, Diagnose & Gehalt',
     gehalt: '2.400–4.200 €',
@@ -76,7 +72,6 @@ const SECTIONS: BerufSection[] = [
   },
   {
     beruf: 'maurer',
-    letter: 'D',
     tocLabel: 'Maurer: Ausbildung & Alltag auf dem Bau',
     heading: 'Maurer: Ausbildung, Gehalt & Alltag auf dem Bau',
     gehalt: '2.400–4.200 €',
@@ -86,7 +81,6 @@ const SECTIONS: BerufSection[] = [
   },
   {
     beruf: 'tischler',
-    letter: 'E',
     tocLabel: 'Tischler & Schreiner: Holzhandwerk',
     heading: 'Tischler & Schreiner: Ausbildung, Gehalt & Holzhandwerk',
     gehalt: '2.300–4.000 €',
@@ -96,7 +90,6 @@ const SECTIONS: BerufSection[] = [
   },
   {
     beruf: 'zimmermann',
-    letter: 'F',
     tocLabel: 'Zimmermann: Ausbildung, Gehalt & Walz',
     heading: 'Zimmermann: Ausbildung, Gehalt & die Walz',
     gehalt: '2.400–4.500 €',
@@ -104,12 +97,107 @@ const SECTIONS: BerufSection[] = [
       'Holzbau boomt — vom Dachstuhl bis zum mehrgeschossigen Holzhaus. Zimmerleute verdienen 2.400 bis 4.500 Euro, und die traditionelle Walz nach der Gesellenprüfung ist bis heute gelebte Praxis: drei Jahre und ein Tag auf Wanderschaft.',
     ],
   },
+  // --- Welle 2 (2026-06-12) ---
+  {
+    beruf: 'anlagenmechaniker-shk',
+    tocLabel: 'Anlagenmechaniker SHK: Wärmepumpe & Bad',
+    heading: 'Anlagenmechaniker SHK: Ausbildung, Gehalt & Wärmepumpen-Boom',
+    gehalt: '3.150–4.300 €',
+    paragraphs: [
+      'Anlagenmechaniker SHK — umgangssprachlich Klempner oder Heizungsbauer — sind die Fachkräfte der Wärmewende. Der Median liegt laut Entgeltatlas bei 3.709 Euro, die Ausbildung dauert 3,5 Jahre, und der Wärmepumpen-Boom sorgt für volle Auftragsbücher: Bundesweit fehlen über 12.000 SHK-Fachkräfte.',
+    ],
+  },
+  {
+    beruf: 'fliesenleger',
+    tocLabel: 'Fliesenleger: Gehalt & Meisterpflicht',
+    heading: 'Fliesenleger: Ausbildung, Gehalt & Meisterpflicht',
+    gehalt: '3.300–4.800 €',
+    paragraphs: [
+      'Fliesen-, Platten- und Mosaikleger verdienen laut Entgeltatlas zwischen 3.314 und 4.844 Euro. Der Bau-Tarif setzt ab April 2026 bei 26,79 Euro pro Stunde an, und seit 2020 gilt wieder die Meisterpflicht — gut für Qualität und Preise.',
+    ],
+  },
+  {
+    beruf: 'friseur',
+    tocLabel: 'Friseur: Ausbildung, Gehalt & Salon',
+    heading: 'Friseur: Ausbildung, Gehalt & Salon-Alltag',
+    gehalt: '2.200–2.600 €',
+    paragraphs: [
+      'Friseurinnen und Friseure verdienen zwischen 2.200 und 2.600 Euro — der Branchen-Mindestlohn von 13,90 Euro pro Stunde setzt die Untergrenze. Die dreijährige Ausbildung startet bei 724 Euro Vergütung, mit Meisterbrief und Spezialisierung sind 3.000 Euro und mehr drin.',
+    ],
+  },
+  {
+    beruf: 'geruestbauer',
+    tocLabel: 'Gerüstbauer: Höhenarbeit & Tarif',
+    heading: 'Gerüstbauer: Ausbildung, Gehalt & Höhenarbeit',
+    gehalt: '2.900–4.100 €',
+    paragraphs: [
+      'Gerüstbauer arbeiten dort, wo alle anderen Gewerke erst hinkommen müssen. Der Entgeltatlas weist 3.454 Euro Median aus, die Tariferhöhung von 7,5 Prozent ab November 2025 schiebt das Richtung 3.700 bis 3.800 Euro — plus allgemeinverbindlicher Mindestlohn von 14,35 Euro ab 2026.',
+    ],
+  },
+  {
+    beruf: 'maler-lackierer',
+    tocLabel: 'Maler & Lackierer: Beruf & Ausbildung',
+    heading: 'Maler & Lackierer: Ausbildung, Gehalt & Fachrichtungen',
+    gehalt: '2.850–3.550 €',
+    paragraphs: [
+      'Maler und Lackierer verdienen laut Entgeltatlas im Median 3.146 Euro. Drei Fachrichtungen, drei Jahre Ausbildung — und die energetische Sanierung mit Wärmedämmverbundsystemen macht den Beruf zum Wachstumsfeld. Der Ecklohn knackt ab Juni 2026 die 20-Euro-Marke.',
+    ],
+  },
+  {
+    beruf: 'metallbauer',
+    tocLabel: 'Metallbauer: Konstruktion & Gestaltung',
+    heading: 'Metallbauer: Ausbildung, Gehalt & Fachrichtungen',
+    gehalt: '3.050–4.300 €',
+    paragraphs: [
+      'Metallbauer — früher Schlosser genannt — arbeiten in drei Fachrichtungen: Konstruktionstechnik, Metallgestaltung und Nutzfahrzeugbau. Der Median liegt laut Entgeltatlas bei 3.460 Euro, die Ausbildung dauert 3,5 Jahre, mit Meisterbrief sind 4.500 bis 5.000 Euro realistisch.',
+    ],
+  },
+  {
+    beruf: 'schornsteinfeger',
+    tocLabel: 'Schornsteinfeger: Tarif & Kehrbezirk',
+    heading: 'Schornsteinfeger: Ausbildung, Gehalt & Kehrbezirk',
+    gehalt: '3.380–4.050 €',
+    paragraphs: [
+      'Schornsteinfeger verdienen nach Bundestarifvertrag zwischen 3.378 und 4.047 Euro — plus eine Jahressonderzahlung in Höhe eines vollen Monatsgehalts. Heute geht es um Energieberatung und Feuerstättenschau statt nur Kehren, und der eigene Kehrbezirk ist ein Alleinstellungsmerkmal im Handwerk.',
+    ],
+  },
+  {
+    beruf: 'schweisser',
+    tocLabel: 'Schweißer: Verfahren, DVS & Verdienst',
+    heading: 'Schweißer: Qualifikation, Gehalt & Verfahren',
+    gehalt: '3.100–4.450 €',
+    paragraphs: [
+      'Schweißer ist kein klassischer Ausbildungsberuf — der Einstieg läuft über DVS-Lehrgänge und die Schweißerprüfung nach ISO 9606-1. Der Median liegt bei rund 3.700 Euro, Schweißfachleute kommen auf 4.761 Euro, und auf Montage im Rohrleitungs- oder Offshore-Bereich sind bis zu 7.000 Euro möglich.',
+    ],
+  },
+  {
+    beruf: 'steinmetz',
+    tocLabel: 'Steinmetz: Naturstein & Denkmalpflege',
+    heading: 'Steinmetz: Ausbildung, Gehalt & Denkmalpflege',
+    gehalt: '2.870–3.780 €',
+    paragraphs: [
+      'Steinmetze bearbeiten Naturstein für Grabmale, Fassaden und Restaurierungen. Der Entgeltatlas weist 3.295 Euro Median aus, die dreijährige Ausbildung wird mit 945 bis 1.195 Euro vergütet — und Denkmalpflege-Spezialisten sind gefragte Leute.',
+    ],
+  },
+  {
+    beruf: 'stuckateur',
+    tocLabel: 'Stuckateur: Stuck, Putz & Fassade',
+    heading: 'Stuckateur: Ausbildung, Gehalt & Ausbau',
+    gehalt: '2.600–3.700 €',
+    paragraphs: [
+      'Stuckateure beherrschen das Spektrum von historischer Stuck-Restaurierung bis zur Fassadendämmung. Das Gehalt liegt zwischen 2.600 und 3.700 Euro — Baden-Württemberg führt mit 3.658 Euro —, und die energetische Sanierung macht das Ausbau-Gewerk zum Zukunftsfeld.',
+    ],
+  },
 ];
 
-export default async function BerufsbilderHub() {
+// Alphabetisch sortiert (Tommy-Regel 2026-06-12), Sektions-Buchstaben dynamisch
+const SORTED_SECTIONS = [...SECTIONS].sort((a, b) => a.heading.localeCompare(b.heading, 'de'));
+const letterOf = (i: number) => String.fromCharCode(65 + i);
+
+export default async function HandwerksberufeHub() {
   const articles = await reader.collections.articles.all();
   const berufArticles = articles.filter(
-    (a) => a.entry.status === 'published' && a.entry.category === 'berufsbilder'
+    (a) => a.entry.status === 'published' && a.entry.category === 'handwerksberufe'
   );
   const byBeruf = (beruf: string) =>
     berufArticles
@@ -117,8 +205,8 @@ export default async function BerufsbilderHub() {
       .sort((a, b) => (a.entry.type === 'berufsbild' ? -1 : b.entry.type === 'berufsbild' ? 1 : 0));
 
   const tocItems = [
-    ...SECTIONS.map((s) => ({ label: `${s.letter}. ${s.tocLabel}`, id: s.beruf })),
-    { label: 'Gehalt im Handwerk: 6 Berufe im Vergleich', id: 'gehaltsvergleich' },
+    ...SORTED_SECTIONS.map((s, i) => ({ label: `${letterOf(i)}. ${s.tocLabel}`, id: s.beruf })),
+    { label: `Gehalt im Handwerk: ${SECTIONS.length} Berufe im Vergleich`, id: 'gehaltsvergleich' },
   ];
 
   const itemList = berufArticles.map((a) => ({
@@ -130,7 +218,7 @@ export default async function BerufsbilderHub() {
     <>
       <JsonLd
         data={collectionPageJsonLd({
-          name: 'Handwerksberufe: Ausbildung, Gehalt & Karriere — alle Berufsbilder',
+          name: 'Handwerksberufe: Ausbildung, Gehalt & Karriere — alle Berufe im Überblick',
           description: HUB.seoDescription,
           url: HUB_URL,
           items: itemList,
@@ -140,14 +228,14 @@ export default async function BerufsbilderHub() {
         data={breadcrumbJsonLd([
           { name: 'Magazin', url: 'https://handwerksingles.de/magazin' },
           { name: 'Handwerk-News', url: 'https://handwerksingles.de/magazin/handwerk-news' },
-          { name: 'Berufsbilder', url: HUB_URL },
+          { name: 'Handwerksberufe', url: HUB_URL },
         ])}
       />
 
       <PillarHero
         title="Handwerksberufe"
         texts={[
-          '6 Handwerksberufe',
+          `${SECTIONS.length} Handwerksberufe`,
           'Elektriker · Dachdecker · Tischler',
           'Ausbildung, Gehalt, Realität',
           'Bau · Holz · Technik',
@@ -159,7 +247,7 @@ export default async function BerufsbilderHub() {
       <div className="max-w-6xl mx-auto px-6">
         <Breadcrumbs items={[
           { label: 'Handwerk-News', href: '/handwerk-news' },
-          { label: 'Berufsbilder', href: '/berufsbilder' },
+          { label: 'Handwerksberufe', href: '/handwerksberufe' },
         ]} />
       </div>
 
@@ -179,14 +267,14 @@ export default async function BerufsbilderHub() {
         </section>
       </ScrollReveal>
 
-      {/* Beruf-Sektionen A–F */}
-      {SECTIONS.map((section) => {
+      {/* Beruf-Sektionen, alphabetisch */}
+      {SORTED_SECTIONS.map((section, i) => {
         const sectionArticles = byBeruf(section.beruf);
         return (
           <ScrollReveal key={section.beruf}>
             <section id={section.beruf} className="max-w-6xl mx-auto px-6 py-10 scroll-mt-24">
               <h2 className="text-2xl md:text-3xl font-bold mb-6 pb-2 border-b-2 border-brand-orange">
-                {section.letter}. {section.heading}
+                {letterOf(i)}. {section.heading}
               </h2>
               <div className="max-w-3xl">
                 {section.paragraphs.map((p, i) => (
@@ -225,17 +313,17 @@ export default async function BerufsbilderHub() {
       <ScrollReveal>
         <section id="gehaltsvergleich" className="max-w-3xl mx-auto px-6 py-10 scroll-mt-24">
           <h2 className="text-2xl md:text-3xl font-bold mb-6 pb-2 border-b-2 border-brand-orange">
-            Gehalt im Handwerk: 6 Berufe im Vergleich
+            Gehalt im Handwerk: {SECTIONS.length} Berufe im Vergleich
           </h2>
           <p className="text-foreground/80 leading-relaxed mb-6 max-w-3xl">
             Brutto-Monatsgehälter für Gesellen, je nach Region, Berufserfahrung und Betrieb. Mit Meistertitel
             oder eigener Firma liegen die Werte deutlich darüber.
           </p>
           <dl className="divide-y divide-foreground/10 rounded-2xl bg-surface border border-foreground/10 overflow-hidden">
-            {SECTIONS.map((s) => (
+            {SORTED_SECTIONS.map((s) => (
               <div key={s.beruf} className="flex justify-between gap-4 px-5 py-3 text-sm">
                 <dt className="text-foreground/60">
-                  <Link href={`/berufsbilder/${s.beruf}`} className="hover:text-brand-orange transition-colors">
+                  <Link href={`/handwerksberufe/${s.beruf}`} className="hover:text-brand-orange transition-colors">
                     {s.heading.split(':')[0]}
                   </Link>
                 </dt>

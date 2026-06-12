@@ -1,7 +1,332 @@
 [
   {
-    "source": "/singles-partnersuche/der-ultimative-guide-zur-partnersuche-fuer-handwerker",
-    "destination": "/singles-partnersuche",
+    "source": "/anlagenmechaniker-shk-ausbildung",
+    "destination": "/handwerksberufe/anlagenmechaniker-shk-ausbildung",
+    "permanent": true
+  },
+  {
+    "source": "/anlagenmechaniker-shk-gehalt",
+    "destination": "/handwerksberufe/anlagenmechaniker-shk-gehalt",
+    "permanent": true
+  },
+  {
+    "source": "/anlagenmechaniker-shk",
+    "destination": "/handwerksberufe/anlagenmechaniker-shk",
+    "permanent": true
+  },
+  {
+    "source": "/azubi-dating-handwerk",
+    "destination": "/singles-partnersuche/azubi-dating-handwerk",
+    "permanent": true
+  },
+  {
+    "source": "/dachdecker-ausbildung",
+    "destination": "/handwerksberufe/dachdecker-ausbildung",
+    "permanent": true
+  },
+  {
+    "source": "/dachdecker-gehalt",
+    "destination": "/handwerksberufe/dachdecker-gehalt",
+    "permanent": true
+  },
+  {
+    "source": "/dachdecker",
+    "destination": "/handwerksberufe/dachdecker",
+    "permanent": true
+  },
+  {
+    "source": "/dachdeckerin-chiara-portraet",
+    "destination": "/handwerk-news/dachdeckerin-chiara-portraet",
+    "permanent": true
+  },
+  {
+    "source": "/dating-apps-handwerker-test",
+    "destination": "/singles-partnersuche/dating-apps-handwerker-test",
+    "permanent": true
+  },
+  {
+    "source": "/der-ultimative-guide-zur-partnersuche-fuer-handwerker",
+    "destination": "/singles-partnersuche/der-ultimative-guide-zur-partnersuche-fuer-handwerker",
+    "permanent": true
+  },
+  {
+    "source": "/elektriker-ausbildung",
+    "destination": "/handwerksberufe/elektriker-ausbildung",
+    "permanent": true
+  },
+  {
+    "source": "/elektriker-gehalt",
+    "destination": "/handwerksberufe/elektriker-gehalt",
+    "permanent": true
+  },
+  {
+    "source": "/elektriker",
+    "destination": "/handwerksberufe/elektriker",
+    "permanent": true
+  },
+  {
+    "source": "/feierabend-dating-handwerker",
+    "destination": "/singles-partnersuche/feierabend-dating-handwerker",
+    "permanent": true
+  },
+  {
+    "source": "/fliesenleger-ausbildung",
+    "destination": "/handwerksberufe/fliesenleger-ausbildung",
+    "permanent": true
+  },
+  {
+    "source": "/fliesenleger-gehalt",
+    "destination": "/handwerksberufe/fliesenleger-gehalt",
+    "permanent": true
+  },
+  {
+    "source": "/fliesenleger",
+    "destination": "/handwerksberufe/fliesenleger",
+    "permanent": true
+  },
+  {
+    "source": "/frau-sucht-handwerker",
+    "destination": "/singles-partnersuche/frau-sucht-handwerker",
+    "permanent": true
+  },
+  {
+    "source": "/frauen-im-handwerk",
+    "destination": "/singles-partnersuche/frauen-im-handwerk",
+    "permanent": true
+  },
+  {
+    "source": "/friseur-ausbildung",
+    "destination": "/handwerksberufe/friseur-ausbildung",
+    "permanent": true
+  },
+  {
+    "source": "/friseur-gehalt",
+    "destination": "/handwerksberufe/friseur-gehalt",
+    "permanent": true
+  },
+  {
+    "source": "/friseur",
+    "destination": "/handwerksberufe/friseur",
+    "permanent": true
+  },
+  {
+    "source": "/geruestbauer-ausbildung",
+    "destination": "/handwerksberufe/geruestbauer-ausbildung",
+    "permanent": true
+  },
+  {
+    "source": "/geruestbauer-gehalt",
+    "destination": "/handwerksberufe/geruestbauer-gehalt",
+    "permanent": true
+  },
+  {
+    "source": "/geruestbauer",
+    "destination": "/handwerksberufe/geruestbauer",
+    "permanent": true
+  },
+  {
+    "source": "/gipser-felix-baufluencer-portraet",
+    "destination": "/handwerk-news/gipser-felix-baufluencer-portraet",
+    "permanent": true
+  },
+  {
+    "source": "/handwerker-klischees-dating",
+    "destination": "/singles-partnersuche/handwerker-klischees-dating",
+    "permanent": true
+  },
+  {
+    "source": "/handwerkerin-kennenlernen",
+    "destination": "/singles-partnersuche/handwerkerin-kennenlernen",
+    "permanent": true
+  },
+  {
+    "source": "/handwerkerin-sucht-mann",
+    "destination": "/singles-partnersuche/handwerkerin-sucht-mann",
+    "permanent": true
+  },
+  {
+    "source": "/jonas-winkler-tischler-portraet",
+    "destination": "/handwerk-news/jonas-winkler-tischler-portraet",
+    "permanent": true
+  },
+  {
+    "source": "/kfz-mechatroniker-ausbildung",
+    "destination": "/handwerksberufe/kfz-mechatroniker-ausbildung",
+    "permanent": true
+  },
+  {
+    "source": "/kfz-mechatroniker-gehalt",
+    "destination": "/handwerksberufe/kfz-mechatroniker-gehalt",
+    "permanent": true
+  },
+  {
+    "source": "/kfz-mechatroniker",
+    "destination": "/handwerksberufe/kfz-mechatroniker",
+    "permanent": true
+  },
+  {
+    "source": "/maler-lackierer-ausbildung",
+    "destination": "/handwerksberufe/maler-lackierer-ausbildung",
+    "permanent": true
+  },
+  {
+    "source": "/maler-lackierer-gehalt",
+    "destination": "/handwerksberufe/maler-lackierer-gehalt",
+    "permanent": true
+  },
+  {
+    "source": "/maler-lackierer",
+    "destination": "/handwerksberufe/maler-lackierer",
+    "permanent": true
+  },
+  {
+    "source": "/maurer-ausbildung",
+    "destination": "/handwerksberufe/maurer-ausbildung",
+    "permanent": true
+  },
+  {
+    "source": "/maurer-gehalt",
+    "destination": "/handwerksberufe/maurer-gehalt",
+    "permanent": true
+  },
+  {
+    "source": "/maurer",
+    "destination": "/handwerksberufe/maurer",
+    "permanent": true
+  },
+  {
+    "source": "/meister-familienbetrieb-partnersuche",
+    "destination": "/singles-partnersuche/meister-familienbetrieb-partnersuche",
+    "permanent": true
+  },
+  {
+    "source": "/metallbauer-ausbildung",
+    "destination": "/handwerksberufe/metallbauer-ausbildung",
+    "permanent": true
+  },
+  {
+    "source": "/metallbauer-gehalt",
+    "destination": "/handwerksberufe/metallbauer-gehalt",
+    "permanent": true
+  },
+  {
+    "source": "/metallbauer",
+    "destination": "/handwerksberufe/metallbauer",
+    "permanent": true
+  },
+  {
+    "source": "/saisonale-dating-ideen-handwerk",
+    "destination": "/singles-partnersuche/saisonale-dating-ideen-handwerk",
+    "permanent": true
+  },
+  {
+    "source": "/schornsteinfeger-ausbildung",
+    "destination": "/handwerksberufe/schornsteinfeger-ausbildung",
+    "permanent": true
+  },
+  {
+    "source": "/schornsteinfeger-gehalt",
+    "destination": "/handwerksberufe/schornsteinfeger-gehalt",
+    "permanent": true
+  },
+  {
+    "source": "/schornsteinfeger",
+    "destination": "/handwerksberufe/schornsteinfeger",
+    "permanent": true
+  },
+  {
+    "source": "/schweisser-ausbildung",
+    "destination": "/handwerksberufe/schweisser-ausbildung",
+    "permanent": true
+  },
+  {
+    "source": "/schweisser-gehalt",
+    "destination": "/handwerksberufe/schweisser-gehalt",
+    "permanent": true
+  },
+  {
+    "source": "/schweisser",
+    "destination": "/handwerksberufe/schweisser",
+    "permanent": true
+  },
+  {
+    "source": "/selbststaendig-handwerk-beziehung",
+    "destination": "/singles-partnersuche/selbststaendig-handwerk-beziehung",
+    "permanent": true
+  },
+  {
+    "source": "/steinmetz-ausbildung",
+    "destination": "/handwerksberufe/steinmetz-ausbildung",
+    "permanent": true
+  },
+  {
+    "source": "/steinmetz-gehalt",
+    "destination": "/handwerksberufe/steinmetz-gehalt",
+    "permanent": true
+  },
+  {
+    "source": "/steinmetz",
+    "destination": "/handwerksberufe/steinmetz",
+    "permanent": true
+  },
+  {
+    "source": "/stuckateur-ausbildung",
+    "destination": "/handwerksberufe/stuckateur-ausbildung",
+    "permanent": true
+  },
+  {
+    "source": "/stuckateur-gehalt",
+    "destination": "/handwerksberufe/stuckateur-gehalt",
+    "permanent": true
+  },
+  {
+    "source": "/stuckateur",
+    "destination": "/handwerksberufe/stuckateur",
+    "permanent": true
+  },
+  {
+    "source": "/tischler-ausbildung",
+    "destination": "/handwerksberufe/tischler-ausbildung",
+    "permanent": true
+  },
+  {
+    "source": "/tischler-gehalt",
+    "destination": "/handwerksberufe/tischler-gehalt",
+    "permanent": true
+  },
+  {
+    "source": "/tischler",
+    "destination": "/handwerksberufe/tischler",
+    "permanent": true
+  },
+  {
+    "source": "/tschulique-maurermeisterin-portraet",
+    "destination": "/handwerk-news/tschulique-maurermeisterin-portraet",
+    "permanent": true
+  },
+  {
+    "source": "/warum-handwerker-gute-partner-sind",
+    "destination": "/singles-partnersuche/warum-handwerker-gute-partner-sind",
+    "permanent": true
+  },
+  {
+    "source": "/wochenendbeziehung-montage",
+    "destination": "/singles-partnersuche/wochenendbeziehung-montage",
+    "permanent": true
+  },
+  {
+    "source": "/zimmermann-ausbildung",
+    "destination": "/handwerksberufe/zimmermann-ausbildung",
+    "permanent": true
+  },
+  {
+    "source": "/zimmermann-gehalt",
+    "destination": "/handwerksberufe/zimmermann-gehalt",
+    "permanent": true
+  },
+  {
+    "source": "/zimmermann",
+    "destination": "/handwerksberufe/zimmermann",
     "permanent": true
   }
 ]

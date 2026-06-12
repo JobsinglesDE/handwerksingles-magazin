@@ -45,9 +45,9 @@ const CLUSTERS = [
     icon: '🏛️',
   },
   {
-    title: 'Berufsbilder Handwerk',
+    title: 'Handwerksberufe',
     excerpt: 'Elektriker, KFZ-Mechatroniker, Dachdecker, Tischler, Zimmermann, Maurer — was der Beruf wirklich heißt, mit ehrlichem Blick auf Ausbildung und Alltag.',
-    href: '/berufsbilder',
+    href: '/handwerksberufe',
     icon: '🪚',
   },
   {
@@ -65,7 +65,7 @@ export default async function HandwerkNewsHub() {
     .filter((a) => a.entry.status === 'published')
     .filter((a) => {
       const cat = a.entry.category;
-      return cat === 'handwerk-news' || cat === 'berufsbilder' || a.entry.type === 'pillar' || a.entry.type === 'berufsbild' || a.entry.type === 'news';
+      return cat === 'handwerk-news' || cat === 'handwerksberufe' || a.entry.type === 'pillar' || a.entry.type === 'berufsbild' || a.entry.type === 'news';
     })
     .sort((a, b) => {
       const da = a.entry.publishedAt || '';
@@ -84,7 +84,7 @@ export default async function HandwerkNewsHub() {
       <JsonLd
         data={collectionPageJsonLd({
           name: 'Handwerk-News & Craftfluencer — Magazin-Hub',
-          description: 'Craftfluencer, Handwerkskammern und Berufsbilder-Hubs auf Handwerksingles.',
+          description: 'Craftfluencer, Handwerkskammern und Handwerksberufe-Hubs auf Handwerksingles.',
           url: HUB_URL,
           items: clusterItems,
         })}
@@ -101,10 +101,10 @@ export default async function HandwerkNewsHub() {
         texts={[
           'Craftfluencer im Porträt',
           'Handwerkskammern & Verbände',
-          'Berufsbilder-Hubs',
+          'Handwerksberufe-Hubs',
           'Magazin-Spur',
         ]}
-        subtitle="Craftfluencer, Handwerkskammern und Berufsbilder — alles, was die deutsche Handwerksszene gerade bewegt."
+        subtitle="Craftfluencer, Handwerkskammern und Handwerksberufe — alles, was die deutsche Handwerksszene gerade bewegt."
         colors={HUB_COLORS}
       />
 
