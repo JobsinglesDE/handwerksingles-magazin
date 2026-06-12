@@ -188,6 +188,97 @@ const SECTIONS: BerufSection[] = [
       'Stuckateure beherrschen das Spektrum von historischer Stuck-Restaurierung bis zur Fassadendämmung. Das Gehalt liegt zwischen 2.600 und 3.700 Euro — Baden-Württemberg führt mit 3.658 Euro —, und die energetische Sanierung macht das Ausbau-Gewerk zum Zukunftsfeld.',
     ],
   },
+  // --- Welle 3 (2026-06-12) ---
+  {
+    beruf: 'augenoptiker',
+    tocLabel: 'Augenoptiker: Gesundheitshandwerk',
+    heading: 'Augenoptiker: Ausbildung, Gehalt & Optometrie',
+    gehalt: '2.540–3.400 €',
+    paragraphs: [
+      'Augenoptiker vereinen Glasschliff, Refraktion und Beratung im Gesundheitshandwerk. Der Median liegt laut Entgeltatlas bei 2.931 Euro, Augenoptikermeister erzielen 4.248 Euro — und die Weiterbildung zum Optometristen öffnet zusätzliche Türen.',
+    ],
+  },
+  {
+    beruf: 'bodenleger',
+    tocLabel: 'Bodenleger: Vinyl, Teppich & Akkord',
+    heading: 'Bodenleger: Ausbildung, Gehalt & Berufsalltag',
+    gehalt: '2.540–3.430 €',
+    paragraphs: [
+      'Bodenleger verlegen elastische und textile Beläge von Vinyl bis Linoleum. Der Median liegt laut Entgeltatlas bei 2.957 Euro — und im Akkord, im Bodenlegehandwerk Standard, sind bis zu 20 Prozent Mehrverdienst über dem Stundensatz möglich.',
+    ],
+  },
+  {
+    beruf: 'gebaeudereiniger',
+    tocLabel: 'Gebäudereiniger: größtes Handwerk',
+    heading: 'Gebäudereiniger: Ausbildung, Gehalt & Karriere',
+    gehalt: '2.630–3.770 €',
+    paragraphs: [
+      'Mit rund 700.000 Beschäftigten ist die Gebäudereinigung Deutschlands beschäftigungsstärkstes Handwerk. Der Branchenmindestlohn liegt ab 2026 bei 15,00 Euro pro Stunde, Glas- und Fassadenprofis kommen auf 18,40 Euro — und der Meister auf 3.771 Euro Median.',
+    ],
+  },
+  {
+    beruf: 'glaser',
+    tocLabel: 'Glaser: Verglasung & Fassadenbau',
+    heading: 'Glaser: Ausbildung, Gehalt & Glasbau',
+    gehalt: '2.980–3.300 €',
+    paragraphs: [
+      'Glaser arbeiten an Fenstern, Fassaden und historischen Bleiverglasungen — zwei Fachrichtungen mit eigenen Gehaltsniveaus. Der Fenster- und Glasfassadenbau liegt im Median bei rund 3.300 Euro, und die energetische Sanierung mit Dreifachverglasung treibt die Nachfrage.',
+    ],
+  },
+  {
+    beruf: 'hoerakustiker',
+    tocLabel: 'Hörakustiker: Gesundheitshandwerk',
+    heading: 'Hörakustiker: Ausbildung, Gehalt & Karriere',
+    gehalt: '2.300–3.600 €',
+    paragraphs: [
+      'Hörakustiker ist ein zulassungspflichtiges Gesundheitshandwerk — die Ausbildung läuft über die Bundesberufsschule in Lübeck. Der Median liegt laut Entgeltatlas bei 2.964 Euro, mit Meisterbrief und eigener Filiale sind 3.500 bis 4.200 Euro realistisch.',
+    ],
+  },
+  {
+    beruf: 'karosseriebauer',
+    tocLabel: 'Karosseriebauer: Blech, Alu & Carbon',
+    heading: 'Karosseriebauer: Ausbildung, Gehalt & KFZ-Handwerk',
+    gehalt: '2.970–4.540 €',
+    paragraphs: [
+      'Karosserie- und Fahrzeugbaumechaniker richten Unfallschäden und arbeiten zunehmend an Alu- und Carbon-Karosserien moderner E-Autos. Der Median liegt laut Entgeltatlas bei rund 3.650 Euro, die 3,5-jährige Ausbildung vergütet 864 bis 1.192 Euro je Lehrjahr.',
+    ],
+  },
+  {
+    beruf: 'landschaftsgaertner',
+    tocLabel: 'Landschaftsgärtner: GaLaBau & Klima',
+    heading: 'Landschaftsgärtner: Ausbildung, Gehalt & GaLaBau',
+    gehalt: '2.760–3.800 €',
+    paragraphs: [
+      'Landschaftsgärtner — offiziell Gärtner der Fachrichtung Garten- und Landschaftsbau — verdienen im Median 3.256 Euro, mit Meisterbrief 4.293 Euro. Klimaanpassung, Schwammstadt und Dachbegrünung machen den GaLaBau zum Wachstumsfeld.',
+    ],
+  },
+  {
+    beruf: 'raumausstatter',
+    tocLabel: 'Raumausstatter: Boden, Polster & Wand',
+    heading: 'Raumausstatter: Ausbildung, Gehalt & Gestaltung',
+    gehalt: '2.450–3.900 €',
+    paragraphs: [
+      'Raumausstatter gestalten Wände, Böden und Polster — ein Handwerk mit echtem Kreativanteil und Schwerpunkt-Prüfung am Ende der dreijährigen Ausbildung. Der Median liegt laut Entgeltatlas bei 2.943 Euro, Meister erreichen im oberen Quartil 4.892 Euro.',
+    ],
+  },
+  {
+    beruf: 'strassenbauer',
+    tocLabel: 'Straßenbauer: Asphalt & Infrastruktur',
+    heading: 'Straßenbauer: Ausbildung, Gehalt & Infrastruktur',
+    gehalt: '3.180–3.940 €',
+    paragraphs: [
+      'Straßenbauer bauen das Fundament, auf dem Deutschland rollt. Der Median liegt laut Entgeltatlas bei 3.539 Euro, und die über 52 Milliarden Euro Bundes-Investitionen in die Verkehrsinfrastruktur bis 2029 machen den Beruf zum Job-Garanten.',
+    ],
+  },
+  {
+    beruf: 'zahntechniker',
+    tocLabel: 'Zahntechniker: Dentallabor & CAD/CAM',
+    heading: 'Zahntechniker: Ausbildung, Gehalt & Dentallabor',
+    gehalt: '3.110–4.250 €',
+    paragraphs: [
+      'Zahntechniker verbinden filigrane Handarbeit mit CAD/CAM-Fertigung im Dentallabor. Der Median liegt laut Entgeltatlas bei 3.109 Euro, mit Meisterbrief bei 4.248 Euro — die 3,5-jährige Ausbildung startet bei 724 Euro Vergütung.',
+    ],
+  },
 ];
 
 // Alphabetisch sortiert (Tommy-Regel 2026-06-12), Sektions-Buchstaben dynamisch

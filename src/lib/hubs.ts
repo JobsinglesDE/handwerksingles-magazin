@@ -159,6 +159,98 @@ export const BERUF_HUBS: Record<string, Hub> = {
     seoDescription:
       'Stuckateur werden: Tätigkeiten, Ausbildungsdauer, Gehalt nach Region und Karrierewege bis zum Meister. Aktuelle Zahlen 2026.',
   },
+  // Welle 3 (2026-06-12): gebäudereiniger 22.2k, hörakustiker 9.9k, zahntechniker 8.1k (gehalt 4.4k!),
+  // karosseriebauer 8.1k, raumausstatter 8.1k, augenoptiker 6.6k, landschaftsgärtner/straßenbauer/glaser/bodenleger je 5.4k.
+  'augenoptiker': {
+    slug: 'handwerksberufe/augenoptiker',
+    title: 'Augenoptiker ❤️ — Ausbildung, Gehalt & Optometrie',
+    description:
+      'Berufsbild Augenoptiker: Ausbildung, Gehalt und das Gesundheitshandwerk zwischen Werkstatt und Beratung — plus Dating-Tipps.',
+    seoTitle: 'Augenoptiker: Ausbildung, Gehalt & Optometrie',
+    seoDescription:
+      'Augenoptiker im Überblick: Aufgaben, Gehalt, Ausbildung und Karrierewege bis zum Meister oder Optometristen. Aktuelle Zahlen 2026.',
+  },
+  'bodenleger': {
+    slug: 'handwerksberufe/bodenleger',
+    title: 'Bodenleger ❤️ — Ausbildung, Gehalt & Beläge',
+    description:
+      'Berufsbild Bodenleger: Ausbildung, Gehalt und der Alltag zwischen Vinyl, Teppich und Linoleum — plus Dating-Tipps.',
+    seoTitle: 'Bodenleger: Ausbildung, Gehalt & Beruf',
+    seoDescription:
+      'Bodenleger werden: Tätigkeiten, Median-Gehalt, 3-jährige Ausbildung und Abgrenzung zum Parkettleger. Aktuelle Fakten zum Beruf.',
+  },
+  'gebaeudereiniger': {
+    slug: 'handwerksberufe/gebaeudereiniger',
+    title: 'Gebäudereiniger ❤️ — Ausbildung, Gehalt & Karriere',
+    description:
+      'Berufsbild Gebäudereiniger: Deutschlands beschäftigungsstärkstes Handwerk — Ausbildung, Branchenmindestlohn und Aufstieg bis zum Meister.',
+    seoTitle: 'Gebäudereiniger: Ausbildung & Gehalt',
+    seoDescription:
+      'Gebäudereiniger — Deutschlands beschäftigungsstärkstes Handwerk: Branchenmindestlohn, Ausbildung und Karriere bis zum Meister.',
+  },
+  'glaser': {
+    slug: 'handwerksberufe/glaser',
+    title: 'Glaser ❤️ — Ausbildung, Gehalt & Glasbau',
+    description:
+      'Berufsbild Glaser: Ausbildung, Gehalt und zwei Fachrichtungen von Bleiverglasung bis Glasfassade — plus Dating-Tipps.',
+    seoTitle: 'Glaser: Ausbildung, Gehalt & Karriere',
+    seoDescription:
+      'Glaser werden: Fachrichtungen, Ausbildungsdauer, Gehalt nach Entgeltatlas und Karrierewege bis zum Glasermeister. Zahlen 2026.',
+  },
+  'hoerakustiker': {
+    slug: 'handwerksberufe/hoerakustiker',
+    title: 'Hörakustiker ❤️ — Ausbildung, Gehalt & Gesundheitshandwerk',
+    description:
+      'Berufsbild Hörakustiker: Ausbildung in Lübeck, Gehalt und das Gesundheitshandwerk mit Zukunft — plus Dating-Tipps.',
+    seoTitle: 'Hörakustiker: Ausbildung, Gehalt & Karriere',
+    seoDescription:
+      'Hörakustiker — Gesundheitshandwerk mit Meisterpflicht: Ausbildung in Lübeck, Gehalt laut Entgeltatlas, Karriere bis zur eigenen Filiale.',
+  },
+  'karosseriebauer': {
+    slug: 'handwerksberufe/karosseriebauer',
+    title: 'Karosseriebauer ❤️ — Ausbildung, Gehalt & KFZ-Handwerk',
+    description:
+      'Berufsbild Karosserie- und Fahrzeugbaumechaniker: Ausbildung, Gehalt und der Wandel zu Alu- und Carbon-Karosserien — plus Dating-Tipps.',
+    seoTitle: 'Karosseriebauer: Ausbildung, Gehalt & Beruf',
+    seoDescription:
+      'Karosseriebauer: Fachrichtungen, Ausbildungsdauer, Gehalt nach Region und Karrierewege bis zum Meister. Aktuelle Entgeltatlas-Zahlen.',
+  },
+  'landschaftsgaertner': {
+    slug: 'handwerksberufe/landschaftsgaertner',
+    title: 'Landschaftsgärtner ❤️ — Ausbildung, Gehalt & GaLaBau',
+    description:
+      'Berufsbild Landschaftsgärtner: Ausbildung im GaLaBau, Gehalt und Klimaanpassung als Wachstumsfeld — plus Dating-Tipps.',
+    seoTitle: 'Landschaftsgärtner: Ausbildung & Gehalt',
+    seoDescription:
+      'Landschaftsgärtner werden: Ausbildung im GaLaBau, Gehalt nach Entgeltatlas und Karrierewege bis zum Meister. Aktuelle Zahlen 2026.',
+  },
+  'raumausstatter': {
+    slug: 'handwerksberufe/raumausstatter',
+    title: 'Raumausstatter ❤️ — Ausbildung, Gehalt & Gestaltung',
+    description:
+      'Berufsbild Raumausstatter: Ausbildung, Gehalt und Kreativarbeit zwischen Boden, Polster und Wand — plus Dating-Tipps.',
+    seoTitle: 'Raumausstatter: Ausbildung, Gehalt & Beruf',
+    seoDescription:
+      'Raumausstatter werden: Schwerpunkte, Ausbildungsdauer, Gehalt nach Entgeltatlas und Karrierewege bis zum Meister. Alle Fakten kompakt.',
+  },
+  'strassenbauer': {
+    slug: 'handwerksberufe/strassenbauer',
+    title: 'Straßenbauer ❤️ — Ausbildung, Gehalt & Infrastruktur',
+    description:
+      'Berufsbild Straßenbauer: Ausbildung, Bau-Tarif-Gehalt und die Infrastruktur-Milliarden als Job-Garant — plus Dating-Tipps.',
+    seoTitle: 'Straßenbauer: Ausbildung, Gehalt & Jobs',
+    seoDescription:
+      'Straßenbauer werden: Ausbildung, Tarif-Vergütung, Median-Gehalt und warum Infrastruktur-Investitionen den Beruf sichern. Zahlen 2026.',
+  },
+  'zahntechniker': {
+    slug: 'handwerksberufe/zahntechniker',
+    title: 'Zahntechniker ❤️ — Ausbildung, Gehalt & Dentallabor',
+    description:
+      'Berufsbild Zahntechniker: Ausbildung, Gehalt und Präzisionsarbeit zwischen Handwerk und CAD/CAM — plus Dating-Tipps.',
+    seoTitle: 'Zahntechniker: Ausbildung, Gehalt & Labor',
+    seoDescription:
+      'Zahntechniker-Beruf: Was Zahntechniker machen, was sie verdienen, wie die Ausbildung läuft und welche Wege der Meisterbrief öffnet.',
+  },
 };
 
 // Sektion 2: Singles (Conversion-Hub, Pillar + 13 thematische Spokes)
@@ -178,10 +270,10 @@ export const SECTION_HUBS: Record<string, Hub> = {
     slug: 'handwerksberufe',
     title: 'Handwerksberufe ❤️ — Elektriker, Dachdecker, Tischler & Co.',
     description:
-      'Berufe im Handwerk: Ausbildung, Gehalt und Alltag von Anlagenmechaniker bis Zimmermann — 16 Handwerksberufe im Überblick.',
+      'Berufe im Handwerk: Ausbildung, Gehalt und Alltag von Anlagenmechaniker bis Zimmermann — 26 Handwerksberufe im Überblick.',
     seoTitle: 'Handwerksberufe: Ausbildung & Gehalt',
     seoDescription:
-      '16 Handwerksberufe im Überblick: Elektriker, Friseur, Schornsteinfeger, Fliesenleger, Metallbauer & Co. — Ausbildung, Gehalt, Karriere.',
+      '26 Handwerksberufe im Überblick: Elektriker, Friseur, Zahntechniker, Gebäudereiniger, Metallbauer & Co. — Ausbildung, Gehalt, Karriere.',
   },
   'handwerker': {
     slug: 'handwerker',

@@ -15,8 +15,38 @@
     "permanent": true
   },
   {
+    "source": "/augenoptiker-ausbildung",
+    "destination": "/handwerksberufe/augenoptiker-ausbildung",
+    "permanent": true
+  },
+  {
+    "source": "/augenoptiker-gehalt",
+    "destination": "/handwerksberufe/augenoptiker-gehalt",
+    "permanent": true
+  },
+  {
+    "source": "/augenoptiker",
+    "destination": "/handwerksberufe/augenoptiker",
+    "permanent": true
+  },
+  {
     "source": "/azubi-dating-handwerk",
     "destination": "/singles-partnersuche/azubi-dating-handwerk",
+    "permanent": true
+  },
+  {
+    "source": "/bodenleger-ausbildung",
+    "destination": "/handwerksberufe/bodenleger-ausbildung",
+    "permanent": true
+  },
+  {
+    "source": "/bodenleger-gehalt",
+    "destination": "/handwerksberufe/bodenleger-gehalt",
+    "permanent": true
+  },
+  {
+    "source": "/bodenleger",
+    "destination": "/handwerksberufe/bodenleger",
     "permanent": true
   },
   {
@@ -110,6 +140,21 @@
     "permanent": true
   },
   {
+    "source": "/gebaeudereiniger-ausbildung",
+    "destination": "/handwerksberufe/gebaeudereiniger-ausbildung",
+    "permanent": true
+  },
+  {
+    "source": "/gebaeudereiniger-gehalt",
+    "destination": "/handwerksberufe/gebaeudereiniger-gehalt",
+    "permanent": true
+  },
+  {
+    "source": "/gebaeudereiniger",
+    "destination": "/handwerksberufe/gebaeudereiniger",
+    "permanent": true
+  },
+  {
     "source": "/geruestbauer-ausbildung",
     "destination": "/handwerksberufe/geruestbauer-ausbildung",
     "permanent": true
@@ -130,6 +175,21 @@
     "permanent": true
   },
   {
+    "source": "/glaser-ausbildung",
+    "destination": "/handwerksberufe/glaser-ausbildung",
+    "permanent": true
+  },
+  {
+    "source": "/glaser-gehalt",
+    "destination": "/handwerksberufe/glaser-gehalt",
+    "permanent": true
+  },
+  {
+    "source": "/glaser",
+    "destination": "/handwerksberufe/glaser",
+    "permanent": true
+  },
+  {
     "source": "/handwerker-klischees-dating",
     "destination": "/singles-partnersuche/handwerker-klischees-dating",
     "permanent": true
@@ -145,8 +205,38 @@
     "permanent": true
   },
   {
+    "source": "/hoerakustiker-ausbildung",
+    "destination": "/handwerksberufe/hoerakustiker-ausbildung",
+    "permanent": true
+  },
+  {
+    "source": "/hoerakustiker-gehalt",
+    "destination": "/handwerksberufe/hoerakustiker-gehalt",
+    "permanent": true
+  },
+  {
+    "source": "/hoerakustiker",
+    "destination": "/handwerksberufe/hoerakustiker",
+    "permanent": true
+  },
+  {
     "source": "/jonas-winkler-tischler-portraet",
     "destination": "/handwerk-news/jonas-winkler-tischler-portraet",
+    "permanent": true
+  },
+  {
+    "source": "/karosseriebauer-ausbildung",
+    "destination": "/handwerksberufe/karosseriebauer-ausbildung",
+    "permanent": true
+  },
+  {
+    "source": "/karosseriebauer-gehalt",
+    "destination": "/handwerksberufe/karosseriebauer-gehalt",
+    "permanent": true
+  },
+  {
+    "source": "/karosseriebauer",
+    "destination": "/handwerksberufe/karosseriebauer",
     "permanent": true
   },
   {
@@ -162,6 +252,21 @@
   {
     "source": "/kfz-mechatroniker",
     "destination": "/handwerksberufe/kfz-mechatroniker",
+    "permanent": true
+  },
+  {
+    "source": "/landschaftsgaertner-ausbildung",
+    "destination": "/handwerksberufe/landschaftsgaertner-ausbildung",
+    "permanent": true
+  },
+  {
+    "source": "/landschaftsgaertner-gehalt",
+    "destination": "/handwerksberufe/landschaftsgaertner-gehalt",
+    "permanent": true
+  },
+  {
+    "source": "/landschaftsgaertner",
+    "destination": "/handwerksberufe/landschaftsgaertner",
     "permanent": true
   },
   {
@@ -212,6 +317,21 @@
   {
     "source": "/metallbauer",
     "destination": "/handwerksberufe/metallbauer",
+    "permanent": true
+  },
+  {
+    "source": "/raumausstatter-ausbildung",
+    "destination": "/handwerksberufe/raumausstatter-ausbildung",
+    "permanent": true
+  },
+  {
+    "source": "/raumausstatter-gehalt",
+    "destination": "/handwerksberufe/raumausstatter-gehalt",
+    "permanent": true
+  },
+  {
+    "source": "/raumausstatter",
+    "destination": "/handwerksberufe/raumausstatter",
     "permanent": true
   },
   {
@@ -270,6 +390,21 @@
     "permanent": true
   },
   {
+    "source": "/strassenbauer-ausbildung",
+    "destination": "/handwerksberufe/strassenbauer-ausbildung",
+    "permanent": true
+  },
+  {
+    "source": "/strassenbauer-gehalt",
+    "destination": "/handwerksberufe/strassenbauer-gehalt",
+    "permanent": true
+  },
+  {
+    "source": "/strassenbauer",
+    "destination": "/handwerksberufe/strassenbauer",
+    "permanent": true
+  },
+  {
     "source": "/stuckateur-ausbildung",
     "destination": "/handwerksberufe/stuckateur-ausbildung",
     "permanent": true
@@ -312,6 +447,21 @@
   {
     "source": "/wochenendbeziehung-montage",
     "destination": "/singles-partnersuche/wochenendbeziehung-montage",
+    "permanent": true
+  },
+  {
+    "source": "/zahntechniker-ausbildung",
+    "destination": "/handwerksberufe/zahntechniker-ausbildung",
+    "permanent": true
+  },
+  {
+    "source": "/zahntechniker-gehalt",
+    "destination": "/handwerksberufe/zahntechniker-gehalt",
+    "permanent": true
+  },
+  {
+    "source": "/zahntechniker",
+    "destination": "/handwerksberufe/zahntechniker",
     "permanent": true
   },
   {
