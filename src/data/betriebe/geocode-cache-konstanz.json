@@ -1,0 +1,237 @@
+{
+  "node/571516880": {
+    "street": "Hussenstraße 32",
+    "plz": "78462",
+    "city": "Konstanz"
+  },
+  "node/571521028": {
+    "street": "Wessenbergstraße 3",
+    "plz": "78462",
+    "city": "Konstanz"
+  },
+  "node/2171109897": null,
+  "node/2295289694": {
+    "street": "Bodanstraße 20",
+    "plz": "78462",
+    "city": "Konstanz"
+  },
+  "node/3220104661": null,
+  "node/3301411591": null,
+  "node/3399699558": null,
+  "node/3454106219": {
+    "street": "Von-Emmich-Straße 3",
+    "plz": "78467",
+    "city": "Konstanz"
+  },
+  "node/4016530202": null,
+  "node/4083801662": {
+    "street": "Tägermoosstraße 1",
+    "plz": "78462",
+    "city": "Konstanz"
+  },
+  "node/4185134490": null,
+  "node/4312663141": {
+    "street": "Neugasse 24",
+    "plz": "78462",
+    "city": "Konstanz"
+  },
+  "node/4426738591": {
+    "street": "Zollernstraße 15",
+    "plz": "78462",
+    "city": "Konstanz"
+  },
+  "node/4610351490": null,
+  "node/4610363495": null,
+  "node/4610384091": null,
+  "node/4802419052": {
+    "street": "Obere Laube 79",
+    "plz": "78462",
+    "city": "Konstanz"
+  },
+  "node/5188055622": null,
+  "node/5197656946": null,
+  "node/5197662230": {
+    "street": "Allensbacher Straße 19",
+    "plz": "78465",
+    "city": "Konstanz"
+  },
+  "node/5287597079": null,
+  "node/5296117061": null,
+  "node/5317028333": null,
+  "node/5342987537": null,
+  "node/5342990956": null,
+  "node/5342990957": null,
+  "node/5343740913": null,
+  "node/5343742013": null,
+  "node/5403634920": null,
+  "node/5873399818": {
+    "street": "Hussenstraße 17",
+    "plz": "78462",
+    "city": "Konstanz"
+  },
+  "node/5938610903": null,
+  "node/5954096218": null,
+  "node/5982481086": {
+    "street": "Zollernstraße 24",
+    "plz": "78462",
+    "city": "Konstanz"
+  },
+  "node/5982481088": null,
+  "node/5982481093": null,
+  "node/6002646377": null,
+  "node/6002646384": {
+    "street": "Marktstätte 9",
+    "plz": "78462",
+    "city": "Konstanz"
+  },
+  "node/6002646690": null,
+  "node/6002646692": null,
+  "node/6002841071": null,
+  "node/6144106785": null,
+  "node/6312382947": null,
+  "node/6312382948": {
+    "street": "Gottlieber Straße 10",
+    "plz": "78462",
+    "city": "Konstanz"
+  },
+  "node/6312383679": null,
+  "node/6312383890": {
+    "street": "Sigismundstraße 6",
+    "plz": "78462",
+    "city": "Konstanz"
+  },
+  "node/6316517789": null,
+  "node/6316586403": null,
+  "node/6329449957": null,
+  "node/6342592496": {
+    "street": "Hüetlinstraße 17",
+    "plz": "78462",
+    "city": "Konstanz"
+  },
+  "node/6511208655": null,
+  "node/6511208705": {
+    "street": "Salmannsweilergasse 3",
+    "plz": "78462",
+    "city": "Konstanz"
+  },
+  "node/6698472552": null,
+  "node/6780552119": {
+    "street": "Wollmatinger Straße 75",
+    "plz": "78467",
+    "city": "Konstanz"
+  },
+  "node/6899901940": null,
+  "node/7941664518": null,
+  "node/8933807743": null,
+  "node/9143792917": null,
+  "node/9223286640": null,
+  "node/9778669707": null,
+  "node/9858249819": null,
+  "node/11093991165": {
+    "street": "Radolfzeller Straße 11",
+    "plz": "78467",
+    "city": "Konstanz"
+  },
+  "node/11225791488": null,
+  "node/11233753580": {
+    "street": "Tirolergasse 4",
+    "plz": "78462",
+    "city": "Konstanz"
+  },
+  "node/11236650305": {
+    "street": "Neugasse 6",
+    "plz": "78462",
+    "city": "Konstanz"
+  },
+  "node/11240012655": null,
+  "node/11373206029": {
+    "street": "Theodor-Heuss-Straße 7",
+    "plz": "78467",
+    "city": "Konstanz"
+  },
+  "node/11373206032": null,
+  "node/11758751288": null,
+  "node/11758820682": null,
+  "node/11974930015": {
+    "street": "Wollmatinger Straße 57",
+    "plz": "78467",
+    "city": "Konstanz"
+  },
+  "node/11974979615": null,
+  "node/12036084337": null,
+  "node/12152147720": null,
+  "node/12155988879": {
+    "street": "Tirolergasse 8",
+    "plz": "78462",
+    "city": "Konstanz"
+  },
+  "node/12157290077": null,
+  "node/12159528109": null,
+  "node/12159834809": {
+    "street": "Brauneggerstraße 1",
+    "plz": "78462",
+    "city": "Konstanz"
+  },
+  "node/12160342170": null,
+  "node/12160353600": {
+    "street": "Fischmarkt 3",
+    "plz": "78462",
+    "city": "Konstanz"
+  },
+  "node/12160641851": null,
+  "node/12229359431": null,
+  "node/12842470914": null,
+  "node/13273168296": {
+    "street": "Hüetlinstraße 9",
+    "plz": "78462",
+    "city": "Konstanz"
+  },
+  "node/13367660327": {
+    "street": "Joseph-Belli-Weg 27",
+    "plz": "78467",
+    "city": "Konstanz"
+  },
+  "node/13369818975": {
+    "street": "Lohnerhofstraße 5",
+    "plz": "78467",
+    "city": "Konstanz"
+  },
+  "node/13369855005": {
+    "street": "Turmstraße 7",
+    "plz": "78467",
+    "city": "Konstanz"
+  },
+  "node/13386739800": null,
+  "node/13386782003": {
+    "street": "Färberstraße 11",
+    "plz": "78467",
+    "city": "Konstanz"
+  },
+  "node/13526080582": {
+    "street": "Helene-Merk-Straße 1",
+    "plz": "78467",
+    "city": "Konstanz"
+  },
+  "node/13699305343": {
+    "street": "Bodanstraße 1",
+    "plz": "78462",
+    "city": "Konstanz"
+  },
+  "node/13699305344": {
+    "street": "Bodanstraße 1",
+    "plz": "78462",
+    "city": "Konstanz"
+  },
+  "node/13699305346": {
+    "street": "Bodanstraße 1",
+    "plz": "78462",
+    "city": "Konstanz"
+  },
+  "node/13699305347": {
+    "street": "Bodanstraße 1",
+    "plz": "78462",
+    "city": "Konstanz"
+  },
+  "node/13699305350": null,
+  "way/708048001": null
+}

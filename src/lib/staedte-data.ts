@@ -19,6 +19,7 @@ export type Betrieb = {
   openingHours?: string;
   osmType: string;
   osmId: number;
+  addressSource?: 'osm' | 'nominatim';
 };
 
 export type CityData = {

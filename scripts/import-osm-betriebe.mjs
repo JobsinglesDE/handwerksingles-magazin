@@ -11,7 +11,7 @@
 // Die Gewerk-Slugs hier MUESSEN mit DIRECTORY_GEWERKE in src/lib/staedte.ts
 // uebereinstimmen (das Script validiert das am Ende und warnt bei Drift).
 
-import { writeFileSync, mkdirSync } from 'node:fs';
+import { writeFileSync, mkdirSync, readFileSync, existsSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -148,6 +148,68 @@ async function fetchOverpass(query) {
 }
 
 // ---------------------------------------------------------------------------
+// Optional: fehlende Adressen via Nominatim reverse-geocoden (legal, OSM/ODbL)
+// Validierung gegen OSM-Ground-Truth (Konstanz): ~96% Straße+Hausnr, 100% ≤40m.
+// Akzeptanz-Filter: Hausnummer vorhanden UND Treffer ≤60m vom Node -> Ausreißer raus.
+// ---------------------------------------------------------------------------
+function haversine(la1, lo1, la2, lo2) {
+  const R = 6371000, p = Math.PI / 180;
+  const a = Math.sin(((la2 - la1) * p) / 2) ** 2 +
+    Math.cos(la1 * p) * Math.cos(la2 * p) * Math.sin(((lo2 - lo1) * p) / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(a));
+}
+
+async function reverseGeocode(lat, lon) {
+  const url = 'https://nominatim.openstreetmap.org/reverse?' +
+    new URLSearchParams({ lat: String(lat), lon: String(lon), format: 'json', addressdetails: '1' });
+  const res = await fetch(url, {
+    headers: { 'User-Agent': 'handwerksingles-magazin OSM-Import (Kontakt: jobsingles@gmail.com)' },
+  });
+  if (!res.ok) throw new Error('HTTP ' + res.status);
+  return res.json();
+}
+
+async function geocodeMissing(betriebe, citySlug) {
+  const cachePath = resolve(REPO, 'src/data/betriebe', `geocode-cache-${citySlug}.json`);
+  const cache = existsSync(cachePath) ? JSON.parse(readFileSync(cachePath, 'utf8')) : {};
+  const missing = betriebe.filter((b) => !b.street && b.lat && b.lon);
+  console.log(`\nGeocoding: ${missing.length} Betriebe ohne Adresse (Nominatim, max 1/s, ≤60m + Hausnr.)...`);
+  let filled = 0, rejected = 0, fromCache = 0;
+  for (const b of missing) {
+    const key = `${b.osmType}/${b.osmId}`;
+    let r = cache[key];
+    if (r === undefined) {
+      try {
+        const d = await reverseGeocode(b.lat, b.lon);
+        const a = d.address || {};
+        const dist = haversine(b.lat, b.lon, parseFloat(d.lat), parseFloat(d.lon));
+        r = (a.road && a.house_number && dist <= 60)
+          ? { street: `${a.road} ${a.house_number}`, plz: a.postcode || null, city: a.city || a.town || a.village || null }
+          : null;
+        cache[key] = r;
+        await new Promise((res) => setTimeout(res, 1100));
+      } catch (e) {
+        console.warn(`  geocode '${b.name}': ${e.message}`);
+        r = null;
+      }
+    } else {
+      fromCache++;
+    }
+    if (r) {
+      b.street = r.street;
+      if (r.plz && !b.plz) b.plz = r.plz;
+      if (r.city) b.city = r.city;
+      b.addressSource = 'nominatim';
+      filled++;
+    } else {
+      rejected++;
+    }
+  }
+  writeFileSync(cachePath, JSON.stringify(cache, null, 2) + '\n', 'utf8');
+  console.log(`  Adressen ergänzt: ${filled} · verworfen (unsicher): ${rejected} · aus Cache: ${fromCache}`);
+}
+
+// ---------------------------------------------------------------------------
 // Main
 // ---------------------------------------------------------------------------
 const citySlug = process.argv[2];
@@ -195,8 +257,14 @@ for (const el of data.elements) {
     openingHours: tags.opening_hours || undefined,
     osmType: el.type,
     osmId: el.id,
+    addressSource: street ? 'osm' : undefined,
   });
   slugCounts.set(gewerk, (slugCounts.get(gewerk) || 0) + 1);
+}
+
+// Optional: fehlende Adressen via Nominatim ergänzen (--geocode)
+if (process.argv.includes('--geocode')) {
+  await geocodeMissing(betriebe, citySlug);
 }
 
 // Slugs vergeben, eindeutig je Stadt

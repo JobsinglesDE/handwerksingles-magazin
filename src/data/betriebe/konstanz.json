@@ -3,28 +3,34 @@
   "citySlug": "konstanz",
   "bundesland": "baden-wuerttemberg",
   "attribution": "© OpenStreetMap-Mitwirkende (ODbL)",
-  "generatedAt": "2026-06-15T22:10:15.184Z",
+  "generatedAt": "2026-06-15T22:28:16.088Z",
   "betriebe": [
     {
       "slug": "elektro-moser",
       "name": "Elektro Moser",
       "gewerk": "elektriker",
+      "street": "Turmstraße 7",
+      "plz": "78467",
       "city": "Konstanz",
       "lat": 47.6713557,
       "lon": 9.1551945,
       "osmType": "node",
-      "osmId": 13369855005
+      "osmId": 13369855005,
+      "addressSource": "nominatim"
     },
     {
       "slug": "ahmad-hair-und-beauty",
       "name": "ahmad, hair & beauty",
       "gewerk": "friseur",
+      "street": "Radolfzeller Straße 11",
+      "plz": "78467",
       "city": "Konstanz",
       "lat": 47.6893645,
       "lon": 9.1477993,
       "openingHours": "Mo-Fr 09:00-18:00; Sa 09:00-16:00",
       "osmType": "node",
-      "osmId": 11093991165
+      "osmId": 11093991165,
+      "addressSource": "nominatim"
     },
     {
       "slug": "atomic",
@@ -38,18 +44,22 @@
       "phone": "+49 7531 44217",
       "openingHours": "Tu-Fr 08:30-18:30; Sa 08:30-13:00",
       "osmType": "node",
-      "osmId": 4373463658
+      "osmId": 4373463658,
+      "addressSource": "osm"
     },
     {
       "slug": "barber-shop",
       "name": "Barber Shop",
       "gewerk": "friseur",
+      "street": "Fischmarkt 3",
+      "plz": "78462",
       "city": "Konstanz",
       "lat": 47.6611785,
       "lon": 9.1773666,
       "openingHours": "Mo-Fr 10:00-18:00; Sa 10:00-15:00",
       "osmType": "node",
-      "osmId": 12160353600
+      "osmId": 12160353600,
+      "addressSource": "nominatim"
     },
     {
       "slug": "casa-dell-arte",
@@ -64,7 +74,8 @@
       "website": "https://www.friseur-konstanz.com/",
       "openingHours": "Mo off; Tu-Fr 09:00-18:00; Sa 09:00-15:00",
       "osmType": "node",
-      "osmId": 8860408819
+      "osmId": 8860408819,
+      "addressSource": "osm"
     },
     {
       "slug": "coiffeur-jedzig",
@@ -80,21 +91,27 @@
       "slug": "coiffeur-stoehrmann",
       "name": "Coiffeur Stöhrmann",
       "gewerk": "friseur",
+      "street": "Allensbacher Straße 19",
+      "plz": "78465",
       "city": "Konstanz",
       "lat": 47.7345939,
       "lon": 9.1137686,
       "osmType": "node",
-      "osmId": 5197662230
+      "osmId": 5197662230,
+      "addressSource": "nominatim"
     },
     {
       "slug": "coiffure-de-paris",
       "name": "Coiffure de Paris",
       "gewerk": "friseur",
+      "street": "Wollmatinger Straße 57",
+      "plz": "78467",
       "city": "Konstanz",
       "lat": 47.6775494,
       "lon": 9.1743566,
       "osmType": "node",
-      "osmId": 11974930015
+      "osmId": 11974930015,
+      "addressSource": "nominatim"
     },
     {
       "slug": "essanelle",
@@ -109,22 +126,28 @@
       "website": "https://essanelle.de",
       "openingHours": "Mo-Sa 09:30-20:00",
       "osmType": "node",
-      "osmId": 5697169822
+      "osmId": 5697169822,
+      "addressSource": "osm"
     },
     {
       "slug": "figaro",
       "name": "Figaro",
       "gewerk": "friseur",
+      "street": "Wollmatinger Straße 75",
+      "plz": "78467",
       "city": "Konstanz",
       "lat": 47.6779481,
       "lon": 9.1731849,
       "osmType": "node",
-      "osmId": 6780552119
+      "osmId": 6780552119,
+      "addressSource": "nominatim"
     },
     {
       "slug": "fineness",
       "name": "fineness",
       "gewerk": "friseur",
+      "street": "Tägermoosstraße 1",
+      "plz": "78462",
       "city": "Konstanz",
       "lat": 47.6595294,
       "lon": 9.1704988,
@@ -132,7 +155,8 @@
       "website": "https://fineness.hair",
       "openingHours": "Tu-Fr 09:30-18:00; Sa 09:30-15:30",
       "osmType": "node",
-      "osmId": 4083801662
+      "osmId": 4083801662,
+      "addressSource": "nominatim"
     },
     {
       "slug": "friseur-aydo",
@@ -146,7 +170,8 @@
       "phone": "+49 7531 73151",
       "openingHours": "Mo-Fr 08:30-18:00; Sa 08:30-13:00",
       "osmType": "way",
-      "osmId": 107492855
+      "osmId": 107492855,
+      "addressSource": "osm"
     },
     {
       "slug": "friseur-birkle-konstanz",
@@ -161,7 +186,8 @@
       "website": "https://friseur-birkle.de/",
       "openingHours": "Mo-Fr 09:00-18:30; Sa 09:00-15:00",
       "osmType": "node",
-      "osmId": 10245297238
+      "osmId": 10245297238,
+      "addressSource": "osm"
     },
     {
       "slug": "friseur-dietrich",
@@ -198,7 +224,8 @@
       "website": "http://www.salon-hair.de/",
       "openingHours": "Mo 11:00-15:00; Tu-Fr 11:00-19:00; Sa 14:00-19:00",
       "osmType": "node",
-      "osmId": 2727708974
+      "osmId": 2727708974,
+      "addressSource": "osm"
     },
     {
       "slug": "gentlemen-hairlounge",
@@ -210,7 +237,8 @@
       "lon": 9.2014752,
       "phone": "+49 7531 9765611",
       "osmType": "node",
-      "osmId": 4852402271
+      "osmId": 4852402271,
+      "addressSource": "osm"
     },
     {
       "slug": "haar-signatur",
@@ -227,12 +255,15 @@
       "slug": "haargefuehl",
       "name": "Haargefühl",
       "gewerk": "friseur",
+      "street": "Gottlieber Straße 10",
+      "plz": "78462",
       "city": "Konstanz",
       "lat": 47.6621568,
       "lon": 9.1688085,
       "openingHours": "Tu-Fr 09:00-18:00; Sa 09:00-14:00",
       "osmType": "node",
-      "osmId": 6312382948
+      "osmId": 6312382948,
+      "addressSource": "nominatim"
     },
     {
       "slug": "haarscharf",
@@ -246,7 +277,8 @@
       "phone": "+49 7531 25555",
       "openingHours": "Tu, Th, Fr 08:30-12:30, 14:30-18:30; We 08:30-13:00; Sa 09:00-13:00",
       "osmType": "node",
-      "osmId": 5333523416
+      "osmId": 5333523416,
+      "addressSource": "osm"
     },
     {
       "slug": "haarstudio-pilar",
@@ -258,7 +290,8 @@
       "lat": 47.6833553,
       "lon": 9.1577751,
       "osmType": "node",
-      "osmId": 2378856305
+      "osmId": 2378856305,
+      "addressSource": "osm"
     },
     {
       "slug": "haartrend",
@@ -271,7 +304,8 @@
       "lon": 9.1751335,
       "phone": "+49753125868",
       "osmType": "node",
-      "osmId": 960714991
+      "osmId": 960714991,
+      "addressSource": "osm"
     },
     {
       "slug": "hair-lounge-by-melli",
@@ -286,7 +320,8 @@
       "website": "https://www.hairlounge-konstanz.de/",
       "openingHours": "Tu-Fr 10:00-18:00; Sa 10:00-16:00",
       "osmType": "node",
-      "osmId": 6326767436
+      "osmId": 6326767436,
+      "addressSource": "osm"
     },
     {
       "slug": "hairlich",
@@ -312,7 +347,8 @@
       "website": "https://handt-werk.de",
       "openingHours": "Su,Mo off;Tu-Fr 09:00-18:00;Sa 09:00-13:00",
       "osmType": "node",
-      "osmId": 6581018106
+      "osmId": 6581018106,
+      "addressSource": "osm"
     },
     {
       "slug": "international-hair-group",
@@ -327,7 +363,8 @@
       "website": "https://www.international-hair-group.de/",
       "openingHours": "Mo - Sa 09:00-18:30",
       "osmType": "node",
-      "osmId": 4363574201
+      "osmId": 4363574201,
+      "addressSource": "osm"
     },
     {
       "slug": "j-7-hair-lounge",
@@ -363,7 +400,8 @@
       "website": "https://www.friseur-kledt.de/",
       "openingHours": "Tu-Fr 08:00-18:00; Sa 08:00-13:00",
       "osmType": "node",
-      "osmId": 5828635357
+      "osmId": 5828635357,
+      "addressSource": "osm"
     },
     {
       "slug": "klinik-friseur",
@@ -418,7 +456,8 @@
       "phone": "+49 7531 63253",
       "website": "https://www.meine-zeit-konstanz.de/",
       "osmType": "node",
-      "osmId": 6264647399
+      "osmId": 6264647399,
+      "addressSource": "osm"
     },
     {
       "slug": "mellin",
@@ -441,18 +480,22 @@
       "lon": 9.1821157,
       "openingHours": "Mo-We,Fr 08:30-18:00; Th 08:30-20:00; Sa 08:30-13:30",
       "osmType": "way",
-      "osmId": 117297432
+      "osmId": 117297432,
+      "addressSource": "osm"
     },
     {
       "slug": "paradies-coiffeur",
       "name": "Paradies Coiffeur",
       "gewerk": "friseur",
+      "street": "Helene-Merk-Straße 1",
+      "plz": "78467",
       "city": "Konstanz",
       "lat": 47.6711604,
       "lon": 9.169564,
       "openingHours": "Mo-Fr 09:00-18:00; Sa 09:00-18:00",
       "osmType": "node",
-      "osmId": 13526080582
+      "osmId": 13526080582,
+      "addressSource": "nominatim"
     },
     {
       "slug": "phoenicia-hairlounge",
@@ -466,7 +509,8 @@
       "phone": "+49 7531 6912828",
       "openingHours": "Tu-Fr 10:00-19:00; Sa 09:00-17:00",
       "osmType": "node",
-      "osmId": 13359610893
+      "osmId": 13359610893,
+      "addressSource": "osm"
     },
     {
       "slug": "sabrina-arresta-scalp-atelier",
@@ -504,11 +548,14 @@
       "slug": "schnipp-schnapp",
       "name": "Schnipp Schnapp",
       "gewerk": "friseur",
+      "street": "Neugasse 6",
+      "plz": "78462",
       "city": "Konstanz",
       "lat": 47.6588209,
       "lon": 9.1740785,
       "osmType": "node",
-      "osmId": 11236650305
+      "osmId": 11236650305,
+      "addressSource": "nominatim"
     },
     {
       "slug": "stilexperten",
@@ -531,7 +578,8 @@
       "lat": 47.6735218,
       "lon": 9.1735143,
       "osmType": "node",
-      "osmId": 5793971349
+      "osmId": 5793971349,
+      "addressSource": "osm"
     },
     {
       "slug": "tony-s-friseur-und-barbershop",
@@ -545,28 +593,35 @@
       "phone": "+4975313808392",
       "openingHours": "Tu-Fr 09:00-18:30; Sa 09:00-17:00",
       "osmType": "node",
-      "osmId": 9776939451
+      "osmId": 9776939451,
+      "addressSource": "osm"
     },
     {
       "slug": "v-i-p-by-jitka",
       "name": "V.I.P. by Jitka",
       "gewerk": "friseur",
+      "street": "Salmannsweilergasse 3",
+      "plz": "78462",
       "city": "Konstanz",
       "lat": 47.661407,
       "lon": 9.1760755,
       "osmType": "node",
-      "osmId": 6511208705
+      "osmId": 6511208705,
+      "addressSource": "nominatim"
     },
     {
       "slug": "vip-friseure",
       "name": "Vip Friseure",
       "gewerk": "friseur",
+      "street": "Von-Emmich-Straße 3",
+      "plz": "78467",
       "city": "Konstanz",
       "lat": 47.6715223,
       "lon": 9.1782345,
       "openingHours": "Mo-Fr 10:00-18:00; Sa 10:00-15:00",
       "osmType": "node",
-      "osmId": 3454106219
+      "osmId": 3454106219,
+      "addressSource": "nominatim"
     },
     {
       "slug": "wilm",
@@ -635,17 +690,21 @@
       "lat": 47.6785098,
       "lon": 9.1574383,
       "osmType": "way",
-      "osmId": 28033375
+      "osmId": 28033375,
+      "addressSource": "osm"
     },
     {
       "slug": "schrodi",
       "name": "Schrodi",
       "gewerk": "glaser",
+      "street": "Färberstraße 11",
+      "plz": "78467",
       "city": "Konstanz",
       "lat": 47.6709383,
       "lon": 9.1560911,
       "osmType": "node",
-      "osmId": 13386782003
+      "osmId": 13386782003,
+      "addressSource": "nominatim"
     },
     {
       "slug": "atelier-fuer-schmuck",
@@ -658,7 +717,8 @@
       "lon": 9.1709586,
       "openingHours": "Tu-Fr 11:00-13.00, 14:00-18:00, Sa 11:00-15:00",
       "osmType": "node",
-      "osmId": 5179948721
+      "osmId": 5179948721,
+      "addressSource": "osm"
     },
     {
       "slug": "bijou-brigitte",
@@ -675,22 +735,28 @@
       "slug": "christ",
       "name": "Christ",
       "gewerk": "juwelier",
+      "street": "Bodanstraße 1",
+      "plz": "78462",
       "city": "Konstanz",
       "lat": 47.656848,
       "lon": 9.1761924,
       "osmType": "node",
-      "osmId": 13699305343
+      "osmId": 13699305343,
+      "addressSource": "nominatim"
     },
     {
       "slug": "formenco",
       "name": "Formenco",
       "gewerk": "juwelier",
+      "street": "Neugasse 24",
+      "plz": "78462",
       "city": "Konstanz",
       "lat": 47.6590275,
       "lon": 9.1730466,
       "openingHours": "Mo,Tu,Th,Fr 10:00-13:00,13:30-18:00; We 10:00-13:00; Sa 10:00-16:00",
       "osmType": "node",
-      "osmId": 4312663141
+      "osmId": 4312663141,
+      "addressSource": "nominatim"
     },
     {
       "slug": "goldschmied",
@@ -705,7 +771,8 @@
       "website": "https://goldschmiede-h-j-baier.de",
       "openingHours": "Tu-Fr 10:00-18:30; Sa 10:00-17:00; Su, Mo off",
       "osmType": "node",
-      "osmId": 5869213619
+      "osmId": 5869213619,
+      "addressSource": "osm"
     },
     {
       "slug": "goldschmiede-joya",
@@ -718,7 +785,8 @@
       "lon": 9.1754027,
       "openingHours": "We-Fr 09:30-12:30, 14:00-18:00, Sa 09:30-14:00",
       "osmType": "node",
-      "osmId": 5982481089
+      "osmId": 5982481089,
+      "addressSource": "osm"
     },
     {
       "slug": "grundmann",
@@ -744,7 +812,8 @@
       "website": "https://www.juwelier-ehniss.de/",
       "openingHours": "Mo-Fr 09:30-13:00,14:30-18:00;Sa 10:00-16:00",
       "osmType": "node",
-      "osmId": 5873399817
+      "osmId": 5873399817,
+      "addressSource": "osm"
     },
     {
       "slug": "kleinod",
@@ -759,17 +828,21 @@
       "website": "https://kleinod-konstanz.de/",
       "openingHours": "Tu-Fr 10:00-18:00; Sa 10:00-16:00",
       "osmType": "node",
-      "osmId": 4791841784
+      "osmId": 4791841784,
+      "addressSource": "osm"
     },
     {
       "slug": "lovisa",
       "name": "Lovisa",
       "gewerk": "juwelier",
+      "street": "Bodanstraße 1",
+      "plz": "78462",
       "city": "Konstanz",
       "lat": 47.6570458,
       "lon": 9.1759671,
       "osmType": "node",
-      "osmId": 13699305344
+      "osmId": 13699305344,
+      "addressSource": "nominatim"
     },
     {
       "slug": "masswerk-meistergoldschmiede",
@@ -788,11 +861,14 @@
       "slug": "michael-westermann",
       "name": "Michael Westermann",
       "gewerk": "juwelier",
+      "street": "Tirolergasse 8",
+      "plz": "78462",
       "city": "Konstanz",
       "lat": 47.6607505,
       "lon": 9.1750396,
       "osmType": "node",
-      "osmId": 12155988879
+      "osmId": 12155988879,
+      "addressSource": "nominatim"
     },
     {
       "slug": "nadja-danzeisen-goldschmiede",
@@ -806,7 +882,8 @@
       "phone": "+49 7531 3652558",
       "openingHours": "Th 11:00-16:00; Sa 11:00-14:00",
       "osmType": "node",
-      "osmId": 12112361713
+      "osmId": 12112361713,
+      "addressSource": "osm"
     },
     {
       "slug": "pandora",
@@ -845,12 +922,15 @@
       "slug": "schmuckerei",
       "name": "Schmuckerei",
       "gewerk": "juwelier",
+      "street": "Hüetlinstraße 9",
+      "plz": "78462",
       "city": "Konstanz",
       "lat": 47.65719,
       "lon": 9.1742867,
       "openingHours": "We-Fr 11:00-18:00; Sa 11:00-15:00",
       "osmType": "node",
-      "osmId": 13273168296
+      "osmId": 13273168296,
+      "addressSource": "nominatim"
     },
     {
       "slug": "schnuckatelier-peter-roth",
@@ -867,11 +947,14 @@
       "slug": "spiegelbild-schmuck-und-schoenes",
       "name": "Spiegelbild - Schmuck & Schönes",
       "gewerk": "juwelier",
+      "street": "Zollernstraße 24",
+      "plz": "78462",
       "city": "Konstanz",
       "lat": 47.6623259,
       "lon": 9.1752195,
       "osmType": "node",
-      "osmId": 5982481086
+      "osmId": 5982481086,
+      "addressSource": "nominatim"
     },
     {
       "slug": "swarovski",
@@ -899,11 +982,14 @@
       "slug": "visy-und-tinkl",
       "name": "Visy und Tinkl",
       "gewerk": "juwelier",
+      "street": "Zollernstraße 15",
+      "plz": "78462",
       "city": "Konstanz",
       "lat": 47.6618207,
       "lon": 9.1762108,
       "osmType": "node",
-      "osmId": 4426738591
+      "osmId": 4426738591,
+      "addressSource": "nominatim"
     },
     {
       "slug": "zobel-schmuckatelier",
@@ -918,7 +1004,8 @@
       "website": "https://www.atelierzobel.com/kollektion/handschmuck/",
       "openingHours": "Tu-Fr 10:00-12:00,13:30-18:00; Sa 10:00-16:00",
       "osmType": "node",
-      "osmId": 9907405139
+      "osmId": 9907405139,
+      "addressSource": "osm"
     },
     {
       "slug": "zweierlei",
@@ -941,7 +1028,8 @@
       "lon": 9.1491761,
       "openingHours": "Mo-Fr 07:30-18:30; Sa 08:00-14:00",
       "osmType": "way",
-      "osmId": 27015509
+      "osmId": 27015509,
+      "addressSource": "osm"
     },
     {
       "slug": "autoglas-konstanz",
@@ -964,7 +1052,8 @@
       "lon": 9.1392088,
       "phone": "+49 7531 92490",
       "osmType": "way",
-      "osmId": 122485721
+      "osmId": 122485721,
+      "addressSource": "osm"
     },
     {
       "slug": "bosch-car-service-sen-karosderie-und-lackierzentrum",
@@ -989,7 +1078,8 @@
       "website": "http://buecklegarage.de/",
       "openingHours": "Mo-Sa 08:00-17:00",
       "osmType": "node",
-      "osmId": 6586870827
+      "osmId": 6586870827,
+      "addressSource": "osm"
     },
     {
       "slug": "carglass",
@@ -1002,7 +1092,8 @@
       "lon": 9.1574156,
       "openingHours": "Mo-Fr 08:00-17:00",
       "osmType": "node",
-      "osmId": 336654170
+      "osmId": 336654170,
+      "addressSource": "osm"
     },
     {
       "slug": "dekra",
@@ -1014,7 +1105,8 @@
       "lat": 47.6765654,
       "lon": 9.1446026,
       "osmType": "node",
-      "osmId": 571432764
+      "osmId": 571432764,
+      "addressSource": "osm"
     },
     {
       "slug": "guggenberger-und-metten-fahrzeugtechnik-unter-einem-dach",
@@ -1029,7 +1121,8 @@
       "website": "https://guggenberger-metten.de",
       "openingHours": "Mo-Fr 08:00-12:00,13:00-17:00",
       "osmType": "node",
-      "osmId": 7721000160
+      "osmId": 7721000160,
+      "addressSource": "osm"
     },
     {
       "slug": "karosseriebau-leo",
@@ -1042,7 +1135,8 @@
       "lon": 9.1501261,
       "openingHours": "Mo-Fr 08:00-12:00,13:00-18:00; Sa 09:00-13:00",
       "osmType": "node",
-      "osmId": 7057216693
+      "osmId": 7057216693,
+      "addressSource": "osm"
     },
     {
       "slug": "kfz-meisterwerkstatt",
@@ -1068,7 +1162,8 @@
       "phone": "+49 7531 50001",
       "openingHours": "Mo-Fr 08:00-12:00,13:00-18:00; Sa 09:00-13:00",
       "osmType": "node",
-      "osmId": 10704633064
+      "osmId": 10704633064,
+      "addressSource": "osm"
     },
     {
       "slug": "reiff-reifen-und-autotechnik",
@@ -1082,7 +1177,8 @@
       "phone": "+49 7531 362570",
       "openingHours": "Mo-Fr 08:00-12:00,13:00-17:15; Sa,Su,PH off",
       "osmType": "way",
-      "osmId": 28143489
+      "osmId": 28143489,
+      "addressSource": "osm"
     },
     {
       "slug": "schwarz-und-partner",
@@ -1095,7 +1191,8 @@
       "lon": 9.1509978,
       "phone": "+49 7531 57878",
       "osmType": "way",
-      "osmId": 46626716
+      "osmId": 46626716,
+      "addressSource": "osm"
     },
     {
       "slug": "selas-automobile-und-abschleppdienst",
@@ -1108,7 +1205,8 @@
       "lon": 9.1453096,
       "phone": "+49 7531 690269",
       "osmType": "node",
-      "osmId": 12165731633
+      "osmId": 12165731633,
+      "addressSource": "osm"
     },
     {
       "slug": "von-buch-automobile",
@@ -1121,7 +1219,8 @@
       "lon": 9.161732,
       "openingHours": "Mo-Fr 08:00-12:30,14:00-18:00",
       "osmType": "node",
-      "osmId": 6586844057
+      "osmId": 6586844057,
+      "addressSource": "osm"
     },
     {
       "slug": "amo-ash-parfuemerie",
@@ -1195,31 +1294,40 @@
       "slug": "heike-jakobs",
       "name": "Heike Jakobs",
       "gewerk": "kosmetik",
+      "street": "Hüetlinstraße 17",
+      "plz": "78462",
       "city": "Konstanz",
       "lat": 47.6569363,
       "lon": 9.1739357,
       "osmType": "node",
-      "osmId": 6342592496
+      "osmId": 6342592496,
+      "addressSource": "nominatim"
     },
     {
       "slug": "kiko-milano",
       "name": "KIKO Milano",
       "gewerk": "kosmetik",
+      "street": "Bodanstraße 1",
+      "plz": "78462",
       "city": "Konstanz",
       "lat": 47.6569537,
       "lon": 9.1761656,
       "osmType": "node",
-      "osmId": 13699305346
+      "osmId": 13699305346,
+      "addressSource": "nominatim"
     },
     {
       "slug": "kosmetik-lounge-afro-shop",
       "name": "Kosmetik Lounge/Afro Shop",
       "gewerk": "kosmetik",
+      "street": "Obere Laube 79",
+      "plz": "78462",
       "city": "Konstanz",
       "lat": 47.6591386,
       "lon": 9.1707825,
       "osmType": "node",
-      "osmId": 4802419052
+      "osmId": 4802419052,
+      "addressSource": "nominatim"
     },
     {
       "slug": "kosmetik-susanne",
@@ -1233,7 +1341,8 @@
       "phone": "+49 7531 457307",
       "website": "http://susanne-kosmetik.de/Startseite/",
       "osmType": "node",
-      "osmId": 10123997866
+      "osmId": 10123997866,
+      "addressSource": "osm"
     },
     {
       "slug": "line-of-beauty",
@@ -1270,7 +1379,8 @@
       "lat": 47.6579362,
       "lon": 9.1706195,
       "osmType": "node",
-      "osmId": 2054886509
+      "osmId": 2054886509,
+      "addressSource": "osm"
     },
     {
       "slug": "mieu-nails-and-beauty",
@@ -1298,11 +1408,14 @@
       "slug": "nails-bar",
       "name": "Nails bar",
       "gewerk": "kosmetik",
+      "street": "Sigismundstraße 6",
+      "plz": "78462",
       "city": "Konstanz",
       "lat": 47.6595471,
       "lon": 9.1755609,
       "osmType": "node",
-      "osmId": 6312383890
+      "osmId": 6312383890,
+      "addressSource": "nominatim"
     },
     {
       "slug": "pb-nails",
@@ -1340,12 +1453,15 @@
       "slug": "sonnenparadies",
       "name": "Sonnenparadies",
       "gewerk": "kosmetik",
+      "street": "Brauneggerstraße 1",
+      "plz": "78462",
       "city": "Konstanz",
       "lat": 47.662307,
       "lon": 9.1694212,
       "openingHours": "Mo-Fr 10:00-18:30; Sa 10:00-14:00",
       "osmType": "node",
-      "osmId": 12159834809
+      "osmId": 12159834809,
+      "addressSource": "nominatim"
     },
     {
       "slug": "sun-dreams",
@@ -1368,7 +1484,8 @@
       "lon": 9.1739352,
       "openingHours": "Mo-Sa 10:00-19:00",
       "osmType": "node",
-      "osmId": 11075423966
+      "osmId": 11075423966,
+      "addressSource": "osm"
     },
     {
       "slug": "tuoi-nails",
@@ -1392,17 +1509,21 @@
       "phone": "+4975319593999",
       "openingHours": "Mo-Fr 09:00-19:00, Sa 09:00-18:00; PH off",
       "osmType": "node",
-      "osmId": 13907227139
+      "osmId": 13907227139,
+      "addressSource": "osm"
     },
     {
       "slug": "malermeister-stoecks",
       "name": "Malermeister Stöcks",
       "gewerk": "maler",
+      "street": "Lohnerhofstraße 5",
+      "plz": "78467",
       "city": "Konstanz",
       "lat": 47.6716994,
       "lon": 9.1571421,
       "osmType": "node",
-      "osmId": 13369818975
+      "osmId": 13369818975,
+      "addressSource": "nominatim"
     },
     {
       "slug": "misol-gmbh",
@@ -1416,7 +1537,8 @@
       "phone": "+49 7531 59250",
       "website": "https://misol-konstanz.de/",
       "osmType": "node",
-      "osmId": 9838488216
+      "osmId": 9838488216,
+      "addressSource": "osm"
     },
     {
       "slug": "k-tech",
@@ -1428,7 +1550,8 @@
       "lat": 47.6713819,
       "lon": 9.154077,
       "osmType": "way",
-      "osmId": 104707159
+      "osmId": 104707159,
+      "addressSource": "osm"
     },
     {
       "slug": "apollo-optik",
@@ -1441,7 +1564,8 @@
       "lon": 9.1832824,
       "openingHours": "Mo-Fr 09:00-19:00; Sa 09:00-16:00",
       "osmType": "node",
-      "osmId": 3517101323
+      "osmId": 3517101323,
+      "addressSource": "osm"
     },
     {
       "slug": "apollo-optik-2",
@@ -1455,17 +1579,21 @@
       "website": "https://www.apollo.com/",
       "openingHours": "Mo-Fr 09:00-18:30; Sa 09:00-16:00",
       "osmType": "node",
-      "osmId": 5388126321
+      "osmId": 5388126321,
+      "addressSource": "osm"
     },
     {
       "slug": "apollo-optik-3",
       "name": "Apollo-Optik",
       "gewerk": "optiker",
+      "street": "Bodanstraße 1",
+      "plz": "78462",
       "city": "Konstanz",
       "lat": 47.6569971,
       "lon": 9.1758437,
       "osmType": "node",
-      "osmId": 13699305347
+      "osmId": 13699305347,
+      "addressSource": "nominatim"
     },
     {
       "slug": "augenweide",
@@ -1480,7 +1608,8 @@
       "website": "https://www.augenweide-konstanz.de",
       "openingHours": "Mo-Fr 09:30-18:30; Sa 10:00-16:00",
       "osmType": "node",
-      "osmId": 10565298077
+      "osmId": 10565298077,
+      "addressSource": "osm"
     },
     {
       "slug": "brillen-mueller",
@@ -1496,12 +1625,15 @@
       "slug": "eyes-more",
       "name": "eyes + more",
       "gewerk": "optiker",
+      "street": "Hussenstraße 17",
+      "plz": "78462",
       "city": "Konstanz",
       "lat": 47.6600026,
       "lon": 9.1726785,
       "openingHours": "Mo-Fr 09:00-18:00; Sa 09:00-16:00",
       "osmType": "node",
-      "osmId": 5873399818
+      "osmId": 5873399818,
+      "addressSource": "nominatim"
     },
     {
       "slug": "fielmann",
@@ -1515,28 +1647,35 @@
       "phone": "+497531914690",
       "openingHours": "Mo-We 09:00-18:30; Th,Fr 09:00-19:00; Sa 09:00-18:00",
       "osmType": "node",
-      "osmId": 2453062161
+      "osmId": 2453062161,
+      "addressSource": "osm"
     },
     {
       "slug": "gebrueder-hepp",
       "name": "Gebrüder Hepp",
       "gewerk": "optiker",
+      "street": "Marktstätte 9",
+      "plz": "78462",
       "city": "Konstanz",
       "lat": 47.6601938,
       "lon": 9.1758539,
       "openingHours": "Mo-Fr 09:00-12:30,13:30-18:00; Sa 09:00-15:00",
       "osmType": "node",
-      "osmId": 6002646384
+      "osmId": 6002646384,
+      "addressSource": "nominatim"
     },
     {
       "slug": "huber",
       "name": "Huber",
       "gewerk": "optiker",
+      "street": "Theodor-Heuss-Straße 7",
+      "plz": "78467",
       "city": "Konstanz",
       "lat": 47.6693059,
       "lon": 9.1812101,
       "osmType": "node",
-      "osmId": 11373206029
+      "osmId": 11373206029,
+      "addressSource": "nominatim"
     },
     {
       "slug": "individuell-optic",
@@ -1563,13 +1702,16 @@
       "slug": "lichtschlaeger-optik",
       "name": "Lichtschläger Optik",
       "gewerk": "optiker",
+      "street": "Wessenbergstraße 3",
+      "plz": "78462",
       "city": "Konstanz",
       "lat": 47.6611499,
       "lon": 9.1736781,
       "website": "https://www.lichtschlaeger.de/",
       "openingHours": "Mo-Fr 09:30-18:30; Sa 10:00-17:00",
       "osmType": "node",
-      "osmId": 571521028
+      "osmId": 571521028,
+      "addressSource": "nominatim"
     },
     {
       "slug": "mister-spex",
@@ -1595,12 +1737,15 @@
       "website": "https://www.optik-montada.de/",
       "openingHours": "Tu-Fr 09:00-12:30, 14:30-18:30; Sa 09:00-13:00",
       "osmType": "node",
-      "osmId": 4019811746
+      "osmId": 4019811746,
+      "addressSource": "osm"
     },
     {
       "slug": "optik-kramer",
       "name": "optik-kramer",
       "gewerk": "optiker",
+      "street": "Hussenstraße 32",
+      "plz": "78462",
       "city": "Konstanz",
       "lat": 47.6595861,
       "lon": 9.1719148,
@@ -1608,7 +1753,8 @@
       "website": "https://optikkramer.de/",
       "openingHours": "Tu-Fr 09:00-18:00; Sa 09:00-15:00",
       "osmType": "node",
-      "osmId": 571516880
+      "osmId": 571516880,
+      "addressSource": "nominatim"
     },
     {
       "slug": "pro-optik",
@@ -1623,7 +1769,8 @@
       "website": "https://www.prooptik.de",
       "openingHours": "Mo-Fr 09:00-18:30; Sa 09:00-16:00",
       "osmType": "node",
-      "osmId": 4370215778
+      "osmId": 4370215778,
+      "addressSource": "osm"
     },
     {
       "slug": "ufert",
@@ -1660,7 +1807,8 @@
       "phone": "+49 7531 54693",
       "website": "https://www.eckert-badstudio.de/",
       "osmType": "node",
-      "osmId": 13714121139
+      "osmId": 13714121139,
+      "addressSource": "osm"
     },
     {
       "slug": "sanitaer-geray",
@@ -1674,7 +1822,8 @@
       "phone": "+49 7531 55150",
       "website": "https://sanitaer-geray.de/",
       "osmType": "way",
-      "osmId": 681679372
+      "osmId": 681679372,
+      "addressSource": "osm"
     },
     {
       "slug": "sommerfeld-bad-heizung-design",
@@ -1690,13 +1839,16 @@
       "slug": "moebellabor",
       "name": "moebellabor",
       "gewerk": "schreiner",
+      "street": "Joseph-Belli-Weg 27",
+      "plz": "78467",
       "city": "Konstanz",
       "lat": 47.6781784,
       "lon": 9.1624509,
       "phone": "+49 7531 9189151",
       "website": "https://www.moebellabor.de/",
       "osmType": "node",
-      "osmId": 13367660327
+      "osmId": 13367660327,
+      "addressSource": "nominatim"
     },
     {
       "slug": "room-art",
@@ -1710,7 +1862,8 @@
       "phone": "+49 7531 91 49 70",
       "website": "https://www.roomart.de/",
       "osmType": "node",
-      "osmId": 5938621258
+      "osmId": 5938621258,
+      "addressSource": "osm"
     },
     {
       "slug": "schmidt-schreinermeister",
@@ -1722,7 +1875,8 @@
       "lat": 47.6824215,
       "lon": 9.1403123,
       "osmType": "way",
-      "osmId": 27015748
+      "osmId": 27015748,
+      "addressSource": "osm"
     },
     {
       "slug": "schreinermeisterei-dominik-hellmann",
@@ -1751,11 +1905,14 @@
       "slug": "multiexpress",
       "name": "MultiExpress",
       "gewerk": "schuhmacher",
+      "street": "Bodanstraße 20",
+      "plz": "78462",
       "city": "Konstanz",
       "lat": 47.6583713,
       "lon": 9.1739007,
       "osmType": "node",
-      "osmId": 2295289694
+      "osmId": 2295289694,
+      "addressSource": "nominatim"
     },
     {
       "slug": "lynk-tatto-art",
@@ -1791,17 +1948,21 @@
       "phone": "+49 7531 8130900",
       "openingHours": "Tu-Sa 11:00-19:00",
       "osmType": "node",
-      "osmId": 5768955853
+      "osmId": 5768955853,
+      "addressSource": "osm"
     },
     {
       "slug": "gold-und-zeit",
       "name": "Gold & Zeit",
       "gewerk": "uhrmacher",
+      "street": "Tirolergasse 4",
+      "plz": "78462",
       "city": "Konstanz",
       "lat": 47.6606139,
       "lon": 9.1750195,
       "osmType": "node",
-      "osmId": 11233753580
+      "osmId": 11233753580,
+      "addressSource": "nominatim"
     },
     {
       "slug": "alles-hipp-sch",
@@ -1813,7 +1974,8 @@
       "lat": 47.6846798,
       "lon": 9.1575628,
       "osmType": "way",
-      "osmId": 399243602
+      "osmId": 399243602,
+      "addressSource": "osm"
     },
     {
       "slug": "brueckner-schreinerei",
@@ -1825,7 +1987,8 @@
       "lat": 47.6709787,
       "lon": 9.156265,
       "osmType": "way",
-      "osmId": 103593386
+      "osmId": 103593386,
+      "addressSource": "osm"
     },
     {
       "slug": "holzbau-martin-romer",
@@ -1837,7 +2000,8 @@
       "lat": 47.7396516,
       "lon": 9.1498322,
       "osmType": "way",
-      "osmId": 117092257
+      "osmId": 117092257,
+      "addressSource": "osm"
     }
   ]
 }
