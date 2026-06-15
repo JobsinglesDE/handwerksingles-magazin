@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { Breadcrumbs } from '@/components/seo/Breadcrumbs';
-import { JsonLd, breadcrumbJsonLd } from '@/components/seo/JsonLd';
 import { bundeslandName, bundeslandEmoji } from '@/lib/bundeslaender';
 import { listCities } from '@/lib/staedte-data';
 
@@ -28,12 +27,6 @@ export default function StaedtePillarPage() {
 
   return (
     <>
-      <JsonLd
-        data={breadcrumbJsonLd([
-          { name: 'Magazin', url: BASE_URL },
-          { name: 'Handwerksbetriebe', url: `${BASE_URL}/handwerksbetriebe` },
-        ])}
-      />
       <div className="max-w-3xl mx-auto px-6 py-12">
         <Breadcrumbs items={[{ label: 'Handwerksbetriebe', href: '/handwerksbetriebe' }]} />
 

@@ -67,3 +67,29 @@ export function businessesByGewerk(city: CityData, gewerk: string): Betrieb[] {
 export function getBusiness(city: CityData, gewerk: string, betriebSlug: string): Betrieb | null {
   return city.betriebe.find((b) => b.gewerk === gewerk && b.slug === betriebSlug) ?? null;
 }
+
+const SCHEMA_DAYS = /^(Mo|Tu|We|Th|Fr|Sa|Su)(-(Mo|Tu|We|Th|Fr|Sa|Su))?(,(Mo|Tu|We|Th|Fr|Sa|Su)(-(Mo|Tu|We|Th|Fr|Sa|Su))?)*$/;
+
+/**
+ * Konvertiert OSM `opening_hours` in valide schema.org `openingHours`-Werte (Array).
+ * OSM nutzt dieselben 2-Buchstaben-Tage wie schema.org. Geschlossene/komplexe Regeln
+ * (off/closed/PH/SH, unparsbar) werden weggelassen — lieber kein Wert als ein falscher.
+ * Der rohe String bleibt fürs Display erhalten (nur das Schema wird sauber).
+ */
+export function osmHoursToSchema(raw?: string): string[] | undefined {
+  if (!raw) return undefined;
+  if (raw.trim() === '24/7') return ['Mo-Su 00:00-23:59'];
+  const out: string[] = [];
+  for (const rule of raw.split(';')) {
+    const r = rule.trim();
+    if (!r || /\b(off|closed)\b|PH|SH/i.test(r)) continue;
+    const m = r.match(/^([A-Za-z,\-]+)\s+(.+)$/);
+    if (!m || !SCHEMA_DAYS.test(m[1].trim())) continue;
+    const days = m[1].trim();
+    for (let span of m[2].split(',')) {
+      span = span.trim().replace('24:00', '23:59');
+      if (/^\d{2}:\d{2}-\d{2}:\d{2}$/.test(span)) out.push(`${days} ${span}`);
+    }
+  }
+  return out.length ? out : undefined;
+}

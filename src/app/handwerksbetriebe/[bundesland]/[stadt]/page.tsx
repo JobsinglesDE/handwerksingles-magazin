@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Breadcrumbs } from '@/components/seo/Breadcrumbs';
-import { JsonLd, collectionPageJsonLd, breadcrumbJsonLd } from '@/components/seo/JsonLd';
+import { JsonLd, collectionPageJsonLd } from '@/components/seo/JsonLd';
 import { StaedteCTA } from '@/components/content/StaedteCTA';
 import { AnimatedGradientBorder } from '@/components/ui/AnimatedGradientBorder';
 import { StaedteSources } from '@/components/content/StaedteSources';
@@ -49,6 +49,15 @@ export default async function StadtHubPage({ params }: { params: Params }) {
   const stats = cityStats(city.citySlug);
   const intro = CITY_INTROS[city.citySlug];
 
+  // Stadt-Geo = Schwerpunkt der Betriebs-Koordinaten (für CollectionPage about)
+  const geoPts = city.betriebe.filter((b) => typeof b.lat === 'number' && typeof b.lon === 'number');
+  const cityGeo = geoPts.length
+    ? {
+        lat: geoPts.reduce((s, b) => s + (b.lat as number), 0) / geoPts.length,
+        lon: geoPts.reduce((s, b) => s + (b.lon as number), 0) / geoPts.length,
+      }
+    : undefined;
+
   // Handwerkskammer derselben Stadt (falls publiziert) -> Cross-Link
   const kammern = await reader.collections.handwerkskammern.all();
   const kammer = kammern.find(
@@ -62,19 +71,13 @@ export default async function StadtHubPage({ params }: { params: Params }) {
           name: `Handwerker & Betriebe in ${city.city}`,
           description: `Betriebe in ${city.city} nach Gewerk.`,
           url,
+          dateModified: city.generatedAt,
+          about: { name: city.city, lat: cityGeo?.lat, lon: cityGeo?.lon },
           items: gewerke.map((g) => ({
             name: gewerkDef(g.gewerk)?.plural ?? g.gewerk,
             url: `${BASE_URL}${getCityGewerkUrl(bundesland, stadt, g.gewerk)}`,
           })),
         })}
-      />
-      <JsonLd
-        data={breadcrumbJsonLd([
-          { name: 'Magazin', url: BASE_URL },
-          { name: 'Handwerksbetriebe', url: `${BASE_URL}/handwerksbetriebe` },
-          { name: blName, url: `${BASE_URL}/handwerksbetriebe/${bundesland}` },
-          { name: city.city, url },
-        ])}
       />
 
       <div className="max-w-3xl mx-auto px-6 py-12">

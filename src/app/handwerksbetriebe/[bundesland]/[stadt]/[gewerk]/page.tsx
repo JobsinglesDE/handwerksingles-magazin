@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Breadcrumbs } from '@/components/seo/Breadcrumbs';
-import { JsonLd, collectionPageJsonLd, breadcrumbJsonLd, faqJsonLd } from '@/components/seo/JsonLd';
+import { JsonLd, collectionPageJsonLd, faqJsonLd } from '@/components/seo/JsonLd';
 import { BetriebList } from '@/components/content/BetriebList';
 import { StaedteCTA } from '@/components/content/StaedteCTA';
 import { StaedteSources } from '@/components/content/StaedteSources';
@@ -18,8 +18,9 @@ import {
   gewerkIntro,
   shouldIndexGewerk,
   partnerCta,
+  hasProfile,
 } from '@/lib/staedte';
-import { getCityUrl, getBerufHubUrl, getCityGewerkUrl } from '@/lib/routes';
+import { getCityUrl, getBerufHubUrl, getCityGewerkUrl, getBetriebUrl } from '@/lib/routes';
 
 const BASE_URL = 'https://handwerksingles.de/magazin';
 type Params = Promise<{ bundesland: string; stadt: string; gewerk: string }>;
@@ -99,19 +100,15 @@ export default async function GewerkStadtPage({ params }: { params: Params }) {
           name: `${def.singular} ${city.city}`,
           description: `${def.plural} in ${city.city} mit Adresse und Kontakt.`,
           url,
-          items: betriebe.map((b) => ({ name: b.name, url })),
+          dateModified: city.generatedAt,
+          about: { name: city.city },
+          items: betriebe.map((b) => ({
+            name: b.name,
+            url: hasProfile(b) ? `${BASE_URL}${getBetriebUrl(bundesland, stadt, gewerk, b.slug)}` : url,
+          })),
         })}
       />
       <JsonLd data={faqJsonLd(faqItems)} />
-      <JsonLd
-        data={breadcrumbJsonLd([
-          { name: 'Magazin', url: BASE_URL },
-          { name: 'Handwerksbetriebe', url: `${BASE_URL}/handwerksbetriebe` },
-          { name: blName, url: `${BASE_URL}/handwerksbetriebe/${bundesland}` },
-          { name: city.city, url: `${BASE_URL}${getCityUrl(bundesland, stadt)}` },
-          { name: def.singular, url },
-        ])}
-      />
 
       <div className="max-w-3xl mx-auto px-6 py-12">
         <Breadcrumbs

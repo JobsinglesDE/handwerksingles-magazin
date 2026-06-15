@@ -189,11 +189,15 @@ export function collectionPageJsonLd({
   description,
   url,
   items,
+  dateModified,
+  about,
 }: {
   name: string;
   description: string;
   url: string;
   items: { name: string; url: string }[];
+  dateModified?: string;
+  about?: { name: string; lat?: number; lon?: number };
 }) {
   return {
     '@context': 'https://schema.org',
@@ -202,6 +206,18 @@ export function collectionPageJsonLd({
     description,
     url,
     inLanguage: 'de-DE',
+    ...(dateModified ? { dateModified } : {}),
+    ...(about
+      ? {
+          about: {
+            '@type': 'City',
+            name: about.name,
+            ...(typeof about.lat === 'number' && typeof about.lon === 'number'
+              ? { geo: { '@type': 'GeoCoordinates', latitude: about.lat, longitude: about.lon } }
+              : {}),
+          },
+        }
+      : {}),
     isPartOf: {
       '@type': 'WebSite',
       name: 'Handwerksingles Magazin',
@@ -303,10 +319,13 @@ export function vereinOrgJsonLd({
   };
 }
 
-/** LocalBusiness fuer einen Betrieb im Stadt-Verzeichnis (OSM-Quelle). */
+/** LocalBusiness (gewerk-spezifischer Subtyp) für einen Betrieb im Stadt-Verzeichnis (OSM-Quelle). */
 export function betriebJsonLd({
   name,
   url,
+  type = 'LocalBusiness',
+  image,
+  description,
   street,
   plz,
   city,
@@ -319,6 +338,9 @@ export function betriebJsonLd({
 }: {
   name: string;
   url: string;
+  type?: string;
+  image?: string;
+  description?: string;
   street?: string;
   plz?: string;
   city: string;
@@ -327,13 +349,15 @@ export function betriebJsonLd({
   lon?: number | null;
   phone?: string;
   website?: string;
-  openingHours?: string;
+  openingHours?: string[];
 }) {
   return {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
+    '@type': type,
     name,
     url,
+    ...(image ? { image } : {}),
+    ...(description ? { description } : {}),
     ...(phone ? { telephone: phone } : {}),
     address: {
       '@type': 'PostalAddress',
@@ -347,7 +371,7 @@ export function betriebJsonLd({
       ? { geo: { '@type': 'GeoCoordinates', latitude: lat, longitude: lon } }
       : {}),
     ...(website ? { sameAs: [website] } : {}),
-    ...(openingHours ? { openingHours } : {}),
+    ...(openingHours && openingHours.length ? { openingHours } : {}),
     areaServed: { '@type': 'City', name: city },
   };
 }

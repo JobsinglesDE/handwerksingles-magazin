@@ -1,13 +1,13 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Breadcrumbs } from '@/components/seo/Breadcrumbs';
-import { JsonLd, betriebJsonLd, breadcrumbJsonLd } from '@/components/seo/JsonLd';
+import { JsonLd, betriebJsonLd } from '@/components/seo/JsonLd';
 import { StaedteCTA } from '@/components/content/StaedteCTA';
 import { StaedteSources } from '@/components/content/StaedteSources';
 import { AnimatedGradientBorder } from '@/components/ui/AnimatedGradientBorder';
 import { bundeslandName, BUNDESLAENDER } from '@/lib/bundeslaender';
-import { listCities, getCityByBundesland, businessesByGewerk, getBusiness } from '@/lib/staedte-data';
-import { gewerkDef, shouldIndexBetrieb, hasProfile } from '@/lib/staedte';
+import { listCities, getCityByBundesland, businessesByGewerk, getBusiness, osmHoursToSchema } from '@/lib/staedte-data';
+import { gewerkDef, shouldIndexBetrieb, hasProfile, gewerkSchemaType } from '@/lib/staedte';
 import { getCityUrl, getCityGewerkUrl, getBetriebUrl } from '@/lib/routes';
 
 const BASE_URL = 'https://handwerksingles.de/magazin';
@@ -39,6 +39,7 @@ export async function generateMetadata({ params }: { params: Params }) {
     title,
     description,
     alternates: { canonical: url },
+    openGraph: { title, description, url, type: 'profile', siteName: 'Handwerksingles Magazin', locale: 'de_DE' },
     ...(index ? {} : { robots: { index: false, follow: true } }),
   };
 }
@@ -74,6 +75,9 @@ export default async function BetriebPage({ params }: { params: Params }) {
         data={betriebJsonLd({
           name: b.name,
           url,
+          type: gewerkSchemaType(gewerk),
+          image: `${BASE_URL}/logos/jobsingles-logo.png`,
+          description: intro,
           street: b.street,
           plz: b.plz,
           city: b.city,
@@ -82,18 +86,8 @@ export default async function BetriebPage({ params }: { params: Params }) {
           lon: b.lon,
           phone: b.phone,
           website: b.website,
-          openingHours: b.openingHours,
+          openingHours: osmHoursToSchema(b.openingHours),
         })}
-      />
-      <JsonLd
-        data={breadcrumbJsonLd([
-          { name: 'Magazin', url: BASE_URL },
-          { name: 'Handwerksbetriebe', url: `${BASE_URL}/handwerksbetriebe` },
-          { name: blName, url: `${BASE_URL}/handwerksbetriebe/${bundesland}` },
-          { name: city.city, url: `${BASE_URL}${getCityUrl(bundesland, stadt)}` },
-          { name: def.plural, url: `${BASE_URL}${getCityGewerkUrl(bundesland, stadt, gewerk)}` },
-          { name: b.name, url },
-        ])}
       />
 
       <div className="max-w-3xl mx-auto px-6 py-12">

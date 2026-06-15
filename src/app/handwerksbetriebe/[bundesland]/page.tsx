@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Breadcrumbs } from '@/components/seo/Breadcrumbs';
-import { JsonLd, collectionPageJsonLd, breadcrumbJsonLd } from '@/components/seo/JsonLd';
+import { JsonLd, collectionPageJsonLd } from '@/components/seo/JsonLd';
 import { bundeslandName, bundeslandEmoji, BUNDESLAENDER } from '@/lib/bundeslaender';
 import { listCities } from '@/lib/staedte-data';
 import { getCityUrl } from '@/lib/routes';
@@ -49,13 +49,6 @@ export default async function BundeslandHubPage({ params }: { params: Params }) 
           url,
           items: cities.map((c) => ({ name: c.city, url: `${BASE_URL}${getCityUrl(bundesland, c.citySlug)}` })),
         })}
-      />
-      <JsonLd
-        data={breadcrumbJsonLd([
-          { name: 'Magazin', url: BASE_URL },
-          { name: 'Handwerksbetriebe', url: `${BASE_URL}/handwerksbetriebe` },
-          { name: blName, url },
-        ])}
       />
 
       <div className="max-w-3xl mx-auto px-6 py-12">

@@ -54,6 +54,23 @@ export function gewerkLabel(slug: string): string {
   return DIRECTORY_GEWERKE[slug]?.plural ?? slug;
 }
 
+/** Gewerk → schema.org LocalBusiness-Subtyp (präziseres Entity-Signal). */
+export const GEWERK_SCHEMA_TYPE: Record<string, string> = {
+  friseur: 'HairSalon',
+  kosmetik: 'BeautySalon',
+  optiker: 'Optician',
+  kfz: 'AutoRepair',
+  juwelier: 'JewelryStore',
+  tattoo: 'TattooParlor',
+  sanitaer: 'Plumber',
+  elektriker: 'Electrician',
+  dachdecker: 'RoofingContractor',
+  maler: 'HousePainter',
+};
+export function gewerkSchemaType(gewerk: string): string {
+  return GEWERK_SCHEMA_TYPE[gewerk] ?? 'LocalBusiness';
+}
+
 /** Wird die Gewerk×Stadt-Seite indexiert? Volumen-Flag UND genug Betriebe. */
 export function shouldIndexGewerk(slug: string, count: number): boolean {
   return Boolean(DIRECTORY_GEWERKE[slug]?.indexable) && count >= MIN_BETRIEBE_INDEX;
