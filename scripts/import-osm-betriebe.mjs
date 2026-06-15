@@ -64,7 +64,7 @@ const SHOP_MAP = {
   car_repair: 'kfz',
   optician: 'optiker',
   jewelry: 'juwelier',
-  tattoo: 'taetowierer',
+  tattoo: 'tattoo',
 };
 
 // Muss zu src/lib/staedte.ts DIRECTORY_GEWERKE passen (Drift-Check unten):
@@ -73,7 +73,7 @@ const KNOWN_SLUGS = new Set([
   'fliesenleger', 'stuckateur', 'metallbauer', 'geruestbauer', 'glaser',
   'schornsteinfeger', 'steinmetz', 'bodenleger', 'garten', 'juwelier',
   'uhrmacher', 'schuhmacher', 'sattler', 'optiker', 'friseur', 'kosmetik',
-  'kfz', 'taetowierer',
+  'kfz', 'tattoo',
 ]);
 
 const OVERPASS_ENDPOINTS = [

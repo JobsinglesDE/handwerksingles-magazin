@@ -4,6 +4,8 @@ import { Breadcrumbs } from '@/components/seo/Breadcrumbs';
 import { JsonLd, collectionPageJsonLd, breadcrumbJsonLd, faqJsonLd } from '@/components/seo/JsonLd';
 import { BetriebList } from '@/components/content/BetriebList';
 import { StaedteCTA } from '@/components/content/StaedteCTA';
+import { StaedteSources } from '@/components/content/StaedteSources';
+import { PartnerCTA } from '@/components/content/PartnerCTA';
 import { bundeslandName, BUNDESLAENDER } from '@/lib/bundeslaender';
 import {
   listCities,
@@ -15,6 +17,7 @@ import {
   gewerkDef,
   gewerkIntro,
   shouldIndexGewerk,
+  partnerCta,
 } from '@/lib/staedte';
 import { getCityUrl, getBerufHubUrl, getCityGewerkUrl } from '@/lib/routes';
 
@@ -71,6 +74,7 @@ export default async function GewerkStadtPage({ params }: { params: Params }) {
   const blName = bundeslandName(bundesland);
   const url = `${BASE_URL}${getCityGewerkUrl(bundesland, stadt, gewerk)}`;
   const intro = gewerkIntro(city.citySlug, gewerk);
+  const partner = partnerCta(gewerk);
 
   // Andere Gewerke derselben Stadt (Cross-Link unten)
   const otherGewerke = gewerkeInCity(city)
@@ -145,7 +149,7 @@ export default async function GewerkStadtPage({ params }: { params: Params }) {
           </p>
         )}
 
-        <StaedteCTA city={city.city} />
+        {partner ? <PartnerCTA {...partner} /> : <StaedteCTA city={city.city} />}
 
         {/* Andere Gewerke in der Stadt */}
         {otherGewerke.length > 0 && (
@@ -189,13 +193,8 @@ export default async function GewerkStadtPage({ params }: { params: Params }) {
           </div>
         </section>
 
-        {/* ODbL-Attribution (Pflicht) */}
-        <p className="mt-12 text-xs text-foreground/40">
-          Betriebsdaten:{' '}
-          <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="nofollow noopener noreferrer" className="hover:underline">
-            © OpenStreetMap-Mitwirkende (ODbL)
-          </a>
-        </p>
+        {/* Quellen konsolidiert ganz unten (leserlich, nofollow) */}
+        <StaedteSources citySlug={city.citySlug} />
       </div>
     </>
   );

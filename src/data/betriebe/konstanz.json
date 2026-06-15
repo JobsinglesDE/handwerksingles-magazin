@@ -3,7 +3,7 @@
   "citySlug": "konstanz",
   "bundesland": "baden-wuerttemberg",
   "attribution": "© OpenStreetMap-Mitwirkende (ODbL)",
-  "generatedAt": "2026-06-15T21:32:52.664Z",
+  "generatedAt": "2026-06-15T22:10:15.184Z",
   "betriebe": [
     {
       "slug": "elektro-moser",
@@ -1760,7 +1760,7 @@
     {
       "slug": "lynk-tatto-art",
       "name": "Lynk Tatto Art",
-      "gewerk": "taetowierer",
+      "gewerk": "tattoo",
       "plz": "78462",
       "city": "Konstanz",
       "lat": 47.6585214,
@@ -1772,7 +1772,7 @@
     {
       "slug": "northtown-tattoo",
       "name": "Northtown Tattoo",
-      "gewerk": "taetowierer",
+      "gewerk": "tattoo",
       "city": "Konstanz",
       "lat": 47.6711507,
       "lon": 9.1700945,
@@ -1782,7 +1782,7 @@
     {
       "slug": "tattooair",
       "name": "Tattooair",
-      "gewerk": "taetowierer",
+      "gewerk": "tattoo",
       "street": "Wollmatinger Straße 77",
       "plz": "78467",
       "city": "Konstanz",

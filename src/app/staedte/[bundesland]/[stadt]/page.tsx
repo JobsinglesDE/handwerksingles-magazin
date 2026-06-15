@@ -4,6 +4,7 @@ import { Breadcrumbs } from '@/components/seo/Breadcrumbs';
 import { JsonLd, collectionPageJsonLd, breadcrumbJsonLd } from '@/components/seo/JsonLd';
 import { StaedteCTA } from '@/components/content/StaedteCTA';
 import { AnimatedGradientBorder } from '@/components/ui/AnimatedGradientBorder';
+import { StaedteSources } from '@/components/content/StaedteSources';
 import { reader } from '@/lib/keystatic';
 import { bundeslandName, BUNDESLAENDER } from '@/lib/bundeslaender';
 import { listCities, getCityByBundesland, gewerkeInCity } from '@/lib/staedte-data';
@@ -109,18 +110,6 @@ export default async function StadtHubPage({ params }: { params: Params }) {
                   </div>
                 ))}
               </div>
-              {stats.note && <p className="text-xs text-white/45 mt-4">{stats.note}</p>}
-              <p className="text-xs text-white/45 mt-3">
-                Quellen:{' '}
-                {stats.sources.map((s, i) => (
-                  <span key={s.url}>
-                    {i > 0 && ' · '}
-                    <a href={s.url} target="_blank" rel="nofollow noopener noreferrer" className="underline hover:text-white">
-                      {s.label}
-                    </a>
-                  </span>
-                ))}
-              </p>
             </div>
           </AnimatedGradientBorder>
         )}
@@ -162,12 +151,8 @@ export default async function StadtHubPage({ params }: { params: Params }) {
 
         <StaedteCTA city={city.city} />
 
-        <p className="mt-10 text-xs text-foreground/40">
-          Betriebsdaten:{' '}
-          <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="nofollow noopener noreferrer" className="hover:underline">
-            © OpenStreetMap-Mitwirkende (ODbL)
-          </a>
-        </p>
+        {/* Quellen konsolidiert ganz unten (leserlich, nofollow) */}
+        <StaedteSources citySlug={city.citySlug} withStats />
       </div>
     </>
   );

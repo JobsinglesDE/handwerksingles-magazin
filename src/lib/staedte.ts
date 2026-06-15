@@ -22,7 +22,7 @@ export const DIRECTORY_GEWERKE: Record<string, GewerkDef> = {
   friseur: { singular: 'Friseur', plural: 'Friseure', berufHub: 'friseur', indexable: true },
   kosmetik: { singular: 'Kosmetik- & Nagelstudio', plural: 'Kosmetik- & Nagelstudios', berufHub: 'kosmetikerin', indexable: true },
   optiker: { singular: 'Optiker', plural: 'Optiker', berufHub: 'augenoptiker', indexable: true },
-  taetowierer: { singular: 'Tattoo-Studio', plural: 'Tattoo-Studios', berufHub: 'taetowierer', indexable: true },
+  tattoo: { singular: 'Tattoo-Studio', plural: 'Tattoo-Studios', berufHub: 'taetowierer', indexable: true },
   juwelier: { singular: 'Juwelier', plural: 'Juweliere & Goldschmiede', berufHub: 'goldschmied', indexable: true },
   kfz: { singular: 'KFZ-Werkstatt', plural: 'KFZ-Werkstätten', berufHub: 'kfz-mechatroniker', indexable: true },
   sanitaer: { singular: 'Sanitär- & Heizungsbetrieb', plural: 'Sanitär & Heizung', berufHub: 'anlagenmechaniker-shk', indexable: true },
@@ -74,6 +74,16 @@ export function shouldIndexBetrieb(b: {
   return Boolean(b.street) && Boolean(b.phone || b.website || b.openingHours);
 }
 
+/**
+ * Bekommt der Betrieb eine eigene (klickbare) Profil-Seite?
+ * Nur wenn es etwas Verwertbares über den Namen hinaus gibt (Adresse ODER Kontakt).
+ * Reine Namens-/Nur-Öffnungszeiten-Einträge (z.B. "Barber Shop") bleiben inline auf
+ * der Gewerk-Liste — keine leere Profil-Seite.
+ */
+export function hasProfile(b: { street?: string; phone?: string; website?: string }): boolean {
+  return Boolean(b.street || b.phone || b.website);
+}
+
 // ---------------------------------------------------------------------------
 // Stadt-Intros (Hub) + Gewerk×Stadt-Intros (Intent-Seiten) = die "geilen Texte"
 // Lokal, faktisch, humanisiert — gleicht die duenne OSM-Liste aus (SEO-Futter).
@@ -91,7 +101,7 @@ export const GEWERK_CITY_INTROS: Record<string, Record<string, string>> = {
       'Kosmetik- und Nagelstudios haben in Konstanz Konjunktur: Maniküre, Gesichtsbehandlung, Wimpern und Waxing werden quer durch die Stadt angeboten, von der Altstadt bis Petershausen. Gerade rund um Nagelstudios ist die Nachfrage hoch — entsprechend viele Adressen gibt es. Achte beim ersten Termin auf Hygiene, sichtbare Preislisten und ob ohne Voranmeldung etwas frei ist; in der Hauptsaison und am Wochenende sind die beliebten Studios oft ausgebucht. Diese Liste zeigt Kosmetik- und Nagelstudios in Konstanz mit Standort.',
     optiker:
       'Optiker in Konstanz reichen von den großen Ketten in der Fußgängerzone bis zu inhabergeführten Fachgeschäften mit eigener Werkstatt. Sehtest, Brillenanpassung, Kontaktlinsen und Reparaturen gehören zum Standard; einige Betriebe sind auf randlose Brillen, Sportoptik oder Kinderbrillen spezialisiert. Wer aus dem Umland oder aus Kreuzlingen kommt, findet die meisten Geschäfte fußläufig in der Altstadt rund um die Markstätte. Unten findest du Optiker in Konstanz mit Adresse.',
-    taetowierer:
+    tattoo:
       'Die Tattoo-Szene in Konstanz ist klein, aber fein. Die Studios arbeiten überwiegend nach Termin und Beratungsgespräch — spontan reinlaufen klappt selten, gute Künstler sind Wochen im Voraus gebucht. Stilrichtungen reichen von Fineline und Blackwork bis zu Realistik. Achte auf ein sauberes Studio, Einweg-Material und eine ehrliche Beratung zu Motiv, Platzierung und Heilung. Diese Übersicht listet Tattoo-Studios in Konstanz mit Standort.',
     juwelier:
       'Juweliere und Goldschmiede prägen das Bild der Konstanzer Altstadt — vom Traditionshaus mit Markenuhren bis zur kleinen Goldschmiede, die Trauringe und Einzelstücke von Hand fertigt. Neben Verkauf bieten viele auch Reparatur, Umarbeitung und Batteriewechsel an. Wer Trauringe sucht, sollte mehrere Termine einplanen; Goldschmiede mit eigener Werkstatt fertigen oft nach Maß. Unten siehst du Juweliere und Goldschmiede in Konstanz mit Adresse.',
@@ -104,6 +114,27 @@ export const GEWERK_CITY_INTROS: Record<string, Record<string, string>> = {
 
 export function gewerkIntro(citySlug: string, gewerk: string): string | undefined {
   return GEWERK_CITY_INTROS[citySlug]?.[gewerk];
+}
+
+// ---------------------------------------------------------------------------
+// Gewerk-spezifische Partner-CTAs (Cross-Network statt generischem Handwerksingles-Pitch).
+// Bei Nischen mit besser passender Partner-Börse: Tattoo → Christians dich-mit-stich.de.
+// Affiliate-Pattern Elflirt/ICONY: /registration/?AID=th · extern = sponsored nofollow (GESETZ).
+// ---------------------------------------------------------------------------
+export type PartnerCta = { headline: string; sub: string; buttonLabel: string; url: string; image?: string };
+
+export const GEWERK_PARTNER_CTA: Record<string, PartnerCta> = {
+  tattoo: {
+    headline: 'Du suchst als Tätowierte:r die große Liebe?',
+    sub: 'Auf dich-mit-stich.de triffst du Singles mit Tattoos und Piercings — Menschen, die deinen Stil teilen.',
+    buttonLabel: 'Zu dich-mit-stich.de',
+    url: 'https://www.dich-mit-stich.de/registration/?AID=th',
+    image: '/images/partner/dich-mit-stich.jpg',
+  },
+};
+
+export function partnerCta(gewerk: string): PartnerCta | undefined {
+  return GEWERK_PARTNER_CTA[gewerk];
 }
 
 // ---------------------------------------------------------------------------

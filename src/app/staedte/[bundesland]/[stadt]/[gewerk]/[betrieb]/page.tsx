@@ -3,10 +3,11 @@ import { notFound } from 'next/navigation';
 import { Breadcrumbs } from '@/components/seo/Breadcrumbs';
 import { JsonLd, betriebJsonLd, breadcrumbJsonLd } from '@/components/seo/JsonLd';
 import { StaedteCTA } from '@/components/content/StaedteCTA';
+import { StaedteSources } from '@/components/content/StaedteSources';
 import { AnimatedGradientBorder } from '@/components/ui/AnimatedGradientBorder';
 import { bundeslandName, BUNDESLAENDER } from '@/lib/bundeslaender';
 import { listCities, getCityByBundesland, businessesByGewerk, getBusiness } from '@/lib/staedte-data';
-import { gewerkDef, shouldIndexBetrieb } from '@/lib/staedte';
+import { gewerkDef, shouldIndexBetrieb, hasProfile } from '@/lib/staedte';
 import { getCityUrl, getCityGewerkUrl, getBetriebUrl } from '@/lib/routes';
 
 const BASE_URL = 'https://handwerksingles.de/magazin';
@@ -16,6 +17,7 @@ export async function generateStaticParams() {
   const params: { bundesland: string; stadt: string; gewerk: string; betrieb: string }[] = [];
   for (const c of listCities()) {
     for (const b of c.betriebe) {
+      if (!hasProfile(b)) continue; // nur datenreiche Betriebe bekommen eine Profil-Seite
       params.push({ bundesland: c.bundesland, stadt: c.citySlug, gewerk: b.gewerk, betrieb: b.slug });
     }
   }
@@ -48,7 +50,7 @@ export default async function BetriebPage({ params }: { params: Params }) {
   const def = gewerkDef(gewerk);
   if (!city || !def) notFound();
   const b = getBusiness(city, gewerk, betrieb);
-  if (!b) notFound();
+  if (!b || !hasProfile(b)) notFound();
 
   const blName = bundeslandName(bundesland);
   const url = `${BASE_URL}${getBetriebUrl(bundesland, stadt, gewerk, betrieb)}`;
@@ -64,7 +66,7 @@ export default async function BetriebPage({ params }: { params: Params }) {
   const intro = introParts.join(' ');
 
   // Ähnliche Betriebe (gleiches Gewerk, gleiche Stadt)
-  const aehnliche = businessesByGewerk(city, gewerk).filter((x) => x.slug !== b.slug).slice(0, 6);
+  const aehnliche = businessesByGewerk(city, gewerk).filter((x) => x.slug !== b.slug && hasProfile(x)).slice(0, 6);
 
   return (
     <>
@@ -149,8 +151,15 @@ export default async function BetriebPage({ params }: { params: Params }) {
           </Link>
         </p>
 
-        {/* Claim + Dating-Brücke */}
-        <StaedteCTA city={city.city} claim businessName={b.name} />
+        {/* Utility: Eintrag korrigieren/melden — getrennt vom Dating-Pitch */}
+        <p className="mt-6 text-sm text-foreground/55">
+          Du bist <strong className="text-foreground/80">{b.name}</strong> und möchtest deinen Eintrag korrigieren
+          oder entfernen lassen?{' '}
+          <Link href="/kontakt" className="text-brand-orange-text hover:underline">Schreib uns →</Link>
+        </p>
+
+        {/* Dating-Brücke (klar getrennt vom Eintrag) */}
+        <StaedteCTA city={city.city} />
 
         {aehnliche.length > 0 && (
           <section className="mt-12">
@@ -172,12 +181,8 @@ export default async function BetriebPage({ params }: { params: Params }) {
           </section>
         )}
 
-        <p className="mt-12 text-xs text-foreground/40">
-          Betriebsdaten:{' '}
-          <a href={osmUrl} target="_blank" rel="nofollow noopener noreferrer" className="hover:underline">
-            © OpenStreetMap-Mitwirkende (ODbL)
-          </a>
-        </p>
+        {/* Quellen konsolidiert ganz unten (leserlich, nofollow) */}
+        <StaedteSources citySlug={city.citySlug} />
       </div>
     </>
   );
