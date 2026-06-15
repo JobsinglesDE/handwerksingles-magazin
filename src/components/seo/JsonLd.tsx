@@ -303,6 +303,55 @@ export function vereinOrgJsonLd({
   };
 }
 
+/** LocalBusiness fuer einen Betrieb im Stadt-Verzeichnis (OSM-Quelle). */
+export function betriebJsonLd({
+  name,
+  url,
+  street,
+  plz,
+  city,
+  region,
+  lat,
+  lon,
+  phone,
+  website,
+  openingHours,
+}: {
+  name: string;
+  url: string;
+  street?: string;
+  plz?: string;
+  city: string;
+  region: string;
+  lat?: number | null;
+  lon?: number | null;
+  phone?: string;
+  website?: string;
+  openingHours?: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name,
+    url,
+    ...(phone ? { telephone: phone } : {}),
+    address: {
+      '@type': 'PostalAddress',
+      ...(street ? { streetAddress: street } : {}),
+      ...(plz ? { postalCode: plz } : {}),
+      addressLocality: city,
+      addressRegion: region,
+      addressCountry: 'DE',
+    },
+    ...(typeof lat === 'number' && typeof lon === 'number'
+      ? { geo: { '@type': 'GeoCoordinates', latitude: lat, longitude: lon } }
+      : {}),
+    ...(website ? { sameAs: [website] } : {}),
+    ...(openingHours ? { openingHours } : {}),
+    areaServed: { '@type': 'City', name: city },
+  };
+}
+
 export function organizationJsonLd({
   name,
   alternateName,

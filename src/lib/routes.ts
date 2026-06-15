@@ -28,3 +28,21 @@ export function articleHref(item: {
 }): string {
   return getArticleUrl(item.slug, item.entry.category);
 }
+
+// --- Stadt-Verzeichnis (Pilot: Konstanz) -----------------------------------
+/** Stadt-Hub: /staedte/{bundesland}/{stadt} */
+export function getCityUrl(bundesland: string, stadt: string): string {
+  return `/staedte/${bundesland}/${stadt}`;
+}
+/** Gewerk×Stadt-Intent-Seite: /staedte/{bundesland}/{stadt}/{gewerk} */
+export function getCityGewerkUrl(bundesland: string, stadt: string, gewerk: string): string {
+  return `/staedte/${bundesland}/${stadt}/${gewerk}`;
+}
+/** Betriebs-Profil: /staedte/{bundesland}/{stadt}/{gewerk}/{betrieb} */
+export function getBetriebUrl(bundesland: string, stadt: string, gewerk: string, betrieb: string): string {
+  return `/staedte/${bundesland}/${stadt}/${gewerk}/${betrieb}`;
+}
+/** Beruf-Hub-URL fuer Cross-Link (informationaler Hub). */
+export function getBerufHubUrl(berufSlug: string): string {
+  return `/handwerksberufe/${berufSlug}`;
+}

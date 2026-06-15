@@ -27,6 +27,7 @@ const NAV_ITEMS: NavItem[] = [
     href: '/singles-regional',
     dropdown: [
       { label: 'Handwerkskammern', href: '/singles-regional/handwerkskammern', description: 'Alle 53 Kammern nach Bundesland' },
+      { label: 'Städte', href: '/staedte', description: 'Handwerker-Betriebe nach Stadt – Pilot: Konstanz' },
     ],
   },
   { label: 'Erfolgsgeschichten', href: '/erfolgsgeschichten' },

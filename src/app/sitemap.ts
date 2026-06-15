@@ -1,7 +1,9 @@
 import type { MetadataRoute } from 'next';
 import { reader } from '@/lib/keystatic';
-import { getArticleUrl, getPersonHubUrl } from '@/lib/routes';
+import { getArticleUrl, getPersonHubUrl, getCityUrl, getCityGewerkUrl, getBetriebUrl } from '@/lib/routes';
 import { ALL_HUBS } from '@/lib/hubs';
+import { listCities, gewerkeInCity } from '@/lib/staedte-data';
+import { shouldIndexGewerk, shouldIndexBetrieb } from '@/lib/staedte';
 
 const BASE = 'https://handwerksingles.de/magazin';
 
@@ -66,7 +68,23 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'weekly' as const,
     }));
 
-  const all = [...staticPages, ...personPages, ...articlePages, ...storyPages, ...kammerBundeslandPages, ...kammerPages];
+  // Stadt-Verzeichnis (Pilot Konstanz): NUR indexierbare URLs (Hub + Volumen-Gewerke + datenreiche Profile)
+  const staedtePages: MetadataRoute.Sitemap = [];
+  for (const c of listCities()) {
+    staedtePages.push({ url: `${BASE}${getCityUrl(c.bundesland, c.citySlug)}`, priority: 0.7, changeFrequency: 'monthly' });
+    for (const { gewerk, count } of gewerkeInCity(c)) {
+      if (shouldIndexGewerk(gewerk, count)) {
+        staedtePages.push({ url: `${BASE}${getCityGewerkUrl(c.bundesland, c.citySlug, gewerk)}`, priority: 0.7, changeFrequency: 'monthly' });
+      }
+    }
+    for (const b of c.betriebe) {
+      if (shouldIndexBetrieb(b)) {
+        staedtePages.push({ url: `${BASE}${getBetriebUrl(c.bundesland, c.citySlug, b.gewerk, b.slug)}`, priority: 0.5, changeFrequency: 'monthly' });
+      }
+    }
+  }
+
+  const all = [...staticPages, ...personPages, ...articlePages, ...storyPages, ...kammerBundeslandPages, ...kammerPages, ...staedtePages];
   // Dedupe nach URL (SINGLE_HUB taucht in staticPages + ALL_HUBS auf)
   const seen = new Set<string>();
   return all.filter((e) => (seen.has(e.url) ? false : (seen.add(e.url), true)));
