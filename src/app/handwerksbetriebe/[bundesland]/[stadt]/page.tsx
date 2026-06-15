@@ -71,8 +71,8 @@ export default async function StadtHubPage({ params }: { params: Params }) {
       <JsonLd
         data={breadcrumbJsonLd([
           { name: 'Magazin', url: BASE_URL },
-          { name: 'Städte', url: `${BASE_URL}/staedte` },
-          { name: blName, url: `${BASE_URL}/staedte/${bundesland}` },
+          { name: 'Handwerksbetriebe', url: `${BASE_URL}/handwerksbetriebe` },
+          { name: blName, url: `${BASE_URL}/handwerksbetriebe/${bundesland}` },
           { name: city.city, url },
         ])}
       />
@@ -80,8 +80,8 @@ export default async function StadtHubPage({ params }: { params: Params }) {
       <div className="max-w-3xl mx-auto px-6 py-12">
         <Breadcrumbs
           items={[
-            { label: 'Städte', href: '/staedte' },
-            { label: blName, href: `/staedte/${bundesland}` },
+            { label: 'Handwerksbetriebe', href: '/handwerksbetriebe' },
+            { label: blName, href: `/handwerksbetriebe/${bundesland}` },
             { label: city.city, href: getCityUrl(bundesland, stadt) },
           ]}
         />

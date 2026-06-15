@@ -7,7 +7,7 @@ import { listCities } from '@/lib/staedte-data';
 const BASE_URL = 'https://handwerksingles.de/magazin';
 
 export async function generateMetadata() {
-  const url = `${BASE_URL}/staedte`;
+  const url = `${BASE_URL}/handwerksbetriebe`;
   return {
     title: 'Handwerker & Betriebe nach Stadt',
     description: 'Finde Handwerks- und Dienstleistungsbetriebe nach Stadt und Gewerk. Pilot: Konstanz.',
@@ -31,11 +31,11 @@ export default function StaedtePillarPage() {
       <JsonLd
         data={breadcrumbJsonLd([
           { name: 'Magazin', url: BASE_URL },
-          { name: 'Städte', url: `${BASE_URL}/staedte` },
+          { name: 'Handwerksbetriebe', url: `${BASE_URL}/handwerksbetriebe` },
         ])}
       />
       <div className="max-w-3xl mx-auto px-6 py-12">
-        <Breadcrumbs items={[{ label: 'Städte', href: '/staedte' }]} />
+        <Breadcrumbs items={[{ label: 'Handwerksbetriebe', href: '/handwerksbetriebe' }]} />
 
         <header className="mt-6 mb-8">
           <h1 className="text-3xl sm:text-4xl font-extrabold text-foreground">
@@ -57,7 +57,7 @@ export default function StaedtePillarPage() {
               {cs.map((c) => (
                 <Link
                   key={c.citySlug}
-                  href={`/staedte/${bl}/${c.citySlug}`}
+                  href={`/handwerksbetriebe/${bl}/${c.citySlug}`}
                   className="flex items-center justify-between p-5 rounded-xl bg-surface border border-foreground/10 hover:border-brand-orange/50 hover:bg-brand-orange/5 transition-colors"
                 >
                   <span className="text-lg font-bold text-foreground">{c.city}</span>

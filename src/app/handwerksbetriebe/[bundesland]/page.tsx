@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Params }) {
   if (!BUNDESLAENDER[bundesland]) return {};
   const cities = listCities().filter((c) => c.bundesland === bundesland);
   const blName = bundeslandName(bundesland);
-  const url = `${BASE_URL}/staedte/${bundesland}`;
+  const url = `${BASE_URL}/handwerksbetriebe/${bundesland}`;
   const title = `Handwerker-Betriebe in ${blName}`;
   const description = `Handwerks- und Dienstleistungsbetriebe in ${blName} nach Stadt und Gewerk – mit Adresse und Kontakt.`;
   return {
@@ -38,7 +38,7 @@ export default async function BundeslandHubPage({ params }: { params: Params }) 
   if (cities.length === 0) notFound();
 
   const blName = bundeslandName(bundesland);
-  const url = `${BASE_URL}/staedte/${bundesland}`;
+  const url = `${BASE_URL}/handwerksbetriebe/${bundesland}`;
 
   return (
     <>
@@ -53,13 +53,13 @@ export default async function BundeslandHubPage({ params }: { params: Params }) 
       <JsonLd
         data={breadcrumbJsonLd([
           { name: 'Magazin', url: BASE_URL },
-          { name: 'Städte', url: `${BASE_URL}/staedte` },
+          { name: 'Handwerksbetriebe', url: `${BASE_URL}/handwerksbetriebe` },
           { name: blName, url },
         ])}
       />
 
       <div className="max-w-3xl mx-auto px-6 py-12">
-        <Breadcrumbs items={[{ label: 'Städte', href: '/staedte' }, { label: blName, href: `/staedte/${bundesland}` }]} />
+        <Breadcrumbs items={[{ label: 'Handwerksbetriebe', href: '/handwerksbetriebe' }, { label: blName, href: `/handwerksbetriebe/${bundesland}` }]} />
 
         <header className="mt-6 mb-8">
           <h1 className="text-3xl sm:text-4xl font-extrabold text-foreground">

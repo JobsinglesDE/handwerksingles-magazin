@@ -30,17 +30,17 @@ export function articleHref(item: {
 }
 
 // --- Stadt-Verzeichnis (Pilot: Konstanz) -----------------------------------
-/** Stadt-Hub: /staedte/{bundesland}/{stadt} */
+/** Stadt-Hub: /handwerksbetriebe/{bundesland}/{stadt} */
 export function getCityUrl(bundesland: string, stadt: string): string {
-  return `/staedte/${bundesland}/${stadt}`;
+  return `/handwerksbetriebe/${bundesland}/${stadt}`;
 }
-/** Gewerk×Stadt-Intent-Seite: /staedte/{bundesland}/{stadt}/{gewerk} */
+/** Gewerk×Stadt-Intent-Seite: /handwerksbetriebe/{bundesland}/{stadt}/{gewerk} */
 export function getCityGewerkUrl(bundesland: string, stadt: string, gewerk: string): string {
-  return `/staedte/${bundesland}/${stadt}/${gewerk}`;
+  return `/handwerksbetriebe/${bundesland}/${stadt}/${gewerk}`;
 }
-/** Betriebs-Profil: /staedte/{bundesland}/{stadt}/{gewerk}/{betrieb} */
+/** Betriebs-Profil: /handwerksbetriebe/{bundesland}/{stadt}/{gewerk}/{betrieb} */
 export function getBetriebUrl(bundesland: string, stadt: string, gewerk: string, betrieb: string): string {
-  return `/staedte/${bundesland}/${stadt}/${gewerk}/${betrieb}`;
+  return `/handwerksbetriebe/${bundesland}/${stadt}/${gewerk}/${betrieb}`;
 }
 /** Beruf-Hub-URL fuer Cross-Link (informationaler Hub). */
 export function getBerufHubUrl(berufSlug: string): string {
