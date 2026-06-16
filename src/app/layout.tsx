@@ -62,10 +62,10 @@ export const metadata: Metadata = {
   // src/app/favicon.ico bleibt für lokale dev/SDK-Tools als Fallback liegen.
   icons: {
     icon: [
-      { url: '/magazin/images/icons/icon-192.png', type: 'image/png', sizes: '192x192' },
+      { url: '/magazin/logos/jobsingles-icon-512.webp', type: 'image/webp', sizes: '512x512' },
     ],
-    shortcut: '/magazin/images/icons/favicon.ico',
-    apple: '/magazin/images/icons/apple-icon-180.png',
+    shortcut: '/magazin/logos/jobsingles-icon-512.webp',
+    apple: '/magazin/logos/jobsingles-icon-512.webp',
   },
 };
 

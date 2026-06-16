@@ -16,7 +16,7 @@ export function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src="/logos/jobsingles-logo.png"
+            src="/logos/jobsingles-icon-512.webp"
             alt="Handwerksingles Magazin"
             width={44}
             height={44}
