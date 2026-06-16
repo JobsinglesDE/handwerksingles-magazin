@@ -6,7 +6,7 @@ import { BerufDirectory, type BerufEntry } from '@/components/content/BerufDirec
 import { HeartButton } from '@/components/ui/HeartButton';
 import { ScrollReveal } from '@/components/ui/ScrollReveal';
 import { Breadcrumbs } from '@/components/seo/Breadcrumbs';
-import { JsonLd, collectionPageJsonLd, breadcrumbJsonLd } from '@/components/seo/JsonLd';
+import { JsonLd, collectionPageJsonLd } from '@/components/seo/JsonLd';
 import { SECTION_HUBS } from '@/lib/hubs';
 
 const HUB_URL = 'https://handwerksingles.de/magazin/handwerksberufe';
@@ -22,7 +22,7 @@ export const metadata = {
     url: HUB_URL,
     type: 'website',
     siteName: 'Handwerksingles Magazin',
-    locale: 'de-DE',
+    locale: 'de_DE',
   },
 };
 
@@ -119,13 +119,6 @@ export default async function HandwerksberufeHub() {
           url: HUB_URL,
           items: itemList,
         })}
-      />
-      <JsonLd
-        data={breadcrumbJsonLd([
-          { name: 'Magazin', url: 'https://handwerksingles.de/magazin' },
-          { name: 'Handwerk-News', url: 'https://handwerksingles.de/magazin/handwerk-news' },
-          { name: 'Handwerksberufe', url: HUB_URL },
-        ])}
       />
 
       <PillarHero

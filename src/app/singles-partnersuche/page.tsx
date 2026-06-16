@@ -9,7 +9,7 @@ import { TakeawayBox } from '@/components/ui/TakeawayBox';
 import { HeartButton } from '@/components/ui/HeartButton';
 import { ScrollReveal } from '@/components/ui/ScrollReveal';
 import { Breadcrumbs } from '@/components/seo/Breadcrumbs';
-import { JsonLd, collectionPageJsonLd, breadcrumbJsonLd, faqJsonLd } from '@/components/seo/JsonLd';
+import { JsonLd, collectionPageJsonLd, faqJsonLd } from '@/components/seo/JsonLd';
 import { SINGLE_HUB } from '@/lib/hubs';
 
 const HUB_URL = 'https://handwerksingles.de/magazin/singles-partnersuche';
@@ -25,7 +25,7 @@ export const metadata = {
     url: HUB_URL,
     type: 'website',
     siteName: 'Handwerksingles Magazin',
-    locale: 'de-DE',
+    locale: 'de_DE',
   },
 };
 
@@ -137,12 +137,6 @@ export default async function SinglesPartnersuche() {
         })}
       />
       {faqItems.length > 0 && <JsonLd data={faqJsonLd(faqItems)} />}
-      <JsonLd
-        data={breadcrumbJsonLd([
-          { name: 'Magazin', url: 'https://handwerksingles.de/magazin' },
-          { name: 'Singles & Partnersuche', url: HUB_URL },
-        ])}
-      />
 
       <PillarHero
         title="Partnersuche im Handwerk"

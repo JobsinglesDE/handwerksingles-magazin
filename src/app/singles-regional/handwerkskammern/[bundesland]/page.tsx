@@ -5,7 +5,7 @@ import { ArticleCard } from '@/components/content/ArticleCard';
 import { ScrollReveal } from '@/components/ui/ScrollReveal';
 import { HeartButton } from '@/components/ui/HeartButton';
 import { Breadcrumbs } from '@/components/seo/Breadcrumbs';
-import { JsonLd, collectionPageJsonLd, breadcrumbJsonLd } from '@/components/seo/JsonLd';
+import { JsonLd, collectionPageJsonLd } from '@/components/seo/JsonLd';
 import { BUNDESLAENDER, BUNDESLAND_SLUGS, bundeslandName, bundeslandEmoji } from '@/lib/bundeslaender';
 
 export async function generateStaticParams() {
@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ bundeslan
     title: `Handwerkskammer ${name} — Singles-Networking für Handwerker`,
     description: `Handwerkskammern in ${name}: Mitgliedsbetriebe, Events, wie Handwerker-Singles diese für Networking nutzen.`,
     alternates: { canonical: url },
-    openGraph: { url, type: 'website', siteName: 'Handwerksingles Magazin', locale: 'de-DE' },
+    openGraph: { url, type: 'website', siteName: 'Handwerksingles Magazin', locale: 'de_DE' },
   };
 }
 
@@ -49,14 +49,6 @@ export default async function HandwerkskammerBundeslandPage({ params }: { params
             url: `https://handwerksingles.de/magazin/singles-regional/handwerkskammern/${bundesland}/${a.entry.stadt}`,
           })),
         })}
-      />
-      <JsonLd
-        data={breadcrumbJsonLd([
-          { name: 'Magazin', url: 'https://handwerksingles.de/magazin' },
-          { name: 'Singles Regional', url: 'https://handwerksingles.de/magazin/singles-regional' },
-          { name: 'Handwerkskammern', url: 'https://handwerksingles.de/magazin/singles-regional/handwerkskammern' },
-          { name: blName, url },
-        ])}
       />
 
       <section className="relative overflow-hidden min-h-[280px] md:min-h-[360px] flex items-center">

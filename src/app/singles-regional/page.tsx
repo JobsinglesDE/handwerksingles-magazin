@@ -1,7 +1,7 @@
 import { reader } from '@/lib/keystatic';
 import Link from 'next/link';
 import { Breadcrumbs } from '@/components/seo/Breadcrumbs';
-import { JsonLd, collectionPageJsonLd, breadcrumbJsonLd } from '@/components/seo/JsonLd';
+import { JsonLd, collectionPageJsonLd } from '@/components/seo/JsonLd';
 
 const BASE_URL = 'https://handwerksingles.de/magazin';
 
@@ -15,7 +15,7 @@ export const metadata = {
     url: `${BASE_URL}/singles-regional`,
     type: 'website',
     siteName: 'Handwerksingles Magazin',
-    locale: 'de-DE',
+    locale: 'de_DE',
   },
 };
 
@@ -37,12 +37,6 @@ export default async function SinglesRegionalHub() {
           url: `${BASE_URL}/singles-regional`,
           items: [{ name: 'Handwerkskammern', url: `${BASE_URL}/singles-regional/handwerkskammern` }],
         })}
-      />
-      <JsonLd
-        data={breadcrumbJsonLd([
-          { name: 'Magazin', url: BASE_URL },
-          { name: 'Singles Regional', url: `${BASE_URL}/singles-regional` },
-        ])}
       />
 
       <div className="max-w-6xl mx-auto px-6 py-8">

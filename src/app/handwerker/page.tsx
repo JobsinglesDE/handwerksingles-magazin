@@ -14,7 +14,7 @@ export async function generateMetadata() {
     title: HUB.seoTitle,
     description: HUB.seoDescription,
     alternates: { canonical: url },
-    openGraph: { title: HUB.seoTitle, description: HUB.seoDescription, url, type: 'website', siteName: 'Handwerksingles Magazin', locale: 'de-DE' },
+    openGraph: { title: HUB.seoTitle, description: HUB.seoDescription, url, type: 'website', siteName: 'Handwerksingles Magazin', locale: 'de_DE' },
   };
 }
 

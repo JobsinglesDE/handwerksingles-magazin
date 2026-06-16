@@ -5,7 +5,7 @@ import { ScrollReveal } from '@/components/ui/ScrollReveal';
 import { HeartButton } from '@/components/ui/HeartButton';
 import { AnimatedGradientBorder } from '@/components/ui/AnimatedGradientBorder';
 import { Breadcrumbs } from '@/components/seo/Breadcrumbs';
-import { JsonLd, collectionPageJsonLd, breadcrumbJsonLd } from '@/components/seo/JsonLd';
+import { JsonLd, collectionPageJsonLd } from '@/components/seo/JsonLd';
 import { BUNDESLAENDER, BUNDESLAND_SLUGS } from '@/lib/bundeslaender';
 
 const PILLAR_URL = 'https://handwerksingles.de/magazin/singles-regional/handwerkskammern';
@@ -20,7 +20,7 @@ export const metadata = {
     url: PILLAR_URL,
     type: 'website',
     siteName: 'Handwerksingles Magazin',
-    locale: 'de-DE',
+    locale: 'de_DE',
   },
 };
 
@@ -50,13 +50,6 @@ export default async function HandwerkskammernPillar() {
             url: `${PILLAR_URL}/${s}`,
           })),
         })}
-      />
-      <JsonLd
-        data={breadcrumbJsonLd([
-          { name: 'Magazin', url: 'https://handwerksingles.de/magazin' },
-          { name: 'Singles Regional', url: 'https://handwerksingles.de/magazin/singles-regional' },
-          { name: 'Handwerkskammern', url: PILLAR_URL },
-        ])}
       />
 
       <PillarHero

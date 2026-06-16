@@ -11,6 +11,42 @@ export function JsonLd({ data }: JsonLdProps) {
   );
 }
 
+// Stabile Entity-Graph-Wurzeln — auf jeder Seite via layout.tsx emittiert,
+// andere Schema-Nodes (Article/CollectionPage) referenzieren sie per @id.
+export const SITE_BASE = 'https://handwerksingles.de/magazin';
+export const WEBSITE_ID = `${SITE_BASE}#website`;
+export const ORG_ID = `${SITE_BASE}#organization`;
+
+/** Site-weiter Entity-Graph (WebSite + Organization). Kein SearchAction — kein Such-Endpoint vorhanden. */
+export function siteGraphJsonLd() {
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebSite',
+        '@id': WEBSITE_ID,
+        url: SITE_BASE,
+        name: 'Handwerksingles Magazin',
+        inLanguage: 'de-DE',
+        publisher: { '@id': ORG_ID },
+      },
+      {
+        '@type': 'Organization',
+        '@id': ORG_ID,
+        name: 'Handwerksingles Magazin',
+        url: SITE_BASE,
+        logo: {
+          '@type': 'ImageObject',
+          url: `${SITE_BASE}/logos/jobsingles-logo.png`,
+          width: 200,
+          height: 200,
+        },
+        sameAs: ['https://www.facebook.com/thomashonold1/'],
+      },
+    ],
+  };
+}
+
 export function articleJsonLd({
   title,
   description,
@@ -56,17 +92,8 @@ export function articleJsonLd({
         'https://handwerksingles.de/magazin/autor/tommy-honold',
       ],
     },
-    publisher: {
-      '@type': 'Organization',
-      name: 'Handwerksingles Magazin',
-      url: 'https://handwerksingles.de/magazin',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://handwerksingles.de/magazin/logos/jobsingles-logo.png',
-        width: 200,
-        height: 200,
-      },
-    },
+    publisher: { '@id': ORG_ID },
+    isPartOf: { '@id': WEBSITE_ID },
     inLanguage: 'de-DE',
   };
 }
@@ -218,11 +245,7 @@ export function collectionPageJsonLd({
           },
         }
       : {}),
-    isPartOf: {
-      '@type': 'WebSite',
-      name: 'Handwerksingles Magazin',
-      url: 'https://handwerksingles.de/magazin',
-    },
+    isPartOf: { '@id': WEBSITE_ID },
     mainEntity: {
       '@type': 'ItemList',
       numberOfItems: items.length,

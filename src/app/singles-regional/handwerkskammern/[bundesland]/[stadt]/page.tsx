@@ -13,7 +13,7 @@ import { HeartButton } from '@/components/ui/HeartButton';
 import { AuthorBio } from '@/components/ui/AuthorBio';
 import { AnimatedGradientBorder } from '@/components/ui/AnimatedGradientBorder';
 import { Breadcrumbs } from '@/components/seo/Breadcrumbs';
-import { JsonLd, articleJsonLd, faqJsonLd, breadcrumbJsonLd, vereinOrgJsonLd } from '@/components/seo/JsonLd';
+import { JsonLd, articleJsonLd, faqJsonLd, vereinOrgJsonLd } from '@/components/seo/JsonLd';
 import { BUNDESLAENDER, bundeslandName } from '@/lib/bundeslaender';
 
 const BASE_URL = 'https://handwerksingles.de/magazin';
@@ -126,15 +126,6 @@ export default async function HandwerkskammerStadtPage({ params }: { params: Par
           mitgliederzahl: e.mitgliedsbetriebe ? String(e.mitgliedsbetriebe) : undefined,
           mutterverband: e.kammerBezirk || undefined,
         })}
-      />
-      <JsonLd
-        data={breadcrumbJsonLd([
-          { name: 'Magazin', url: BASE_URL },
-          { name: 'Singles Regional', url: `${BASE_URL}/singles-regional` },
-          { name: 'Handwerkskammern', url: `${BASE_URL}/singles-regional/handwerkskammern` },
-          { name: blName, url: `${BASE_URL}/singles-regional/handwerkskammern/${bundesland}` },
-          { name: e.title, url },
-        ])}
       />
 
       <ClusterHero

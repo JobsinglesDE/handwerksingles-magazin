@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: { params: Promise<{ person: s
       url,
       type: 'profile',
       siteName: 'Handwerksingles Magazin',
-      locale: 'de-DE',
+      locale: 'de_DE',
       images: person.featuredImage ? [person.featuredImage] : [],
     },
   };

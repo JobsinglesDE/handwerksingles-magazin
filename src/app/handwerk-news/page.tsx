@@ -4,7 +4,7 @@ import { reader } from '@/lib/keystatic';
 import { PillarHero } from '@/components/content/PillarHero';
 import { ScrollReveal } from '@/components/ui/ScrollReveal';
 import { Breadcrumbs } from '@/components/seo/Breadcrumbs';
-import { JsonLd, collectionPageJsonLd, breadcrumbJsonLd } from '@/components/seo/JsonLd';
+import { JsonLd, collectionPageJsonLd } from '@/components/seo/JsonLd';
 import { withBasePath } from '@/lib/url';
 import { SECTION_HUBS } from '@/lib/hubs';
 
@@ -21,7 +21,7 @@ export const metadata = {
     url: HUB_URL,
     type: 'website',
     siteName: 'Handwerksingles Magazin',
-    locale: 'de-DE',
+    locale: 'de_DE',
   },
 };
 
@@ -88,12 +88,6 @@ export default async function HandwerkNewsHub() {
           url: HUB_URL,
           items: clusterItems,
         })}
-      />
-      <JsonLd
-        data={breadcrumbJsonLd([
-          { name: 'Magazin', url: 'https://handwerksingles.de/magazin' },
-          { name: 'Handwerk-News', url: HUB_URL },
-        ])}
       />
 
       <PillarHero
