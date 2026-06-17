@@ -212,7 +212,7 @@ export default async function ArticleView({ slug }: { slug: string }) {
           insertElement={
             <AnimatedGradientBorder borderRadius={12} borderWidth={2} className="my-8">
               <div className="p-6 text-center">
-                <p className="text-sm text-foreground/70 mb-3">Du arbeitest im Handwerk?</p>
+                <p className="text-sm text-foreground/70 mb-3">Du suchst Singles aus dem Handwerk?</p>
                 <HeartButton href="https://handwerksingles.de/registration/?AID=HandwerksinglesMagazin">
                   Jetzt kostenfrei anmelden
                 </HeartButton>
