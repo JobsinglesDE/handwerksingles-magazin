@@ -6,7 +6,7 @@ import { ScrollReveal } from '@/components/ui/ScrollReveal';
 export const metadata = {
   alternates: { canonical: '/ueber-uns' },
   title: 'Über uns — Handwerksingles Magazin',
-  description: 'Thomas Honold: Gründer des größten Berufs-Dating-Netzwerks und passionierter Unternehmer. Die Geschichte hinter Handwerksingles.de — und warum es Handwerker-Singles hilft.',
+  description: 'Thomas Honold: Gründer des größten Berufs-Dating-Netzwerks. Die Geschichte hinter Handwerksingles.de — und warum es Handwerker-Singles zusammenbringt.',
   openGraph: {
     title: 'Über uns — Die Geschichte hinter Handwerksingles',
     description: 'Thomas Honold: Gründer des größten Berufs-Dating-Netzwerks. Die Geschichte hinter Handwerksingles.de.',

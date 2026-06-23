@@ -14,7 +14,7 @@ import { MatchQuiz } from '@/components/ui/MatchQuiz';
 export const metadata = {
   alternates: { canonical: '/' },
   title: { absolute: 'Partnersuche im Handwerk ❤️' },
-  description: 'Partnersuche für Elektriker, Dachdecker, Tischler, Zimmermann und Maurer. Guides für Dating trotz Montage, echte Erfolgsgeschichten und Tipps für den Handwerksalltag.',
+  description: 'Partnersuche für Elektriker, Dachdecker, Tischler, Zimmermann und Maurer. Guides für Dating trotz Montage, echte Erfolgsgeschichten und Handwerks-Tipps.',
 };
 
 const rotations: Array<'left' | 'right' | 'slight'> = ['left', 'right', 'slight'];

@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ bundeslan
   const name = bundeslandName(bundesland);
   const url = `https://handwerksingles.de/magazin/singles-regional/handwerkskammern/${bundesland}`;
   return {
-    title: `Handwerkskammer ${name} — Singles-Networking für Handwerker`,
+    title: `Handwerkskammer ${name} — Singles & Netzwerk`,
     description: `Handwerkskammern in ${name}: Mitgliedsbetriebe, Events, wie Handwerker-Singles diese für Networking nutzen.`,
     alternates: { canonical: url },
     openGraph: { url, type: 'website', siteName: 'Handwerksingles Magazin', locale: 'de_DE' },
