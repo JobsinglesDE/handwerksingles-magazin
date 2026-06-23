@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     images: [`${BASE_URL}/images/hero-startseite.webp`],
   },
   verification: {
-    google: ['sBM54LsgZvWu9O8S8sMGQ4cGZqqMCyVWuxg7rBSyVos', '0rBBQts6iJpxHaZMv5zje4gmnsLJE-tPhQxBGNMLUDY'],
+    google: '0rBBQts6iJpxHaZMv5zje4gmnsLJE-tPhQxBGNMLUDY',
   },
   // Icons unter /magazin/images/icons/ — ICONY-Proxy whitelistet /images/* (top-level
   // /magazin/icon.png oder /magazin/favicon.ico würden vom Proxy mit 404 geblockt).
