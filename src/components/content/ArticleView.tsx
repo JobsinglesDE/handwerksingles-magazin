@@ -21,6 +21,7 @@ import { Breadcrumbs } from '@/components/seo/Breadcrumbs';
 import { ArticleByline } from '@/components/content/ArticleByline';
 import { JsonLd, articleJsonLd, faqJsonLd, videoJsonLd, extractYoutubeEmbed, occupationSalaryJsonLd } from '@/components/seo/JsonLd';
 import { ELEKTRONIKER_GEHALT_ROWS, ELEKTRONIKER_GEHALT_QUELLE } from '@/lib/elektroniker-gehalt-daten';
+import { KONDITOR_GEHALT_ROWS, KONDITOR_GEHALT_QUELLE } from '@/lib/konditor-gehalt-daten';
 import { SECTION_HUBS, SINGLE_HUB } from '@/lib/hubs';
 
 const BASE_URL = 'https://handwerksingles.de/magazin';
@@ -172,6 +173,16 @@ export default async function ArticleView({ slug }: { slug: string }) {
           url: `${BASE_URL}${canonicalPath}`,
           rows: ELEKTRONIKER_GEHALT_ROWS,
           quelle: ELEKTRONIKER_GEHALT_QUELLE,
+        });
+        return s ? <JsonLd data={s} /> : null;
+      })()}
+      {slug === 'konditor-gehalt' && (() => {
+        const s = occupationSalaryJsonLd({
+          name: 'Konditor / Konditorin',
+          description: 'Gehalt im Konditor-Handwerk (Geselle und Meister).',
+          url: `${BASE_URL}${canonicalPath}`,
+          rows: KONDITOR_GEHALT_ROWS,
+          quelle: KONDITOR_GEHALT_QUELLE,
         });
         return s ? <JsonLd data={s} /> : null;
       })()}

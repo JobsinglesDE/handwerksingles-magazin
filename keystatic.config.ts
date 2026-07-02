@@ -49,6 +49,7 @@ export default config({
             { label: 'KFZ', value: 'kfz' },
             { label: 'SHK (Sanitär/Heizung/Klima)', value: 'shk' },
             { label: 'Metall', value: 'metall' },
+            { label: 'Nahrung (Lebensmittelhandwerk)', value: 'nahrung' },
           ],
         }),
         beruf: fields.select({
@@ -93,6 +94,7 @@ export default config({
             { label: 'Hufschmied', value: 'hufschmied' },
             { label: 'Feinwerkmechaniker', value: 'feinwerkmechaniker' },
             { label: 'Zweiradmechatroniker', value: 'zweiradmechatroniker' },
+            { label: 'Konditor', value: 'konditor' },
             { label: 'Handwerkerin (allgemein)', value: 'handwerkerin-allgemein' },
           ],
         }),
