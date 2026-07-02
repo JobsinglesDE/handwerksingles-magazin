@@ -19,7 +19,8 @@ import { AnimatedGradientBorder } from '@/components/ui/AnimatedGradientBorder';
 import { StickyTOC } from '@/components/content/StickyTOC';
 import { Breadcrumbs } from '@/components/seo/Breadcrumbs';
 import { ArticleByline } from '@/components/content/ArticleByline';
-import { JsonLd, articleJsonLd, faqJsonLd, videoJsonLd, extractYoutubeEmbed } from '@/components/seo/JsonLd';
+import { JsonLd, articleJsonLd, faqJsonLd, videoJsonLd, extractYoutubeEmbed, occupationSalaryJsonLd } from '@/components/seo/JsonLd';
+import { ELEKTRONIKER_GEHALT_ROWS, ELEKTRONIKER_GEHALT_QUELLE } from '@/lib/elektroniker-gehalt-daten';
 import { SECTION_HUBS, SINGLE_HUB } from '@/lib/hubs';
 
 const BASE_URL = 'https://handwerksingles.de/magazin';
@@ -164,6 +165,16 @@ export default async function ArticleView({ slug }: { slug: string }) {
       {article.faqItems && article.faqItems.length > 0 && (
         <JsonLd data={faqJsonLd(article.faqItems)} />
       )}
+      {slug === 'elektroniker-gehalt' && (() => {
+        const s = occupationSalaryJsonLd({
+          name: 'Elektroniker / Elektronikerin',
+          description: 'Median-Gehalt nach Fachrichtung (Entgeltatlas).',
+          url: `${BASE_URL}${canonicalPath}`,
+          rows: ELEKTRONIKER_GEHALT_ROWS,
+          quelle: ELEKTRONIKER_GEHALT_QUELLE,
+        });
+        return s ? <JsonLd data={s} /> : null;
+      })()}
       {ytEmbed && (
         <JsonLd data={videoJsonLd({ name: article.title, description: article.excerpt, videoId: ytEmbed.videoId, uploadDate: article.publishedAt || '2026-05-30' })} />
       )}
