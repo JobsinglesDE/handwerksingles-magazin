@@ -57,6 +57,7 @@ export default config({
           options: [
             { label: '— (allgemein)', value: '' },
             { label: 'Elektriker', value: 'elektriker' },
+            { label: 'Elektroniker', value: 'elektroniker' },
             { label: 'KFZ-Mechatroniker', value: 'kfz-mechatroniker' },
             { label: 'Dachdecker', value: 'dachdecker' },
             { label: 'Tischler / Schreiner', value: 'tischler' },
