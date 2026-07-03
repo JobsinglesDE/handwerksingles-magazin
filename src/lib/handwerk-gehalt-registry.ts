@@ -190,4 +190,17 @@ export const HANDWERK_GEHALT_REGISTRY: Record<string, GehaltEntry> = {
     rows: [{ gruppe: 'Kfz-Mechatroniker/in – Pkw-Technik', median: '3.588 €', q1: '2.966 €', q3: '4.537 €' }],
     quelle: 'Entgeltatlas der Bundesagentur für Arbeit (beruf/14798, Median, Vollzeit brutto), Stand 2024',
   },
+  // ── Tranche 3b (2026-07-03): verifiziert + artikel-konsistent (Sub-Kategorie transparent im Artikel benannt) ──
+  'steinmetz-gehalt': {
+    name: 'Steinmetz/in',
+    description: 'Median-Gehalt (Entgeltatlas, Fachkraft; Industrie/Grabsteinmetz).',
+    rows: [{ gruppe: 'Steinmetz/in (Industrie/Grabsteinmetz)', median: '3.295 €', q1: '2.872 €', q3: '3.779 €' }],
+    quelle: 'Entgeltatlas der Bundesagentur für Arbeit (beruf/849, Median, Vollzeit brutto), Stand 2024',
+  },
+  'gebaeudereiniger-gehalt': {
+    name: 'Gebäudereiniger/in',
+    description: 'Median-Gehalt (Entgeltatlas, Fachkraft Gebäudereinigung).',
+    rows: [{ gruppe: 'Gebäudereiniger/in (Gebäudereinigung)', median: '2.634 €', q1: '2.310 €', q3: '3.051 €' }],
+    quelle: 'Entgeltatlas der Bundesagentur für Arbeit (beruf/10234, Median, Vollzeit brutto), Stand 2024',
+  },
 };
