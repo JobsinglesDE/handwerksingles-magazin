@@ -54,4 +54,71 @@ export const HANDWERK_GEHALT_REGISTRY: Record<string, GehaltEntry> = {
     rows: [{ gruppe: 'Dachdecker/in', median: '3.611 €', q1: '3.156 €', q3: '4.070 €' }],
     quelle: 'Entgeltatlas der Bundesagentur für Arbeit (beruf/4051, Median, Vollzeit brutto), Stand 2024',
   },
+  // ── Tranche 1 (2026-07-03): Direkt-Extract verifiziert UND Artikel-Zahl angeglichen (Schema==sichtbar) ──
+  'zimmermann-gehalt': {
+    name: 'Zimmerer / Zimmerin',
+    description: 'Median-Gehalt (Entgeltatlas, Fachkraft).',
+    rows: [{ gruppe: 'Zimmerer/Zimmerin', median: '3.636 €', q1: '3.190 €', q3: '4.100 €' }],
+    quelle: 'Entgeltatlas der Bundesagentur für Arbeit (beruf/4007, Median, Vollzeit brutto), Stand 2024',
+  },
+  'landschaftsgaertner-gehalt': {
+    name: 'Landschaftsgärtner/in (Garten- und Landschaftsbau)',
+    description: 'Median-Gehalt (Entgeltatlas, Fachkraft).',
+    rows: [{ gruppe: 'Gärtner/in – Garten- und Landschaftsbau', median: '3.256 €', q1: '2.762 €', q3: '3.799 €' }],
+    quelle: 'Entgeltatlas der Bundesagentur für Arbeit (beruf/585, Median, Vollzeit brutto), Stand 2024',
+  },
+  'elektriker-gehalt': {
+    name: 'Elektroniker/in – Energie- und Gebäudetechnik',
+    description: 'Median-Gehalt (Entgeltatlas, Fachkraft, Fachrichtung Energie- und Gebäudetechnik).',
+    rows: [{ gruppe: 'Elektroniker/in – Energie- und Gebäudetechnik', median: '3.765 €', q1: '3.188 €', q3: '4.542 €' }],
+    quelle: 'Entgeltatlas der Bundesagentur für Arbeit (beruf/15637, Median, Vollzeit brutto), Stand 2024',
+  },
+  'augenoptiker-gehalt': {
+    name: 'Augenoptiker/in',
+    description: 'Median-Gehalt (Entgeltatlas, Fachkraft).',
+    rows: [{ gruppe: 'Augenoptiker/in', median: '2.931 €', q1: '2.540 €', q3: '3.403 €' }],
+    quelle: 'Entgeltatlas der Bundesagentur für Arbeit (beruf/2629, Median, Vollzeit brutto), Stand 2024',
+  },
+  'hoerakustiker-gehalt': {
+    name: 'Hörakustiker/in',
+    description: 'Median-Gehalt (Entgeltatlas, Fachkraft).',
+    rows: [{ gruppe: 'Hörakustiker/in', median: '2.964 €', q1: '2.560 €', q3: '3.763 €' }],
+    quelle: 'Entgeltatlas der Bundesagentur für Arbeit (beruf/129407, Median, Vollzeit brutto), Stand 2024',
+  },
+  'kosmetikerin-gehalt': {
+    name: 'Kosmetiker/in',
+    description: 'Median-Gehalt (Entgeltatlas, Fachkraft).',
+    rows: [{ gruppe: 'Kosmetiker/in', median: '2.259 €', q1: '1.793 €', q3: '2.773 €' }],
+    quelle: 'Entgeltatlas der Bundesagentur für Arbeit (beruf/14672, Median, Vollzeit brutto), Stand 2024',
+  },
+  'raumausstatter-gehalt': {
+    name: 'Raumausstatter/in',
+    description: 'Median-Gehalt (Entgeltatlas, Fachkraft).',
+    rows: [{ gruppe: 'Raumausstatter/in', median: '2.943 €', q1: '2.488 €', q3: '3.495 €' }],
+    quelle: 'Entgeltatlas der Bundesagentur für Arbeit (beruf/4403, Median, Vollzeit brutto), Stand 2024',
+  },
+  'metallbauer-gehalt': {
+    name: 'Metallbauer/in (Konstruktionstechnik)',
+    description: 'Median-Gehalt (Entgeltatlas, Fachkraft).',
+    rows: [{ gruppe: 'Metallbauer/in – Konstruktionstechnik', median: '3.606 €', q1: '3.047 €', q3: '4.294 €' }],
+    quelle: 'Entgeltatlas der Bundesagentur für Arbeit (beruf/14442, Median, Vollzeit brutto), Stand 2024',
+  },
+  'karosseriebauer-gehalt': {
+    name: 'Karosseriebauer/in',
+    description: 'Median-Gehalt (Entgeltatlas, Fachkraft).',
+    rows: [{ gruppe: 'Karosserie- und Fahrzeugbaumechaniker/in', median: '3.588 €', q1: '2.966 €', q3: '4.537 €' }],
+    quelle: 'Entgeltatlas der Bundesagentur für Arbeit (beruf/15832, Median, Vollzeit brutto), Stand 2024',
+  },
+  'schweisser-gehalt': {
+    name: 'Schweißer/in (Fachkraft Schweißtechnik)',
+    description: 'Median-Gehalt (Entgeltatlas, Fachkraft).',
+    rows: [{ gruppe: 'Schweißer/in – Anlagen- und Apparatebau', median: '3.697 €', q1: '3.079 €', q3: '4.430 €' }],
+    quelle: 'Entgeltatlas der Bundesagentur für Arbeit (beruf/2050, Median, Vollzeit brutto), Stand 2024',
+  },
+  'tischler-gehalt': {
+    name: 'Tischler/in',
+    description: 'Median-Gehalt (Entgeltatlas, Fachkraft).',
+    rows: [{ gruppe: 'Tischler/in', median: '3.224 €', q1: '2.776 €', q3: '3.702 €' }],
+    quelle: 'Entgeltatlas der Bundesagentur für Arbeit (beruf/4456, Median, Vollzeit brutto), Stand 2024',
+  },
 };
