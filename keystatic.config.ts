@@ -95,6 +95,7 @@ export default config({
             { label: 'Feinwerkmechaniker', value: 'feinwerkmechaniker' },
             { label: 'Zweiradmechatroniker', value: 'zweiradmechatroniker' },
             { label: 'Konditor', value: 'konditor' },
+            { label: 'Metzger / Fleischer', value: 'metzger' },
             { label: 'Handwerkerin (allgemein)', value: 'handwerkerin-allgemein' },
           ],
         }),
