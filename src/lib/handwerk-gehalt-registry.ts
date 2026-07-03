@@ -47,4 +47,11 @@ export const HANDWERK_GEHALT_REGISTRY: Record<string, GehaltEntry> = {
     ],
     quelle: 'Entgeltatlas der Bundesagentur für Arbeit (Anlagenmechaniker/in SHK, beruf/15625, Median, Vollzeit brutto), Stand 2024',
   },
+  // Batch 2026-07-03 — Entgeltatlas direkt-verifiziert UND Artikel-konsistent (Schema==sichtbare Zahl):
+  'dachdecker-gehalt': {
+    name: 'Dachdecker/in',
+    description: 'Median-Gehalt (Entgeltatlas, Fachkraft).',
+    rows: [{ gruppe: 'Dachdecker/in', median: '3.611 €', q1: '3.156 €', q3: '4.070 €' }],
+    quelle: 'Entgeltatlas der Bundesagentur für Arbeit (beruf/4051, Median, Vollzeit brutto), Stand 2024',
+  },
 };
