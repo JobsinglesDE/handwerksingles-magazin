@@ -158,4 +158,36 @@ export const HANDWERK_GEHALT_REGISTRY: Record<string, GehaltEntry> = {
     rows: [{ gruppe: 'Fliesen-, Platten- und Mosaikleger/in', median: '3.494 €', q1: '3.025 €', q3: '3.983 €' }],
     quelle: 'Entgeltatlas der Bundesagentur für Arbeit (beruf/4320, Median, Vollzeit brutto), Stand 2024',
   },
+  // ── Tranche 3 (2026-07-03): Direkt-Extract verifiziert (Triangulation Median+Q1+Q3); Artikel-Zahl angeglichen ──
+  'maurer-gehalt': {
+    name: 'Maurer/in',
+    description: 'Median-Gehalt (Entgeltatlas, Fachkraft).',
+    // Wichtig: beruf/3935 = allgemeine Maurer/in-Fachkraft (NICHT beruf/3972 = Restaurierung 5.170!).
+    rows: [{ gruppe: 'Maurer/in', median: '3.709 €', q1: '3.144 €', q3: '4.177 €' }],
+    quelle: 'Entgeltatlas der Bundesagentur für Arbeit (beruf/3935, Median, Vollzeit brutto), Stand 2024',
+  },
+  'maler-lackierer-gehalt': {
+    name: 'Maler/in und Lackierer/in',
+    description: 'Median-Gehalt (Entgeltatlas, Fachkraft).',
+    rows: [{ gruppe: 'Maler/in und Lackierer/in', median: '3.211 €', q1: '2.843 €', q3: '3.536 €' }],
+    quelle: 'Entgeltatlas der Bundesagentur für Arbeit (beruf/134953, Median, Vollzeit brutto), Stand 2024',
+  },
+  'zahntechniker-gehalt': {
+    name: 'Zahntechniker/in',
+    description: 'Median-Gehalt (Entgeltatlas, Fachkraft).',
+    rows: [{ gruppe: 'Zahntechniker/in', median: '3.109 €', q1: '2.553 €', q3: '3.853 €' }],
+    quelle: 'Entgeltatlas der Bundesagentur für Arbeit (beruf/2618, Median, Vollzeit brutto), Stand 2024',
+  },
+  'glaser-gehalt': {
+    name: 'Glaser/in',
+    description: 'Median-Gehalt (Entgeltatlas, Fachkraft; beide Fachrichtungen gleichauf).',
+    rows: [{ gruppe: 'Glaser/in (Verglasung/Glasbau & Fenster-/Glasfassadenbau)', median: '3.360 €', q1: '2.868 €', q3: '3.892 €' }],
+    quelle: 'Entgeltatlas der Bundesagentur für Arbeit (beruf/4362, Median, Vollzeit brutto), Stand 2024',
+  },
+  'kfz-mechatroniker-gehalt': {
+    name: 'Kfz-Mechatroniker/in (Pkw-Technik)',
+    description: 'Median-Gehalt (Entgeltatlas, Fachkraft, Fachrichtung Pkw-Technik).',
+    rows: [{ gruppe: 'Kfz-Mechatroniker/in – Pkw-Technik', median: '3.588 €', q1: '2.966 €', q3: '4.537 €' }],
+    quelle: 'Entgeltatlas der Bundesagentur für Arbeit (beruf/14798, Median, Vollzeit brutto), Stand 2024',
+  },
 };
