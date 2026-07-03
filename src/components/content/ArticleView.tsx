@@ -23,6 +23,7 @@ import { JsonLd, articleJsonLd, faqJsonLd, videoJsonLd, extractYoutubeEmbed, occ
 import { ELEKTRONIKER_GEHALT_ROWS, ELEKTRONIKER_GEHALT_QUELLE } from '@/lib/elektroniker-gehalt-daten';
 import { KONDITOR_GEHALT_ROWS, KONDITOR_GEHALT_QUELLE } from '@/lib/konditor-gehalt-daten';
 import { METZGER_GEHALT_ROWS, METZGER_GEHALT_QUELLE } from '@/lib/metzger-gehalt-daten';
+import { BAECKER_GEHALT_ROWS, BAECKER_GEHALT_QUELLE } from '@/lib/baecker-gehalt-daten';
 import { SECTION_HUBS, SINGLE_HUB } from '@/lib/hubs';
 
 const BASE_URL = 'https://handwerksingles.de/magazin';
@@ -194,6 +195,16 @@ export default async function ArticleView({ slug }: { slug: string }) {
           url: `${BASE_URL}${canonicalPath}`,
           rows: METZGER_GEHALT_ROWS,
           quelle: METZGER_GEHALT_QUELLE,
+        });
+        return s ? <JsonLd data={s} /> : null;
+      })()}
+      {slug === 'baecker-gehalt' && (() => {
+        const s = occupationSalaryJsonLd({
+          name: 'Bäcker / Bäckerin',
+          description: 'Gehalt im Bäcker-Handwerk (Geselle und Meister).',
+          url: `${BASE_URL}${canonicalPath}`,
+          rows: BAECKER_GEHALT_ROWS,
+          quelle: BAECKER_GEHALT_QUELLE,
         });
         return s ? <JsonLd data={s} /> : null;
       })()}
