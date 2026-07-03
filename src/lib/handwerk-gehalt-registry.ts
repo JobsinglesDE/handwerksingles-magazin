@@ -203,4 +203,29 @@ export const HANDWERK_GEHALT_REGISTRY: Record<string, GehaltEntry> = {
     rows: [{ gruppe: 'Gebäudereiniger/in (Gebäudereinigung)', median: '2.634 €', q1: '2.310 €', q3: '3.051 €' }],
     quelle: 'Entgeltatlas der Bundesagentur für Arbeit (beruf/10234, Median, Vollzeit brutto), Stand 2024',
   },
+  // ── Tranche 4 (2026-07-03): datenlimitierte Rest-Hubs frisch verifiziert (10 offen → 4 baubar; Rest bewusst ohne Schema, s. Übergabe) ──
+  'schuhmacher-gehalt': {
+    name: 'Schuhmacher/in',
+    description: 'Median-Gehalt (Entgeltatlas, Fachkraft).',
+    rows: [{ gruppe: 'Schuhmacher/in', median: '2.817 €', q1: '2.500 €', q3: '3.166 €' }],
+    quelle: 'Entgeltatlas der Bundesagentur für Arbeit (beruf/3500, Median, Vollzeit brutto), Stand 2024',
+  },
+  'geruestbauer-gehalt': {
+    name: 'Gerüstbauer/in',
+    description: 'Median-Gehalt (Entgeltatlas, Fachkraft).',
+    rows: [{ gruppe: 'Gerüstbauer/in', median: '3.454 €', q1: '2.958 €', q3: '4.037 €' }],
+    quelle: 'Entgeltatlas der Bundesagentur für Arbeit (beruf/4066, Median, Vollzeit brutto), Stand 2024',
+  },
+  'schornsteinfeger-gehalt': {
+    name: 'Schornsteinfeger/in',
+    description: 'Statistischer Median über alle Beschäftigten (Entgeltatlas, Fachkraft); Tarif TG 1–3 im Artikel.',
+    rows: [{ gruppe: 'Schornsteinfeger/in', median: '3.912 €', q1: '3.534 €', q3: '4.054 €' }],
+    quelle: 'Entgeltatlas der Bundesagentur für Arbeit (beruf/8211, Median, Vollzeit brutto), Stand 2024',
+  },
+  'uhrmacher-gehalt': {
+    name: 'Uhrmacher/in',
+    description: 'Median-Gehalt (Entgeltatlas, Fachkraft; keine Quartile veröffentlicht).',
+    rows: [{ gruppe: 'Uhrmacher/in', median: '3.431 €' }],
+    quelle: 'Entgeltatlas der Bundesagentur für Arbeit (beruf/2500, Median, Vollzeit brutto), Stand 2024',
+  },
 };
