@@ -121,4 +121,41 @@ export const HANDWERK_GEHALT_REGISTRY: Record<string, GehaltEntry> = {
     rows: [{ gruppe: 'Tischler/in', median: '3.224 €', q1: '2.776 €', q3: '3.702 €' }],
     quelle: 'Entgeltatlas der Bundesagentur für Arbeit (beruf/4456, Median, Vollzeit brutto), Stand 2024',
   },
+  // ── Tranche 2 (2026-07-03): Direkt-Extract verifiziert; Artikel-Zahl angeglichen bzw. Entgeltatlas eingeführt ──
+  'bodenleger-gehalt': {
+    name: 'Bodenleger/in',
+    description: 'Median-Gehalt (Entgeltatlas, Fachkraft).',
+    rows: [{ gruppe: 'Bodenleger/in (Bodenverlegung)', median: '2.957 €', q1: '2.544 €', q3: '3.432 €' }],
+    quelle: 'Entgeltatlas der Bundesagentur für Arbeit (beruf/132733, Median, Vollzeit brutto), Stand 2024',
+  },
+  'schaedlingsbekaempfer-gehalt': {
+    name: 'Schädlingsbekämpfer/in',
+    description: 'Median-Gehalt (Entgeltatlas, Fachkraft).',
+    rows: [{ gruppe: 'Schädlingsbekämpfer/in', median: '3.369 €', q1: '2.895 €', q3: '3.939 €' }],
+    quelle: 'Entgeltatlas der Bundesagentur für Arbeit (beruf/27397, Median, Vollzeit brutto), Stand 2024',
+  },
+  'zweiradmechatroniker-gehalt': {
+    name: 'Zweiradmechatroniker/in (Fahrradtechnik)',
+    description: 'Median-Gehalt (Entgeltatlas, Fachkraft, Fachrichtung Fahrradtechnik).',
+    rows: [{ gruppe: 'Zweiradmechatroniker/in – Fahrradtechnik', median: '2.741 €', q1: '2.411 €', q3: '3.160 €' }],
+    quelle: 'Entgeltatlas der Bundesagentur für Arbeit (beruf/124407, Median, Vollzeit brutto), Stand 2024',
+  },
+  'stuckateur-gehalt': {
+    name: 'Stuckateur/in',
+    description: 'Median-Gehalt (Entgeltatlas, Fachkraft).',
+    rows: [{ gruppe: 'Stuckateur/in (Gipsbildhauer/in)', median: '3.352 €', q1: '2.954 €', q3: '3.781 €' }],
+    quelle: 'Entgeltatlas der Bundesagentur für Arbeit (beruf/4258, Median, Vollzeit brutto), Stand 2024',
+  },
+  'goldschmied-gehalt': {
+    name: 'Goldschmied/in (Schmuck)',
+    description: 'Median-Gehalt (Entgeltatlas, Fachkraft, Fachrichtung Schmuck).',
+    rows: [{ gruppe: 'Goldschmied/in – Schmuck', median: '2.959 €', q1: '2.359 €', q3: '3.734 €' }],
+    quelle: 'Entgeltatlas der Bundesagentur für Arbeit (beruf/2584, Median, Vollzeit brutto), Stand 2024',
+  },
+  'fliesenleger-gehalt': {
+    name: 'Fliesenleger/in',
+    description: 'Median-Gehalt (Entgeltatlas, Fachkraft).',
+    rows: [{ gruppe: 'Fliesen-, Platten- und Mosaikleger/in', median: '3.494 €', q1: '3.025 €', q3: '3.983 €' }],
+    quelle: 'Entgeltatlas der Bundesagentur für Arbeit (beruf/4320, Median, Vollzeit brutto), Stand 2024',
+  },
 };
