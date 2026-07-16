@@ -79,8 +79,17 @@ export async function buildArticleMetadata(slug: string) {
     ? `${BASE_URL}${article.featuredImage}`
     : `${BASE_URL}/logos/jobsingles-logo.png`;
 
+  // Info-Intent-Seiten tragen KEIN ❤️ im SERP-Titel. Das Layout-Template ('%s ❤️',
+  // layout.tsx) hängt es sonst an jeden Titel — auch an reine Gehalts-/Ausbildungs-Seiten.
+  // GSC 2026-07-16 (28 Tage): friseur-gehalt Pos 8,9 mit 260 Impressionen → 0 Klicks;
+  // elektriker-gehalt Pos 8,3 → 0 Klicks. Wer "friseur gehalt" sucht, liest ein Herz neben
+  // einer Dating-Domain als Spam und klickt weiter. Dating-Intent behält das Herz:
+  // /singles-partnersuche erreicht damit 4,55 % CTR. `absolute` umgeht das Template.
+  const HEARTLESS_CATEGORIES = ['handwerksberufe'];
+  const suppressHeart = HEARTLESS_CATEGORIES.includes(article.category as string);
+
   return {
-    title,
+    title: suppressHeart ? { absolute: title } : title,
     description,
     alternates: { canonical: url },
     openGraph: {
