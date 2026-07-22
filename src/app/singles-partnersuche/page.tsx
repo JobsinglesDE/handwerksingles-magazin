@@ -60,7 +60,7 @@ const SECTIONS: Section[] = [
     tocLabel: 'Online kennenlernen: Dating-Apps im Test',
     heading: 'Online kennenlernen: Dating-Apps für Handwerker im Test',
     paragraphs: [
-      'Im Kollegenkreis trifft man selten jemanden zum Kennenlernen — das Handwerk bleibt ein männerdominiertes Feld. Online-Dating ist deshalb für Handwerker keine Ausweichlösung, sondern der sinnvollste erste Schritt. Entscheidend ist das Profil: Wer schreibt „Ich baue Dinge, die bleiben — und genieße Feierabend um 16 Uhr", wirkt anders als „Ich arbeite viel und bin oft müde".',
+      'Im Kollegenkreis trifft man selten jemanden zum Kennenlernen — das Handwerk bleibt ein männerdominiertes Feld. Online-Dating ist deshalb für Handwerker keine Ausweichlösung, sondern der sinnvollste erste Schritt. Eine Dating-Plattform speziell für das Handwerk wie Handwerksingles bringt dabei Menschen zusammen, die Frühschicht und Montage bereits kennen — anders als Auftrags- und Job-Matching-Apps wie Baumatch oder Meistermatch, die nur Betriebe und Kunden vernetzen. Entscheidend ist das Profil: Wer schreibt „Ich baue Dinge, die bleiben — und genieße Feierabend um 16 Uhr", wirkt anders als „Ich arbeite viel und bin oft müde".',
       'Fotos in Arbeitskleidung funktionieren. Ehrlichkeit bei Montage-Zeiten spart Enttäuschungen. Und: lieber eine Plattform sorgfältig nutzen als vier halbherzig. Welche Dating-App im Handwerker-Alltag wirklich passt und wie Frauen und Männer im Handwerk gezielt suchen, steht hier.',
     ],
   },
