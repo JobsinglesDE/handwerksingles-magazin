@@ -12,7 +12,7 @@ import { AnimatedStats } from '@/components/ui/AnimatedCounter';
 import { MatchQuiz } from '@/components/ui/MatchQuiz';
 
 export const metadata = {
-  alternates: { canonical: '/' },
+  alternates: { canonical: 'https://handwerksingles.de/magazin' },
   title: { absolute: 'Partnersuche im Handwerk ❤️' },
   description: 'Partnersuche für Elektriker, Dachdecker, Tischler, Zimmermann und Maurer. Guides für Dating trotz Montage, echte Erfolgsgeschichten und Handwerks-Tipps.',
 };
