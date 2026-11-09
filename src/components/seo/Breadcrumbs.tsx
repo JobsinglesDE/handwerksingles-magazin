@@ -20,7 +20,8 @@ export function Breadcrumbs({ items, baseUrl = 'https://handwerksingles.de/magaz
         data={breadcrumbJsonLd(
           allItems.map((item) => ({
             name: item.label,
-            url: `${baseUrl}${item.href}`,
+            // Startseite ohne angehängten Slash: /magazin/ leitet per 308 weiter (GSC 09.11.2026)
+            url: item.href === '/' ? baseUrl : `${baseUrl}${item.href}`,
           }))
         )}
       />
